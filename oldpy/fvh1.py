@@ -1,4 +1,7 @@
 import turtle
+import fvh
+
+
 fred=turtle.Turtle()
 def a(fred):
 	for x in range(360):

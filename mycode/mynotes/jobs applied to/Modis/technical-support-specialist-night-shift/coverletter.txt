@@ -1,0 +1,14 @@
+Good morning, afternoon, or night! My name is Jeremiah Marks and I am very interested in the position that you have listed at http://www.modis.com/job-seekers/it-jobs/technical-support-specialist-night-shift/39234061/j/#apply . I believe that I would be an excellent match for this position due to my qualifications, my passion for providing top notch customer service, and my ability to troubleshoot and resolve issues in a timely and friendly manner. 
+
+I have a diverse background in providing support for everything from connectivity (at multiple ISPs), hardware and software (with Apple Computers), and both Windows and Apache Servers. I have a better-than-most understanding of Windows 7 and a basic understanding of Windows Server. 
+
+I also have good organizational skills and excellent analytical skills. To be frank I also have excellent communication skills as well as an innate ability to develop and maintain mutually positive customer relationships. 
+
+I have written a couple of PHP and Python programs that use and build SQL databases, I can develop basic OO java programs, and frankly use SFTP on a daily basis in everything from scripting to command line to GUIs. I have some limited experience with Windows Batch, but given the opportunity to work in a Windows environment I would quickly rectify that situation. 
+
+I hope that you feel that I am a great fit and contact me! 
+
+Thank you,
+
+JL Marks
+Jeremiah@jlmarks.org

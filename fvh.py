@@ -24,6 +24,10 @@ somecolors=['Blue','Red','White']
 from turtle import Turtle
 import random
 import datetime
+from wand.image import Image
+import fvhmans
+
+
 
 class MyTurtle(Turtle):
     """
@@ -47,11 +51,7 @@ class MyTurtle(Turtle):
     #    lm.speed(0)
     #    lm.ht()
     #    return lm
-    def __init__(self):
-        return None
-
-
-
+        
     def setup(self):
         self.ht()
         self.speed(0)
@@ -121,7 +121,6 @@ def trialb():
         a.forward(x%100)
         a.right(91.5)
         
-def trialc(turts, angle):
     turts.cleanhome()
     turts.speed(0)
     for it in range(1,6000):
@@ -136,21 +135,24 @@ def trialc2(truts, angle, revolutions):
 def triald(angle):
     mover=MyTurtle()
     mover.speed(0)
+    mover.setup()
     printer=MyTurtle()
+    printer.setup()
     ts=MyTurtle.getscreen(mover)
     ts.screensize(1600,1600)
     printer.ht()
     printer.penup()
     printer.goto(0,200)
     printer.pendown()
-    for val in range(700):
+    for val in range(300):
         printer.clear()
         printer.write(val)
         mover.fd(val/15+3)
         mover.left(angle)
     printer.clear()
-    ts.getcanvas().postscript(file="turtle/"+str(angle)+".eps")
-    ts.bye()
+    fvhmans.savetocircles(printer, togif=True)
+    #ts.getcanvas().postscript(file="turtle/"+str(angle)+".eps")
+    #ts.bye()
     
 def prettyDraw():
   leftpoints=((-75, 75), (-75, 0), (-75,-75))
@@ -180,7 +182,9 @@ def pdraw(numOfLPoints,numOfRPoints):
   for x in range(-vBars, vBars, leftstep):
     for y in range (-hBars, hBars, rightstep):
       #print str(-hBars)+ ","+str(y)+" TO: "+str(hBars)+","+str(x)
-      mover.jumpto((-hBars,-x))
+      mover.pu()
+      mover.goto((-hBars,-x))
+      mover.pd()
       mover.goto((hBars,y))
       
 def triale(angle):
@@ -206,23 +210,60 @@ def trialf(angle, turt):
     mover=turt
     mover.cleanhome()
     mover.setheading(0)
-    for val in range(75):
+    for val in range(800):
         mover.fd(val)
         mover.left(angle)
-    
+
+def trialf(angle, turt, finallength):
+    mover=turt
+    mover.cleanhome()
+    mover.setheading(0)
+    for val in range(finallength):
+        mover.fd(val)
+        mover.left(angle)    
     
 def dotrialf():
   frank=MyTurtle()
   frank.speed(0)
   frank.ht()
+  frank.tracer(False)
   ts=MyTurtle.getscreen(frank)
-  ts.screensize(100,100)
-  ts.setup(150,150)
-  for angle in range(36000):
-    realangle=angle/100.0
+  ts.screensize(300,300)
+  ts.setup(350,350)
+  for angle in range(0,3600):
+    realangle=angle/10.0
     trialf(realangle, frank)
-    ts.getcanvas().postscript(file="turtle/real/"+'%05d' % angle+".eps")
+    ts.update()
+    afilename="turtle/real/"+'%05d' % angle+".eps"
+    ts.getcanvas().postscript(file=afilename)
+    with Image(filename=afilename) as img:
+        with img.convert('gif') as newimg:
+            newfilename=afilename[:-3]+'.gif'
+            newimg.save(filename=newfilename)
     print '%05d' % angle +": Done!"
+  ts.bye()
+
+def adotrialf(screensize, iterationsperangle):
+  frank=MyTurtle()
+  frank.speed(0)
+  frank.ht()
+  frank.tracer(False)
+  ts=MyTurtle.getscreen(frank)
+  ts.screensize(screensize, screensize)
+  ts.setup(screensize+50,screensize+50)
+  for angle in range(0,36000,25):
+    realangle=angle/100.0
+    trialf(realangle, frank, iterationsperangle)
+    ts.update()
+    afilename="turtle/real/"+'%05d' % angle+".eps"
+    ts.getcanvas().postscript(file=afilename, height=screensize, width=screensize, x=-(screensize/2), y=-(screensize/2))
+    with Image(filename=afilename) as img:
+        with img.convert('gif') as newimg:
+            newfilename=afilename[:-3]+'gif'
+            newimg.save(filename=newfilename)
+    print '%05d' % angle +": Done!"
+  ts.bye()
+
     
 def clockcharsa(colors):
   a=MyTurtle()
@@ -364,8 +405,8 @@ def coolercircles():
       lm.pu()
       print start, end
 
-def coolestcircles(numofpoints, circlewidth, firststep=1, secondstep=1,lm=MyTurtle()):
-  
+def coolestcircles(numofpoints, circlewidth, firststep=1, secondstep=1):
+  lm=MyTurtle()
   lm.ht()
   lm.speed(0)
   ts=lm.getscreen()
@@ -480,8 +521,10 @@ def attr():
     
     for x in range(50):
         a=MyTurtle()
+        a.tracer(False)
         a.pu()
         a.goto(random.randint(-1200,1200), random.randint(-1200,1200))
+        a.tracer(True)
         partlist.append(a)
     return partlist
 

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# This file will
+#   copy different parts of the home folder to their appropriate backup locations
+#   compress those locations
+#   sync those locations
+#

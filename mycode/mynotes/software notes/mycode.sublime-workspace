@@ -1,0 +1,176 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"ANF: New File"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/jlmarks/.ssh/config",
+		"/home/jlmarks/Desktop/March to the Stars - David Weber.html",
+		"/home/jlmarks/Desktop/test1.html",
+		"/home/jlmarks/Desktop/t.sh~",
+		"/home/jlmarks/freestuff.txt",
+		"/home/jlmarks/Downloads/taskd_setup_new.sh",
+		"/home/jlmarks/notes/jobs applied to/Mesa Public Schools/Computer Repair Tech/ past personal and professional experience make you a quality candidate.txt",
+		"/home/jlmarks/Downloads/Dragon 9 Pro/readme.txt",
+		"/home/jlmarks/notes/jobs applied to/Modis/Desktop Support- Entry Level/coverletter.txt",
+		"/home/jlmarks/notes/jobs applied to/Modis/Desktop Support- Entry Level/jobdescription.txt",
+		"/home/jlmarks/notes/jobs applied to/Modis/technical-support-specialist-night-shift/coverletter.txt",
+		"/home/jlmarks/notes/jobs applied to/Modis/App Support_Phone Support needed immediately!/jobdescription.txt",
+		"/home/jlmarks/notes/jobs applied to/Modis/App Support_Phone Support needed immediately!/coverletter.txt",
+		"/home/jlmarks/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/jlmarks/notes/jobs applied to/Modis/technical-support-specialist-night-shift/jobdescription.txt",
+		"/home/jlmarks/Downloads/Dragon 9 Pro/Dragon Naturally Speaking v9 Pro Serial.txt",
+		"/home/jlmarks/taskwarriornotes",
+		"/home/jlmarks/taskwarriorserverdata/aa.txt",
+		"/home/jlmarks/Downloads/mirakel.taskdconfig",
+		"/home/jlmarks/Downloads/newtaskd.taskconfig",
+		"/home/jlmarks/Downloads/taskd_setup.sh",
+		"/home/jlmarks/env.txt",
+		"/home/jlmarks/tw/task-2.3.0/aa.txt",
+		"/home/jlmarks/.bash_profile",
+		"/home/jlmarks/.bashrc",
+		"/home/jlmarks/Desktop/django/mysite/mysite/settings.py",
+		"/home/jlmarks/.config/sublime-text-2/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"BACKUPFILENAME",
+			"update",
+			"7z u -t7z -mx=9 -up1q0r2x1y2z1w2",
+			" ",
+			"",
+			"save",
+			"url",
+			"urls",
+			"url"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 176.0,
+	"status_bar_visible": true
+}

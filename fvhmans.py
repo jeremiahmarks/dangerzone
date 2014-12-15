@@ -1,5 +1,7 @@
 import math
 import fvh
+import datetime
+from wand.image import Image
 #This module is intended to supply functions that help with 
 #various parts of image creation done with fvh
 
@@ -62,6 +64,24 @@ def center(setOfpoints):
     newpoints[anotherpoint]=(setOfpoints[anotherpoint][0]-xoffset,setOfpoints[anotherpoint][1]-yoffset)
   
   return newpoints
+
+def savetocircles(aturtle,afilename=None,aheight=None,awidth=None,ax=None,ay=None, togif=False, topng=False):
+  
+  if not afilename:
+    datetime.datetime.now()
+    afilename='circles/'+datetime.datetime.now().strftime('%Y-%b-%d_%H:%M:%S.%f'+'.eps')
+  aturtle.getscreen().getcanvas().postscript(file=afilename, height=aheight, width=awidth, x=ax, y=ay)
+  if togif:
+    with Image(filename=afilename) as img:
+      with img.convert('gif') as newimg:
+        newfilename=afilename[:-3]+'gif'
+        newimg.save(filename=newfilename)
+  if topng:
+    with Image(filename=afilename) as img:
+      with img.convert('png') as newimg:
+        newfilename=afilename[:-3]+'png'
+        newimg.save(filename=newfilename)
+
   
 def circleinter(x0, y0, r0, x1, y1, r1):
   """
@@ -97,3 +117,23 @@ def circleinter(x0, y0, r0, x1, y1, r1):
   yi_prime = y2 - ry
   
   return (xi,yi),(xi_prime,yi_prime)
+  
+def savetocircleshelp():
+  lm=fvh.MyTurtle()
+  lm.pu()
+  lm.tracer(False)
+  for x in range(0,1200,100):
+    lm.pu()
+    lm.goto(-x, x)
+    lm.pd()
+
+    lm.seth(270)
+    for y in range(4):
+      lm.write(lm.pos())
+      for z in range(0,2*x,10):
+        lm.fd(10)
+        lm.write(lm.pos())
+      lm.left(90)
+  lm.tracer(True)
+  return lm
+    

@@ -1,0 +1,590 @@
+Good reading at http://www.dotnetperls.com/7-zip-examples
+
+Function Letters
+
+a
+    Add
+d
+    Delete
+e
+    Extract
+l
+    List
+t
+    Test
+u
+    Update
+x
+    eXtract with full paths
+
+===============================================================================
+===============================================================================
+==
+== To delete a file from the archive 
+==
+===============================================================================
+== $ 7z d archive.7z path/to/file
+===============================================================================
+
+
+=============================
+==
+== Switches of interest
+==
+==============================
+
+-l
+    don't store symlinks; store the files/directories they point to (CAUTION : the scanning stage can never end because of recursive symlinks like 'ln -s .. ldir')
+
+-p{Password}
+    Set Password
+
+-t{Type}
+    Type of archive (7z, zip, gzip, bzip2 or tar. 7z format is default)
+
+-u[-][p#][q#][r#][x#][y#][z#][!newArchiveName]
+    Update options
+    The "u" command in 7-Zip stands for update. This is a useful command and is great when you want to replace old files in your archive with newer files. This prevents needing to decompress and recompress the entire archive.
+
+
+=============================
+==
+== note that the manpages uses -mx=0/1/3/5/7/9
+==
+==
+===============================
+
+Switch m
+This section provides information
+
+We can change the optimization settings in 7-Zip on the command line. This is the most important and useful option you can use. It specifies the method of compression. Here I will show a bunch of options, and also some examples.
+Compression Levels
+
+Compression levels
+
+Switch -mx0: Don't compress at all.
+         This is called "copy mode."
+
+Switch -mx1: Low compression.
+         This is called "fastest" mode.
+
+Switch -mx3: Fast compression mode.
+         Will automatically set various parameters.
+
+Switch -mx5: Same as above, but "normal."
+
+Switch -mx7: This means "maximum" compression.
+
+Switch -mx9: This means "ultra" compression.
+         You probably want to use this.
+
+
+========================
+==
+== Examples
+==
+=========================
+Example 1
+
+7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on archive.7z dir1
+    adds all files from directory "dir1" to archive archive.7z using "ultra settings"
+-t7z
+    7z archive
+-m0=lzma
+    lzma method
+-mx=9
+    level of compression = 9 (Ultra)
+-mfb=64
+    number of fast bytes for LZMA = 64
+-md=32m
+    dictionary size = 32 megabytes
+-ms=on
+    solid archive = on
+
+    7z a -t7z -mx=9 mycodeArchive.7z mycode
+
+==================================
+==
+== From dotnetperls.com/7-zip-examples
+==
+====================================
+
+
+7-Zip Command-Line
+7z: 7-Zip icon
+
+7-Zip is an effective compression program. The 7za.exe program is used to compress, extract and update files through the command line. It provides superior compression. It is open-source. This makes it easy to obtain and use.
+Start
+
+First you need to download the 7-Zip command line executable, 7za.exe. This is the exe you will use to run commands on archives. Please go to 7-zip.org and get the command line version.
+Steps
+
+Tip:For convenience and so you don't need to change environment paths, put the 7za.exe file in your user directory.
+
+Next:Open the Windows console and test the 7za.exe program out with a few commands. Type in the exe name 7za and this will display.
+
+7-Zip (A)  4.60 beta  Copyright (c) 1999-2008 Igor Pavlov  2008-08-19
+
+Usage: 7za <command> [<switches>...] <archive_name> [<file_names>...]
+       [<@listfiles...>]
+
+That's the grammar of the commands you use on 7za.exe. The "command" is the main verb. Then you specify optional switches, the archive name (either source or destination archives) and files. My user directory is "C:\Users\Sam\".
+Command a
+Plus
+
+You can use the "a" command with the single letter a. This command stands for "archive" or "add." Use it to put files in an archive. You have to specify the destination archive, and the source files (in that order).
+
+On the test system, the directory C:\Users\Sam contains two files (file1.txt and file2.txt). The command puts those two files in an archive, and you need to type it into the command prompt.
+
+C:\Users\Sam>7za a -t7z files.7z *.txt
+
+7-Zip (A)  4.60 beta  Copyright (c) 1999-2008 Igor Pavlov  2008-08-19
+Scanning
+
+Creating archive files.7z
+
+Compressing  file1.txt
+Compressing  file2.txt
+
+Everything is Ok
+
+C:\Users\Sam>
+
+7-Zip file manager in Microsoft Windows
+
+Tip:To open your archive, right click on it and select 7-Zip -> Open archive. The screenshot shows the files compressed in files.7z.
+Command d
+Note
+
+Here we see an example of the "d" command in 7-Zip command lines. This stands for 'delete' and is used much less often. It allows you to remove a certain file (or set of files) from inside an archive.
+
+Note:You will need this if you use huge archives and need to save time. This is from the manual.
+
+7z d archive.zip *.bak -r
+
+7z:          use executable
+d:           delete files
+archive.zip: delete from this archive
+*.bak:       only match bak files
+-r:          traverse all subdirectories
+
+Tip:You can also remove a single file from an archive with "d". This is more useful when you do not have a solid archive.
+Command e
+Mathematical constant e: Euler's number
+
+Here we use the "e" command in your console window. The "e" stands for extract, and it means to unzip or expand an archive. You must specify the source archive always, and may also specify a destination.
+
+Info:The "e" command extracts everything to a specified directory. Another command "x" can preserve directory structures in archives.
+
+7z e archive.zip
+
+7z:          executable
+e:           use extract command
+archive.zip: source archive you want to expand
+
+Overwrite prompts:7-Zip will always prompt you if there is a file it needs to overwrite to extract the new file.
+
+However:This can be problematic if you are scripting or embedding 7za.exe. In that case, see the -y switch.
+Command l
+List type
+
+We next use the single-letter "l" (lowercase letter ell) command. The lowercase L is used to list the contents of archives and you probably will not need to use it often. I thought I would test it and show an example.
+
+Next:This shows the listing of a solid archive.
+The originals are 27216 bytes and 3888 bytes.
+They compress down to 1030 bytes.
+
+C:\Users\Sam>7za l files.7z
+
+7-Zip (A)  4.60 beta  Copyright (c) 1999-2008 Igor Pavlov  2008-08-19
+
+Listing archive: files.7z
+
+Method = LZMA
+Solid = +
+Blocks = 1
+Physical Size = 1202
+Headers Size = 172
+
+   Date      Time    Attr         Size   Compressed  Name
+------------------- ----- ------------ ------------  ------------------------
+2008-10-02 15:48:01 ....A        27216         1030  file1.txt
+2008-10-02 15:47:45 ....A         3888               file2.txt
+------------------- ----- ------------ ------------  ------------------------
+                 31104         1030  2 files, 0 folders
+
+7-Zip command line output in Windows
+Command t
+
+Here we use the "t" command in the 7z program. This command allows you to test the integrity of archives. It stands for 'test' and is much less useful than the "-t" switch. Don't confuse the two. This one is used for diagnostics.
+
+7z t archive.zip *.doc -r
+
+7z:          use this executable
+t:           test the specified archive
+archive.zip: the archive you want to test
+*.doc:       test all these files in the archive
+-r:          recurse all child directories
+
+Command u
+
+The "u" command in 7-Zip stands for update. This is a useful command and is great when you want to replace old files in your archive with newer files. This prevents needing to decompress and recompress the entire archive.
+
+7z u archive.zip *.doc
+
+7z:          executable name
+u:           update command
+archive.zip: archive you want to update files in
+*.doc:       only update these files (Word documents)
+
+Warning:The "u" command doesn't work with solid archives. A solid archive is one where all the files are compressed together.
+
+So:This means that you can't update specific files in solid archives with the "u" command.
+Switch m
+This section provides information
+
+We can change the optimization settings in 7-Zip on the command line. This is the most important and useful option you can use. It specifies the method of compression. Here I will show a bunch of options, and also some examples.
+Compression Levels
+
+Compression levels
+
+Switch -mx0: Don't compress at all.
+         This is called "copy mode."
+
+Switch -mx1: Low compression.
+         This is called "fastest" mode.
+
+Switch -mx3: Fast compression mode.
+         Will automatically set various parameters.
+
+Switch -mx5: Same as above, but "normal."
+
+Switch -mx7: This means "maximum" compression.
+
+Switch -mx9: This means "ultra" compression.
+         You probably want to use this.
+
+Switch m, advanced
+Squares
+
+Here are advanced compression method (-m) switches. The first three are usually of limited use, but you might benefit from tweaking them. My experience is that manual optimizations to these options doesn't produce big benefits.
+
+Switch -mfb:Specifies number of fast bytes.
+Sometimes helps with "sparse" files.
+Don't bother.
+
+Switch -mpass:Number of passes for deflate compression.
+Don't bother with this.
+Automatically set with levels.
+
+Switch -md:This specifies dictionary size.
+It is automatically set, so don't bother.
+
+Switch -mmt:Enable multithreading.
+Use if you have quad-core and a huge archive.
+Specify "on" or "off".
+This may be enabled by default.
+Command x
+
+This command is like "e" except it preserves the full paths. If you have an elaborate or important directory structure, use this option. This would be most useful for system backups or really big backups. Here's the example syntax.
+
+7z x archive.zip
+
+7z:          executable name
+x:           use the extract command
+archive.zip: the archive you want to extract all the files from
+
+Switch t type
+
+Here I show how to specify the precise archive type you want to create. Note that you can specify any filename you want for any type. But some extensions are recommended—they are standard.
+
+Type switches
+
+      Switch: -t7z
+      Format: 7Z
+Example filename: archive.7z (default option)
+
+      Switch: -tgzip
+      Format: GZIP
+Example filename: archive.gzip, archive.gz
+
+      Switch: -tzip
+      Format: ZIP
+Example filename: archive.zip (compatible)
+
+      Switch: -tbzip2
+      Format: BZIP2
+Example filename: archive.bzip2
+
+      Switch: -ttar
+      Format: TAR
+Example filename: tarball.tar (UNIX and Linux)
+
+      Switch: -tiso
+      Format: ISO
+Example filename: image.iso
+
+      Switch: -tudf
+      Format: UDF
+Example filename: disk.udf
+
+Also, the 7-Zip manual provides some useful examples for type switches. It shows the -tiso and -tudf switches. These are not the most common. Almost all of the examples in this document use -t switches.
+
+7z a -tiso archive.iso
+7z a -tudf archive.udf
+
+7z:                         executable name
+a:                          add to archive
+-tiso or -tudf:             format of archive to create
+archive.iso or archive.udf: name of archive to create
+
+Solid archives
+
+7z is the only file format in 7-Zip that you can specify whether the archive is solid or not. Solid means all the files are compressed as one. It makes it impossible to use the "u" command to update individual files.
+
+Switch -ms=on:Enable solid mode.
+This is the default so you won't often need to specify it.
+
+Switch -ms=off:Disable solid mode.
+Useful when you need to update individual files.
+Will reduce compression ratios normally.
+7z archives
+Programming tip
+
+You can change many values and switches on 7z archives, with endless permutations. Some things you can change are dictionary sizes, FastBytes values, MatchFinder values, and filters. Normally you don't need to deal with these.
+PPMd
+Page: lines of text
+
+With the 7z format, you can specify the algorithm. PPMd is fast and effective for compressing plain text files. It is ideal for large collections of Word documents. PPMd does not perform as well on files containing binary data.
+
+PPMd switch -mmem=24b, -mmem=24k, -mmem=24m:These control the amount of memory you use.
+They are useful and higher is normally better.
+
+PPMd switch -mo=2, -mo=32:These specify the model order in PPMd.
+They are not normally useful.
+Question and answer
+
+When should I use PPMd? You should use PPMd when you have a large corpus (body) of text. This could include HTML or other formatting, but plain text should dominate. It can improve ratios by around 30% on some datasets.
+Example commands
+
+Here I show the example compression commands from the 7-Zip manual. I demonstrated simple ones at the start of this document. These are more complex. We use more features of the 7-Zip command line.
+
+7z a -tzip archive.zip *.jpg -mx0
+
+7z:          name of executable
+a:           add to archive command
+-tzip:       specify a ZIP archive (useful for compatibility)
+archive.zip: destination archive
+*.jpg:       only add jpg files to archive
+-mx0:        don't compress, just copy
+         useful for already-compressed files
+
+Example of 7z format. This next command line shows how to create a solid 7z archive of program files (executables). It uses multithreading mode, which means it will be fast on a dual core machine.
+
+7z a -t7z archive.7z *.exe *.dll -ms -mmt
+
+7z:         name of executable
+a:          archive command specified
+-t7z:       use 7z file type (less compatible and smaller results)
+archive.7z: destination archive file
+*.exe:      include all *.exe files in directory in new archive
+*.dll:      include all *.dll files in new archive
+-ms:        create solid archive (default)
+-mmt:       multithread the operation (faster)
+
+Create PPMd archive
+
+PPMd is an extraordinary algorithm for compressing text and is relatively new. Here I show a command in the 7-Zip manual that compresses all the text files in the working directory. It creates a PPMd archive.
+
+Tip:The command is useful because you will normally want to only compress text files with PPMd.
+PPMd Compression
+
+7z a -t7z archive.7z *.txt -m0=PPMd
+
+7z:         executable name/path
+a:          add command specified
+-t7z:       use the 7z format (needed for PPMd)
+archive.7z: destination archive file
+*.txt:      select all text files
+-mo=PPMd:   compress with this algorithm
+
+Switch o
+
+We show the "o" switch on the 7-Zip command line. Sometimes you do not want to extract to the current directory. This is where -o can come in handy. Use this to set the destination directory.
+
+7z x archive.zip -oC:\Doc
+
+7z:          executable name
+x:           extract archive with paths intact
+archive.zip: archive to extract files from
+-oC:\Doc:    extract all files to the Doc folder on the C: drive
+
+Switch p
+
+We can use the "-p" switch, which refers to the word "password". This is really helpful when security and encryption is involved. You can specify a password on the command line. The syntax is a bit funky.
+
+7za a pw.7z *.txt -pSECRET
+
+7za:      name and path of 7-Zip executable
+a:        add to archive
+pw.7z:    name of destination archive
+*.txt:    add all text files to destination archive
+-pSECRET: specify the password "SECRET"
+
+Opening password-protected archives. This next console output shows what happens when you try to open the password-protected archive. The password here is SECRET, which will allow the archive to be extracted.
+
+C:\Users\Sam>7za x pw.7z
+
+7-Zip (A)  4.60 beta  Copyright (c) 1999-2008 Igor Pavlov  2008-08-19
+
+Processing archive: pw.7z
+
+Enter password:
+
+Header encryption:Add -mhe to encrypt headers. The password command will automatically deal with encrypted headers.
+
+Tip:Remember, encrypted headers will hide the names of the files in your archive.
+More switches
+
+Here we take a closer look at more switches that are of limited use. They are useful to know, however, if you ever need to use them. Usually you can do better just by using the defaults that are slightly adjusted for your requirement.
+
+Switch -ssc:Specify case-sensitive mode.
+The default is -ssc- on Windows (insensitive).
+The default is -scc on Linux (sensitive).
+
+Switch -ssw:Compress locked files.
+You can try this if you have problems opening files.
+
+Switch -w:Set working directory.
+You can use this when you want to specify temp folders.
+Case-sensitive example
+Lowercase and uppercase words
+
+We can use case-insensitive file names in the 7-Zip command line. For those of you who use both Linux and Windows, the case-sensitive option is useful. I will show my own example here with some explanation.
+
+7za.exe a archive.7z Z*.* -ssc
+
+7za.exe:    7-Zip command-line executable path and name
+a:          archive command
+archive.7z: add files to this target archive
+Z*.*:       select only files whose first letter is a capital Z
+
+Switch v
+Megabyte: MB
+
+You can use the "v" switch on the command line. In data compression, a volume is a segment of a data set that is a certain number of bytes long. The volume switch specifies the exact size in bytes, kilobytes or megabytes.
+
+Also:You can specify sequential volumes with the "v" switch on the 7za.exe command line.
+Switch ao
+
+The "ao" switch allows you to specify whether you want to overwrite old files. Be careful—you cannot restore an overwritten file normally. It takes another argument. Back up your data by copying the files in your file manager first.
+
+Switch -aoa:This switch overwrites all destination files.
+Use it when the new versions are preferred.
+
+Switch -aos:Skip over existing files without overwriting. Use this for files where the earliest version is most important.
+
+Switch -aou:Avoid name collisions. New files extracted will have a number appending to their names. You will have to deal with them later.
+
+Switch -aot:Rename existing files. This will not rename the new files, just the old ones already there.
+
+Example of the switches
+
+7z x test.zip -aoa
+
+7z:       use the 7-zip executable
+x:        use the extract command
+test.zip: extract files from this archive
+-aoa:     overwrite all existing files. risky!
+
+Multiple files
+
+This section addresses adding multiple files to an archive. To add many files to one archive, please use the "a" command and the wildcard * symbol. Specify the name of the destination archive file and the source files afterwards.
+
+Tip:Please read more in the section covering the "a" command, found in the previous part of this page.
+
+How do I add many files with a specific extension? Use the "a" command and the wildcard * symbol, but specify the extension after the wildcard. For example, *.txt means all text files. You can use the wildcard anywhere.
+
+How can I add many files from an entire subdirectory? Specify just the directory name. You do not need to use a wildcard. The 7-Zip manual helpfully shows this example. It specifies an entire directory called "subdir".
+
+7z a -tzip archive.zip subdir\
+
+7z:          use executable
+a:           add to archive
+-tzip:       use zip compression
+archive.zip: create this archive
+subdir\:     source directory
+
+Formats
+GZIP compression
+
+This section answers questions about choosing formats. First, to use GZip compression, please specify the "-tgzip" option for the type switch. This makes a great way to compress files on your web server for HTTP compression.
+7-Zip DEFLATE
+
+How do I use BZip2? You can use BZip2 by specifying the "-tbzip2" switch. This can be combined with any compression level in the above charts. The different modes in 7-Zip automatically use many different settings.
+
+How do I use 7z format? By specifying the "-t7z" switch for type. Or you can simply omit the type switch and that will default to 7z. This format offers the greatest compression ratios, but it does not work in all places.
+Prompts
+
+You can stop 7-Zip from displaying prompts. Please use the -y switch. This will assume a yes answer to all prompts. Use this only when you are confident that you are not going to lose any data.
+Questions
+
+There are many more possibilities and usages of the 7-Zip program on the command line in both Windows and Linux. This section answers some questions I had when doing this research, and also some questions that you may have.
+
+Why can't I update my archive? It is probably a solid archive. 7z archives are by default solid archives—all the files are compressed together. Change the archive not to be solid if you want to update it. Search this page for "solid".
+
+Can I specify the output directory? Yes—please use the "e" command and combine it with the -o switch. The syntax with -o is a bit funny so I will show the example from the 7-Zip help file. Here's how it works.
+
+7z e archive.zip -oC:\soft *.cpp -r
+
+7z:          executable
+e:           use extract command
+archive.zip: source archive you want to extract from
+-oC:\soft:   the destination folder (-o is the switch and C:\soft is the argument)
+*.cpp:       only extract cpp files (C++)
+-r:          traverse all subdirectories
+
+How can I see what's inside an archive? Use the "l" command as shown above. You might want to use "l" in a utility that you run from a command line to make sure your batch archiving properly works.
+Warning: exclamation mark
+
+How can I exclude certain files? Near the start we saw how to add files based on filters, but sometimes you want to manually exclude certain files. Use the -x switch, followed immediately with an exclamation mark and then the filename.
+
+So:If you want to exclude "file1.txt", use the switch "-x!file1.txt". Please include the hyphen and exclamation.
+
+How can I replace files already on disk with new files? By using the -ao switch, described above. There are other options, and it is usually a better idea to use one of the renaming options (-aou or -aot).
+
+Can I ignore extracting files already on disk? Yes—please specify the -aos option, which means "skip overwriting files." This will cause 7za.exe to not copy the newer files out of the archive.
+
+Note:Use -aos if your files don't change over time and overwriting would just be a waste.
+Embed
+Framework: NET
+
+You can embed 7-Zip in a Windows .NET program using the tutorial in my article about .NET 7-Zip. This yields the same great compression but in your own GUI. The link shows some compression ratios.
+7-Zip Executable Tutorial: Process.Start
+Internal settings
+
+You can change internal settings. You do not need to do this normally, as they are set automatically. I recommend just using the mx=0 (and 3, 5, 7, 9) settings. An in-depth study would be fascinating.
+
+What values can I change in the internals? You can change compression filters, which change behaviors on executable files such as *.exe and *.dll. You can enable header compression and encryption (-mhc=on and -mhe=on).
+
+Tip:Header compression is by default enabled.
+Encryption must be explicitly enabled.
+AdvanceCOMP
+
+You can use AdvanceCOMP to improve compression ratios. The improvement is often small, less than 1%. 7-Zip and AdvanceCOMP use the same Deflate encoder, but AdvanceCOMP has more options and is more fine-grained.
+AdvanceCOMP
+Summary
+
+We invoked 7-Zip on the command line. This provides superior compression with an open-source tool. We created new archives, added to existing archives, used different formats for compression, and used various strengths of compression.
+
+So:I suggest you try the different options: experiment with balancing time required and strength of compression.
+
+C#: Compression
+
+
+
+======================================
+==
+==end copy pasta
+==
+========================================

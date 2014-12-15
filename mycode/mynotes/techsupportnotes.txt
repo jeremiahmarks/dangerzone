@@ -1,0 +1,76 @@
+curret situation:
+
+	when attempting to boot boot fails and displays screen that states : 
+		"ALERT! ALERT! /dev/disk/by-uuid/asdfasdf   does not exist. Dropping to shell"
+
+What I have done so far:
+	formatted all disks on computer and reinstalled OS
+
+Now:
+	working from http://www.linuxquestions.org/questions/linux-laptop-and-netbook-25/alert-dev-disk-by-uuid-does-not-exist-ubuntu-1-1-10-2-1ubuntu7-please-help-718554/#post3506207
+
+	rebooted from livecd (actually livesd)
+	ran lsblk and got outputof uuids. 
+	mounted actual install
+	opened fstab
+	uuids in fstab are same uuids listed in ls -l /dev/disk/by-uuid/
+
+
+
+
+    ubuntu@ubuntu:~$ ls -l /dev/disk/by-uuid/
+    total 0
+    lrwxrwxrwx 1 root root 10 May 21 08:09 11AA-7976 -> ../../sda1
+    lrwxrwxrwx 1 root root 10 May 21 08:09 1f377020-d086-4feb-a5c1-ecc737075afc -> ../../sdb5
+    lrwxrwxrwx 1 root root 10 May 21 08:09 32b3bb48-73b9-44fa-971b-dd0a5db82d49 -> ../../sdb1
+    ubuntu@ubuntu:~$
+
+    rebooting
+
+    same error, note, it is uuid 32b3bb48-73b9-44fa-971b-dd0a5db82d49 that is causing the issues. 
+
+    reboot, attempted to remove other drive from bios, unable to, however was able to move other drive to higher boot priority (it should be blank, so I am interested to see what happens)
+
+    Also disabled quickboot
+
+    rebooted
+
+    same issue
+
+    attempted modified version of this post: http://ubuntuforums.org/showthread.php?t=2017580&p=12078319#post12078319
+
+	    booted to grub
+	    changed all mentions of 32b3bb48-73b9-44fa-971b-dd0a5db82d49 to /dev/sdb1
+	    similar issue, states that /dev/sdb1 does not exist. 
+
+	found post http://ubuntuforums.org/showthread.php?t=981159&p=6169849#post6169849
+
+		waited for time (approx45 seconds), entered "exit", 
+		success, able to boot into ubuntu.
+
+		added line to grub.cfg 
+			rootdelay=90
+		in choice for ubuntu.
+
+	reboot, same issue (wait, type exit, good to go. )
+
+	found this post : http://askubuntu.com/questions/462650/cannot-open-ubuntu-stuck-with-intramfs/467978#467978
+
+	edited /etc/default/grub from 
+		GRUB_CMDLINE_LINUX=" "
+		to
+		GRUB_CMDLINE_LINUX="rootdelay=90 nomodeset "
+	ran sudo update-grub
+
+	reboot
+
+	boots to ubuntu
+
+	poweroff
+
+	success, boots to ubuntu
+
+
+
+
+

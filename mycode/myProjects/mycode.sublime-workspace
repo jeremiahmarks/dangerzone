@@ -1,0 +1,298 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cm",
+				"cmake28"
+			],
+			[
+				"cm28",
+				"cm28needtoinstall"
+			],
+			[
+				"cmake",
+				"cmake28"
+			],
+			[
+				"bas",
+				"bash_profile"
+			],
+			[
+				"taskd",
+				"taskdconfig"
+			]
+		]
+	},
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 138.0,
+		"selected_items":
+		[
+			[
+				"snippl",
+				"Snipplr: Upload a snippet"
+			],
+			[
+				"snipp",
+				"Snipplr: Upload a snippet"
+			],
+			[
+				"new",
+				"ANF: New File"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"op",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"com",
+				"Toggle Comment"
+			]
+		],
+		"width": 402.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/jlmarks/mycode/mylogs/gdsync-2014-04-16-17:06:05.log",
+		"/home/jlmarks/mycode/mynotes/jobs applied to/infusionsoft/jobposting.html",
+		"/home/jlmarks/Downloads/01-chapter4.markdown",
+		"/home/jlmarks/.gvfs/SFTP for root on 192.168.1.108/etc/httpd/conf/httpd.conf",
+		"/home/jlmarks/mycode/mynotes/software notes/date",
+		"/home/jlmarks/mycode/mynotes/software notes/rsync",
+		"/home/jlmarks/mycode/mynotes/software notes/sshfs",
+		"/home/jlmarks/mycode/mynotes/software notes/mount",
+		"/home/jlmarks/remotesystems/bje/oldbackups/home/jlmarks/t.sh",
+		"/home/jlmarks/Downloads/responsive/rtl.css",
+		"/home/jlmarks/Downloads/responsive/style.css",
+		"/home/jlmarks/mycode/mybash/newInstalls/brilliantjennyiptables.sh",
+		"/home/jlmarks/.gvfs/SFTP for jlmarks on 192.168.1.132/home/jlmarks/.taskrc",
+		"/home/jlmarks/.gvfs/SFTP for root on 192.168.1.108/etc/init.d/tomcat",
+		"/home/jlmarks/catalina.out",
+		"/home/jlmarks/.gvfs/SFTP for root on 192.168.1.108/etc/profile.d/javahome.sh",
+		"/home/jlmarks/.gvfs/SFTP for jlmarks on 192.168.1.108/home/jlmarks/tomcatdem.sh",
+		"/home/jlmarks/.taskrc",
+		"/home/jlmarks/.gvfs/SFTP for root on 192.168.1.108/etc/profile.d/colorls.csh",
+		"/home/jlmarks/.gvfs/SFTP for root on 192.168.1.108/etc/profile.d/less.sh",
+		"/home/jlmarks/.gvfs/SFTP for root on 192.168.1.108/etc/profile.d/lang.sh",
+		"/home/jlmarks/.gvfs/SFTP for root on 192.168.1.108/etc/profile",
+		"/home/jlmarks/.gvfs/SFTP for root on 192.168.1.108/etc/bashrc",
+		"/home/jlmarks/.gvfs/SFTP for jlmarks on 192.168.1.108/etc/httpd/conf/httpd.conf",
+		"/home/jlmarks/.gvfs/SFTP for jlmarks on 192.168.1.108/home/jlmarks/public_html/index.html",
+		"/home/jlmarks/mycode/mygits/taskdsetup/RHEL/twRHEL.sh",
+		"/home/jlmarks/mycode/mygits/taskdsetup/arch/tempArch.sh",
+		"/home/jlmarks/mycode/mygits/taskdsetup/arch/twArch.sh",
+		"/home/jlmarks/mycode/mygits/taskdsetup/debianOSs/twMINTfinal.sh",
+		"/home/jlmarks/mycode/mygits/taskdsetup/arch/taskd.service",
+		"/home/jlmarks/newjnl.txt",
+		"/home/jlmarks/1jnl.txt",
+		"/home/jlmarks/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/jlmarks/bj.sshd_config",
+		"/home/jlmarks/a1/totar/.taskrc",
+		"/home/jlmarks/jnl.txt",
+		"/home/jlmarks/1all.txt",
+		"/home/jlmarks/mycode/mygits/taskdsetup/RHEL/testa.sh",
+		"/home/jlmarks/mycode/mybash/twtssetupCENTOS.sh",
+		"/home/jlmarks/totar/.taskrc",
+		"/home/jlmarks/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/jlmarks/mycode/mygits/taskdsetup/debianOSs/clientsetup.sh",
+		"/home/jlmarks/totar/taskrc",
+		"/home/jlmarks/home/jlmarks/totar/server.txt",
+		"/etc/fstab",
+		"/etc/fuse.conf",
+		"/home/jlmarks/mycode/mygits/taskdsetup/README.md",
+		"/home/jlmarks/mycode/mygits/taskdsetup/debianOSs/taskd",
+		"/home/jlmarks/.bashrc",
+		"/home/jlmarks/.bash_profile",
+		"/home/jlmarks/mycode/mybash/twMINTfinal.sh",
+		"/home/jlmarks/mycode/mygits/taskdsetup/taskd",
+		"/home/jlmarks/mycode/mygits/taskdsetup/taskd.conf",
+		"/home/jlmarks/mycode/mybash/autostartFiles/taskd.sh",
+		"/home/jlmarks/.gvfs/SFTP for jlmarks on 192.168.1.108/home/jlmarks/test.sh",
+		"/home/jlmarks/.gvfs/SFTP for jlmarks on 192.168.1.108/home/jlmarks/tw.sh",
+		"/home/jlmarks/mycode/mybash/iptablesForCentOS.sh",
+		"/home/jlmarks/Desktop/rsnapshot.conf",
+		"/home/jlmarks/Desktop/server1.rsnapshot.conf",
+		"/home/jlmarks/mycode/mybash/twCENTOSsudo.sh",
+		"/home/jlmarks/mycode/mybash/autostartFiles/init.dfile for rsync.txt",
+		"/etc/init.d/skeleton",
+		"/etc/init.d/apache2",
+		"/home/jlmarks/mycode/mybash/autostartFiles/readme from init.d.txt",
+		"/home/jlmarks/mycode/mybash/twtsetup1.sh",
+		"/usr/local/bin/taskdctl",
+		"/home/jlmarks/mycode/mybash/twMINTAutoStart1703.sh",
+		"/home/jlmarks/mycode/mybash/tcsT.sh",
+		"/etc/init.d/virtualbox",
+		"/etc/rc2.d/README",
+		"/etc/init/lightdm.conf",
+		"/etc/init/console.conf",
+		"/home/jlmarks/.profile",
+		"/home/jlmarks/Downloads/twtssetup.sh",
+		"/home/jlmarks/mycode/mynotes/software notes/taskwarrior",
+		"/home/jlmarks/mycode/mybash/twtssetup.sh",
+		"/home/jlmarks/mycode/mybash/psuedo.sh",
+		"/home/jlmarks/mycode/mygits/tasknc/cmake/Modules/Findcurses.cmake",
+		"/home/jlmarks/Downloads/CentOS-6.5-i386-minimal/md5sum.txt",
+		"/home/jlmarks/.gvfs/SFTP for jlmarks on 192.168.1.108/home/jlmarks/twts2.sh",
+		"/home/jlmarks/Desktop/jlmarksFinalServer.taskdconfig",
+		"/home/jlmarks/.gvfs/SFTP for root on 192.168.1.108/etc/rc.d/rc.local",
+		"/home/jlmarks/.gvfs/SFTP for jlmarks on 192.168.1.108/etc/rc.d/rc.local",
+		"/home/jlmarks/.gvfs/SFTP for jlmarks on 192.168.1.108/home/jlmarks/.bashrc",
+		"/home/jlmarks/.gvfs/SFTP for jlmarks on 192.168.1.108/etc/profile",
+		"/home/jlmarks/.gvfs/SFTP for jlmarks on 192.168.1.108/home/jlmarks/.bash_profile",
+		"/home/jlmarks/.gvfs/SFTP for jlmarks on 192.168.1.149/home/jlmarks/psuedo.sh",
+		"/home/jlmarks/Desktop/jlmarkscentos.taskdconfig",
+		"/home/jlmarks/mycode/mybash/scp1.sh",
+		"/home/jlmarks/.ssh/config",
+		"/home/jlmarks/brilliantjenny/.bash_history",
+		"/home/jlmarks/.gvfs/SFTP for jlmarks on 192.168.1.108/home/jlmarks/tester.sh",
+		"/home/jlmarks/brilliantjenny/scp1.sh",
+		"/home/jlmarks/.irssi/scripts/autorun/hilightwin.pl",
+		"/home/jlmarks/man.yum.txt",
+		"/home/jlmarks/mycode/mynotes/notes.sublime-workspace",
+		"/home/jlmarks/abs.txt",
+		"/home/jlmarks/juser.taskdconfig",
+		"/home/jlmarks/11.txt",
+		"/home/jlmarks/mycode/mybash/test.sh",
+		"/home/jlmarks/.config/autostart/dropbox.desktop",
+		"/home/jlmarks/Downloads/newinstall.sh",
+		"/home/jlmarks/.config/autostart/taskdctl.desktop",
+		"/home/jlmarks/taskd/demo/server/jlmarks.taskdconfig",
+		"/home/jlmarks/.task/taskd/demo/server/setup",
+		"/home/jlmarks/taskd/demo/server/uuser.key",
+		"/home/jlmarks/16:51:20.out.txt"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"log",
+			"<D",
+			"<d",
+			"<Loc",
+			"documentroot",
+			"NameV",
+			"Location",
+			"cmake .",
+			"$TASKDDATA/..",
+			"~",
+			"sudo ",
+			"sudo",
+			"~",
+			"INCLUDE_",
+			"",
+			": ",
+			"| tee $FN",
+			"\n  | tee $FN",
+			"\n | tee",
+			"$TASKD ",
+			"$ROOT ",
+			"$ROOT"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 285.0,
+	"status_bar_visible": true
+}
