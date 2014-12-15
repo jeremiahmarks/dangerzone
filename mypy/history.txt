@@ -1,0 +1,546 @@
+    1  cd html/
+    2  ls
+    3  mkdir todo
+    4  cd todo
+    5  vi todo.py
+    6  ls
+    7  cd ..
+    8  ls
+    9   ls *.py
+   10  vi microThoughts.py 
+   11  cd portfolio/
+   12  ls
+   13  cd ..
+   14  ls
+   15  cd Python/
+   16  ls
+   17  vi default.html 
+   18  ls
+   19  vi pylibs.html 
+   20  ls
+   21  cd ..
+   22  ls
+   23  cd my_stuff/
+   24  ls
+   25  cd ../portfolio/
+   26  ls
+   27  vi adec.py 
+   28  vi init.py 
+   29  cd _in_progress/
+   30  ls
+   31  cd mypy2/
+   32  ls
+   33  vi gcalu.py
+   34  ls
+   35  cd ..
+   36  ls
+   37  cd ..
+   38  ls
+   39  cd ..
+   40  ls
+   41  cd todo
+   42  ls
+   43  rm Details.html
+   44  cp Details.html~ Details.html
+   45  rm Details.html~
+   46  ls
+   47  vi Details.html 
+   48  vi Details.html 
+   49  vi Details.html 
+   50  vi Details.html 
+   51  vi Details.html 
+   52  vi results.py
+   53  vi Details.html 
+   54  vi Details.html 
+   55  vi results.py
+   56  vi results.py
+   57  vi Details.html 
+   58  vi todo.py
+   59  break() asdf
+   60  quit
+   61  q
+   62  q() a
+   63  a() q!
+   64  !
+   65  q() a
+   66  Q1
+   67  q!
+   68  cd html
+   69  ls
+   70  vi mycode.html
+   71  ls
+   72  cd html
+   73  cd todo
+   74  vi index.htm
+   75  ls
+   76  cd html
+   77  cd byron
+   78  ls
+   79  vi index.htm 
+   80  cd html/
+   81  cd todo
+   82  ls
+   83  vi todo.py 
+   84  chmod todo.py 333
+   85  chmod 333 todo.py 
+   86  chmod 777 todo.py 
+   87  chmod +x todo.py 
+   88  vi todo.py 
+   89  vi todo.py 
+   90  vi todo.py 
+   91  ls
+   92  chmod 333 todo.py 
+   93  ls
+   94  ls-l
+   95  ls -l
+   96  chmod 734 todo.py 
+   97  ls -l
+   98  chmod 700 todo.py 
+   99  ls -l
+  100  ls ../byron/
+  101  vi index.htm
+  102  cd ../portfolio/
+  103  ls
+  104  vi mywysiwyg.php 
+  105  vi mywysiwyg.php 
+  106  vi editorview.php
+  107  vi mywysiwyg.php 
+  108  get editorview.php 
+  109  vi mywysiwyg.php 
+  110  vi editorview.php
+  111  vi editorview.php
+  112  cd html/
+  113  cd portfolio/
+  114  ls
+  115  ls -a
+  116  ls -l
+  117  vi editorview.php.txt 
+  118  chmod 644 mywysiwyg.php.txt 
+  119  ls -l
+  120  cp mywysiwyg.php mywysiwyg.txt
+  121  cp editorview.php editorview.txt
+  122  ls
+  123  pwd
+  124  cd ..
+  125  la
+  126  ls
+  127  cd portfolio/dailycodingchallenges/
+  128  ls
+  129  vi dailytwo.txt
+  130  cd html/portfolio/dailycodingchallenges/
+  131  ls
+  132  cp dailytwo.java dailytwo.txt
+  133  ls
+  134  vi dailytwo.txt 
+  135  cd html
+  136  vi notes.txt
+  137  cd html
+  138  vi log.html 
+  139  vi log.html 
+  140  vi log.html 
+  141  cd html
+  142  ls
+  143  cp resume.pdf Resume.pdf
+  144  ls
+  145  rm resume.pdf 
+  146  ls
+  147  cd htmlk
+  148  cd html
+  149  ls
+  150  cp notes.txt ./todo/
+  151  cd todo
+  152  ls
+  153  cd ..
+  154  cp tobuy.txt ./todo/
+  155  cp schedule.txt ./todo/
+  156  cp todo.txt ./todo
+  157  cp programming.txt ./todo/
+  158  cd todo
+  159  vi todo.txt 
+  160  ls
+  161  cd ..
+  162  ls
+  163  cp PersonalManifesto.txt ./todo/
+  164  ls
+  165  cd html
+  166  ls
+  167  cp default.html old_default.html
+  168  rm default.html
+  169  ls
+  170  cd html
+  171  ls
+  172  cd todo
+  173  ls
+  174  cp index.htm oldlog.html
+  175  vi index.htm 
+  176  gedit index.htm 
+  177  bye
+  178  quit()
+  179  quit
+  180  logout
+  181  logout
+  182  cd html
+  183  cd todo
+  184  ls
+  185  nano index.htm 
+  186  vi
+  187  vi index.htm 
+  188  vi index.htm 
+  189  vi index.htm 
+  190  ls
+  191  logout
+  192  ls
+  193  vi crontab 
+  194  cd html
+  195  ls
+  196  vi web.html 
+  197  nano web.html 
+  198  micro
+  199  ls
+  200  cd /
+  201  ls
+  202  cd sbin
+  203  ls
+  204  ps
+  205  ps -u jeremiahmarks
+  206  time ls
+  207  ifcfg
+  208  /sbin/ifcfg
+  209  cd .
+  210  ls
+  211  cd ..
+  212  ls
+  213  cd home
+  214  ls
+  215  cd ..
+  216  ls
+  217  cd usr
+  218  ls
+  219  cd ..
+  220  cd /
+  221  cd ~
+  222  ls
+  223  pwd
+  224  cd /var/chroot/home/content/06/8404606/
+  225  su
+  226  ls
+  227  cd html
+  228  ls
+  229  man l;s
+  230  man ls
+  231  ls -d
+  232  ls -D
+  233  man ls
+  234  ls -1 -R
+  235  time ls -R
+  236  ls -d
+  237  ls
+  238  man ls
+  239  ls --directory
+  240  ls -1
+  241  ls -l -a
+  242  cd Python/
+  243  ls
+  244  man ssh-agent
+  245  man sftp
+  246  sftp jlmarks@68.2.60.64
+  247  man sdiff
+  248  a
+  249  man arch
+  250  arch
+  251  man aserver\
+  252  man aserver
+  253  man aspell
+  254  aspell 
+  255  aspell -c default.html
+  256  ls
+  257  aspell -c ./pyleft.html
+  258  logout
+  259  ls
+  260  cd html
+  261  ls
+  262  cd microThoughts
+  263  ls
+  264  vi tester.html
+  265  cd ..
+  266  cd notes/
+  267  ls
+  268  vi SQLNotes.txt 
+  269  logout
+  270  ls
+  271  cd html
+  272  pwd
+  273  ls
+  274  vi missing.html 
+  275  logout
+  276  ls
+  277  cd html
+  278  ls
+  279  vi microThoughts.txt 
+  280  touch thoughtsfromgodaddy.txt
+  281  vi thoughtsfromgodaddy.txt 
+  282  vi e1.php 
+  283  mkdir godaddy
+  284  cd godaddy
+  285  ls
+  286  cp study.pdf ./html/study.pdf
+  287  logou5t
+  288  logout
+  289  logout
+  290  ls
+  291  cp study* ./html
+  292  rm study*
+  293  ls
+  294  cd html
+  295  ls
+  296  ls *.pdf
+  297  logout
+  298  cd html
+  299  ls
+  300  cd godaddy
+  301  ls
+  302  cd ..
+  303  tail thoughtsfromgodaddy.txt 
+  304  rm thoughtsfromgodaddy.txt 
+  305  rmdir godaddy
+  306  ls
+  307  ls -la
+  308  cd html/forwardsto/
+  309  ls
+  310  vi index.html 
+  311  ls -l index.html 
+  312  logout
+  313  cd html
+  314  ls
+  315  ls -l 
+  316  ls -l lincom.pdf 
+  317  chmod +r lincom.pdf 
+  318  ls -l lincom.pdf 
+  319  cd html
+  320  ls
+  321  rm byron.html 
+  322  ls
+  323  cd ht
+  324  vi index.php.compromised 
+  325  cd html
+  326  cd html
+  327  ls
+  328  vi index.php 
+  329  cd ..
+  330  ls
+  331  cd tmp_my_stuff/
+  332  ls
+  333  ls -a
+  334  cd ..
+  335  ls
+  336  cd tmp
+  337  ls
+  338  cd ../scc/
+  339  ls
+  340  cat jeremiahmarks.acct 
+  341  cd ..
+  342  ls 
+  343  cd met_QqjjzZ/
+  344  ls
+  345  ls -a
+  346  cd ..
+  347  cat index.php.compromised 
+  348  ls -laR
+  349  ls -laR > ls-laR.txt
+  350  nano
+  351  vi ls-laR.txt 
+  352  less ls-laR.txt 
+  353  cd html/forwardsto/
+  354  ls
+  355  vi redir.php
+  356  logout
+  357  ls
+  358  cat index.php.compromised 
+  359  ls -l
+  360  cd /html/hacked
+  361  cd html/
+  362  cd hacked/
+  363  ls
+  364  touch index.html
+  365  cp index.php.compromised text.txt
+  366  vi index.html 
+  367  vi index.html 
+  368  cp index.php.compromised iphp.html
+  369  logout
+  370  cd html/hacked/
+  371  ls -l
+  372  logout
+  373  get
+  374  put
+  375  PUT
+  376  GET
+  377  logout
+  378  cd html/wal/
+  379  cp Screenshot\ from\ 2013-04-26\ 17\:19\:38.png w0.png
+  380  cp Screenshot\ from\ 2013-04-26\ 17\:21\:07.png w1.png
+  381  cp w0.png w2.png
+  382  ls
+  383  logout
+  384  logout
+  385  pwd
+  386  logout
+  387  ~/djcode/
+  388  logout
+  389  cd html
+  390  ls -l
+  391  cd mypy
+  392  ls
+  393  /usr/bin/python2.7 virtualenv.py --system-site-packages djangoenv
+  394  /usr/local/bin/python2.7 virtualenv.py --system-site-packages djangoenv
+  395  s
+  396  ls
+  397  pwd
+  398  ~
+  399  mkdir ~/djcode
+  400  cd djangoenv/
+  401  ls
+  402  cd bin
+  403  ls
+  404  source ./activate
+  405  pip install django
+  406  python
+  407  python -c "import django; print(django.get_version())"
+  408  pwd
+  409  django-admin.py startproject /var/chroot/home/content/06/6816406/djcode/project1
+  410  cd /var/chroot/home/content/06/6816406/djcode/
+  411  django-admin.py startproject project1
+  412  ls
+  413  cd project1/
+  414  ls
+  415  pip install flup
+  416  ls
+  417  cd project1/
+  418  ls
+  419  vi settings.py 
+  420  python ../manage.py syncdb
+  421  mysql
+  422  pwd
+  423  cd ..
+  424  ls
+  425  python manage.py startapp polls
+  426  cd ..
+  427  pwd
+  428  touch django_cgi.py
+  429  vi django_cgi.py 
+  430  cp django_cgi.py ./project1/polls/models.py 
+  431  vi django_cgi.py 
+  432  vi django_cgi.py 
+  433  ls
+  434  cd ../html/
+  435  ls .htaccess 
+  436  vi .htaccess 
+  437  vi ./project1.cgi
+  438  vi ./project1.cgi
+  439  vi .htaccess 
+  440  ls ~ -a
+  441  mkdir ~/.ssh
+  442  mkdir ~/.ssh/authorized_keys
+  443  sftp jlmarks@brilliantjenny.com
+  444  ls
+  445  cd ~/.ssh/
+  446  ls
+  447  rmdir authorized_keys/
+  448  ls ../ -l
+  449  ls ../ -la
+  450  chmod 700 ~/.ssh
+  451  bye
+  452  ls .ssh/ -l
+  453  ls .ssh/ -la
+  454  ls djcode/ -la
+  455  chmod djcode/django_cgi.py 755
+  456  chmod 755 djcode/django_cgi.py
+  457  ls
+  458  cd html
+  459  ls dj* -l
+  460  ls -l
+  461  ls *.cgi
+  462  ls *.cgi -l
+  463  cat project1.cgi 
+  464  chmod 755 project1.cgi 
+  465  ls project1.cgi -l
+  466  ls
+  467  cd djcode/
+  468  ls
+  469  cat django_cgi.py 
+  470  cd project1/
+  471  ls
+  472  cd project1/
+  473  ls
+  474  cat settings.py
+  475  cd project1/
+  476  cd ..
+  477  ls
+  478  cat manage.py 
+  479  cd ..
+  480  ls
+  481  cat django_cgi.py 
+  482  vi django_cgi.py 
+  483  logout
+  484  cd djcode/
+  485  ls
+  486  cd project1/
+  487  ls
+  488  cd project1/
+  489  ls
+  490  cd ../../../html/
+  491  cd ./mypy/djangoenv/
+  492  ls
+  493  cd bin/
+  494  ls
+  495  source ./activate
+  496  logout
+  497  ls -la
+  498  cd .ssh/
+  499  ls
+  500  cat authorized_keys 
+  501  python -c "import django; print(django.get_version())"
+  502  activate ./html/mypy/djangoenv/
+  503  activate ./html/mypy/djangoenv/bin/activate
+  504  source ./html/mypy/djangoenv/bin/activate
+  505  python -c "import django; print(django.get_version())"
+  506  cd ./djcode/
+  507  ls
+  508  cd project1/
+  509  ls
+  510  python manage.py runserver
+  511  cd
+  512  ls
+  513  cd djcode/
+  514  ls
+  515  cd project1/project1/settings.py
+  516  cd project1/project1/
+  517  vi settings.py
+  518  python manage.py runserver
+  519  cd ..
+  520  python manage.py runserver
+  521  pwd
+  522  cd project1/project1/
+  523  cd project1/
+  524  vi settings.py
+  525  pip install mysql-python
+  526  cd ..
+  527  pwd
+  528  python manage.py runserver
+  529  logout
+  530  source ./html/mypy/djangoenv/bin/activate
+  531  pip install mysql-python
+  532* 
+  533  python
+  534  quit
+  535* 
+  536  pwd
+  537  cd html/mypy/
+  538  ls
+  539  mkdir ~/html/.virtualenv
+  540  /usr/bin/python2.7 virtualenv.py --system-site-packages ~/html/.virtualenv
+  541  /usr/local/bin/python 2.7 virtualenv.py --system-site-packages ~/html/.virtualenv/pythonenv
+  542  /usr/local/bin/python2.7 virtualenv.py --system-site-packages ~/html/.virtualenv/pythonenv
+  543  source ~/html/.virtualenv/pythonenv/bin/activate
+  544  python
+  545  history
+  546  history > history.txt

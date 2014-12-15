@@ -1,0 +1,52 @@
+
+
+from turtle import Turtle
+
+class MyTurtle(Turtle):
+    """
+    This function uses Turtle as a parent function and adds a jump, gohome, and clean home method to the default methods. 
+    
+    Jump will retract the turtles pen, move it 'distance' units in the direction it is facing, and then put its pen back on the ground.
+    
+    gohome simply jumps the turtle home
+    
+    clean home jumps the turtle home and then cleans up his tracks
+    
+    """
+    def jump(self, distance):
+        self.pu()
+        self.forward(distance)
+        self.pd()
+        
+    def gohome(self):
+        self.pu()
+        self.goto(0,0)
+        self.pd()
+        
+    def cleanhome(self):
+        self.gohome()
+        self.clear()
+
+
+def triala():
+    fred = MyTurtle()
+    herb=MyTurtle()
+    for x in range (2, 180):
+        fred.forward(x)
+        fred.right(x)
+        herb.forward(x)
+        herb.left(x)
+
+def trialb():
+    a=MyTurtle()
+    a.speed(0)
+    for x in range (2, 3000):
+        a.forward(x%100)
+        a.right(91.5)
+        
+def trialc(turts, angle):
+    turts.cleanhome()
+    turts.speed(0)
+    for it in range(1,6000):
+        turts.fd(it/2+3)
+        turts.left(angle)
