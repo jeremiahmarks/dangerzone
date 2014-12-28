@@ -56,7 +56,9 @@ def savetocircles(aturtle,afilename=None,aheight=None,awidth=None,ax=None,ay=Non
   
   if not afilename:
     datetime.datetime.now()
-    afilename='circles/'+datetime.datetime.now().strftime('%Y-%b-%d_%H:%M:%S.%f'+'.eps')
+    afilename='circles/'+datetime.datetime.now().strftime('%Y%b%d%H%M%S%f'+'.eps')
+  else:
+    afilename='circles/'+datetime.datetime.now().strftime('%Y%b%d%H%M%S%f'+afilename+'.eps')
   aturtle.getscreen().getcanvas().postscript(file=afilename, height=aheight, width=awidth, x=ax, y=ay)
   if togif:
     with Image(filename=afilename) as img:

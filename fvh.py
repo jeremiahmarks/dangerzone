@@ -26,7 +26,7 @@ import random
 import datetime
 from wand.image import Image
 import fvhmans
-
+import fvh2
 
 
 class MyTurtle(Turtle):
@@ -43,14 +43,14 @@ class MyTurtle(Turtle):
     clean home jumps the turtle home and then cleans up its tracks
     
     """
-    #Turtle.speed(0)
 
-    #def __init__(self):
-    #    self.setup()
-    #    lm=Turtle()
-    #    lm.speed(0)
-    #    lm.ht()
-    #    return lm
+
+    def __init__(self):
+        super(MyTurtle, self).__init__()
+        self.setup()
+        self.speed(0)
+        self.ht()
+        return None
         
     def setup(self):
         self.ht()
@@ -69,33 +69,46 @@ class MyTurtle(Turtle):
     def cleanhome(self):
         self.gohome()
         self.clear()
-        
+
+    def jumpto(self, destination):
+        self.pu()
+        if (type(destination)==type(())):
+            self.goto(destination[0],destination[1])
+        else:
+            self.goto(destination)
+        self.pd()
     #Turtle.speed(0)
     #Turtle.ht()
 
-def coolercirclesaa():
-  import math
-  lm=MyTurtle()
-  
+def coolercirclesaa(lm=MyTurtle()):
+  fname="coolercirclesaa"
+  import math  
   lm.ht()
   lm.speed(0)
   numofpoints=25
   degperpt=360.0/numofpoints
   pointmap={}
   for point in range(numofpoints):
+    lm.tracer(False)
     lm.gohome()
     lm.setheading(point*degperpt)
     lm.pu()
     lm.fd(250)
     pointmap[point]=lm.position()
+    lm.tracer(True)
+    fvh2.savetocircles(lm, afilename=fname)
   for apoint in range (numofpoints):
+    lm.tracer(False)
     lm.gohome()
     lm.setheading(apoint*degperpt)
     lm.pu()
     lm.fd(500)
     pointmap[numofpoints+apoint]=lm.position()
+    lm.tracer(True)
+    fvh2.savetocircles(lm, afilename=fname)
   for start in range(0,len(pointmap)):
     for end in range(start+1,len(pointmap)):
+      lm.tracer(False)
       lm.goto(pointmap[start])
       lm.seth(lm.towards(pointmap[end]))
       lm.bk(800)
@@ -103,9 +116,11 @@ def coolercirclesaa():
       lm.goto(pointmap[end])
       lm.fd(800)
       lm.pu()
-
+      lm.tracer(True)
+      fvh2.savetocircles(lm, afilename=fname)
 
 def triala():
+
     fred = MyTurtle()
     herb=MyTurtle()
     for x in range (2, 180):
@@ -126,13 +141,10 @@ def trialb():
     for it in range(1,6000):
         turts.fd(it/2+3)
         turts.left(angle)
-
-def trialc2(truts, angle, revolutions):
-    pass
   
+def triald(angle):
 
         
-def triald(angle):
     mover=MyTurtle()
     mover.speed(0)
     mover.setup()
@@ -169,9 +181,8 @@ def prettyDraw():
       mover.jumpto(leftpoint)
       mover.goto(rightpoint)
   
-def pdraw(numOfLPoints,numOfRPoints):
-  
-  mover=MyTurtle()
+def pdraw(numOfLPoints,numOfRPoints, mover=MyTurtle()):
+  fname="pdraw_%sL_%sR"%(str(numOfLPoints),str(numOfRPoints))
   mover.speed(0)
   ts=MyTurtle.getscreen(mover)
   ts.screensize(600,600)
@@ -183,10 +194,13 @@ def pdraw(numOfLPoints,numOfRPoints):
   for x in range(-vBars, vBars, leftstep):
     for y in range (-hBars, hBars, rightstep):
       #print str(-hBars)+ ","+str(y)+" TO: "+str(hBars)+","+str(x)
+      mover.tracer(False)
       mover.pu()
       mover.goto((-hBars,-x))
       mover.pd()
       mover.goto((hBars,y))
+      mover.tracer(True)
+      fvh2.savetocircles(mover, afilename=fname)
       
 def triale(angle):
     mover=MyTurtle()
@@ -336,16 +350,16 @@ def doclockcharsb(astring):
     linemaker.goto(charmap[astring[eachchar+1]])
     
     
-def coolcircles():
-  import math
-  lm=MyTurtle()
-  
+def coolcircles(numofpoints,lm=MyTurtle()):
+  fname="coolcircles_%s"%(str(numofpoints))
+  import math  
   lm.ht()
   lm.speed(0)
-  numofpoints=55
+  # numofpoints=55
   degperpt=360.0/numofpoints
   pointmap={}
   for point in range(numofpoints):
+    lm.tracer(False)
     lm.gohome()
     lm.setheading(point*degperpt)
     lm.pu()
@@ -353,11 +367,14 @@ def coolcircles():
     pointmap[point]=lm.position()
   for start in range(0,numofpoints,int(math.sqrt(numofpoints))):
     for end in range(numofpoints):
+      lm.tracer(False)
       lm.goto(pointmap[start])
       lm.pd()
       lm.goto(pointmap[end])
       lm.pu()
-      print start, end
+      lm.tracer(True)
+      fvh2.savetocircles(lm, afilename=fname)
+#      print start, end
 
 def coolercircles():
   import math
@@ -407,7 +424,7 @@ def coolercircles():
       print start, end
 
 def coolestcircles(numofpoints, circlewidth, firststep=1, secondstep=1):
-  lm=MyTurtle()
+  
   lm.ht()
   lm.speed(0)
   ts=lm.getscreen()
