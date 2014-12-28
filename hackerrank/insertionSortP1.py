@@ -14,6 +14,10 @@ def insertionSort(ar):
 			ar[-(place-1)]=elementToPlace
 			placed=True
 			strToReturn+=str(ar).replace('[','').replace(']','').replace(',','')+"\n"
+		if (place==len(ar) and not (placed)):
+			ar[0]=elementToPlace
+			strToReturn += str(ar).replace('[','').replace(']','').replace(',','')+"\n"
+			placed=True
 	return strToReturn
 
 m = input()
