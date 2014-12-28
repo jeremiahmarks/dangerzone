@@ -9,10 +9,11 @@ def insertionSort(ar):
 	for place in range(2,len(ar)+1):
 		if (ar[-place]>elementToPlace):
 			ar[-(place-1)]=ar[-place]
+			strToReturn+=str(ar).replace('[','').replace(']','').replace(',','')+"\n"
 		elif ((ar[-place]<elementToPlace) and not placed):
 			ar[-(place-1)]=elementToPlace
 			placed=True
-		strToReturn+=str(ar).replace('[','').replace(']','').replace(',','')+"\n"
+			strToReturn+=str(ar).replace('[','').replace(']','').replace(',','')+"\n"
 	return strToReturn
 
 m = input()
