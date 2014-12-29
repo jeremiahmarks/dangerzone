@@ -1,48 +1,64 @@
 
 # from  https://www.hackerrank.com/challenges/quicksort3
 
+# Fails from test case 1
+# Test Case 1 input:
+# 9
+# 9 8 6 7 3 5 4 1 2
+# Test case 1 expected output:
+# 1 2 6 7 3 5 4 9 8
+# 1 2 6 7 3 5 4 8 9
+# 1 2 3 4 6 5 7 8 9
+# 1 2 3 4 6 5 7 8 9
+# 1 2 3 4 5 6 7 8 9
+# Test case 1 actual output:
+# 1 2 6 7 3 5 4 9 8
+# 1 2 6 7 3 5 4 9 8
+# 1 2 3 4 6 5 7 8 9
+
 def swapPositions(ar, pos1, pos2):
 	val1=ar[pos1]
 	ar[pos1]=ar[pos2]
 	ar[pos2]=val1
-	return ar
+	print str(ar).replace('[','').replace(']','').replace(',','')
 
 
-def quicksortInplace(ar,n):
-	retString=""
-	piv=ar[-1]
-	for location in range(len(ar)):
-		if (ar[location]<piv):
+def quicksortInPlace(ar,startLoc=0, endLoc=None):
+	if (endLoc==None):
+		endLoc=len(ar)-1
+	#print str(ar).replace('[','').replace(']','').replace(',','') + " " + str(startLoc) + " " + str(endLoc)
+	#raw_input('waiting')
+	pivotValue=ar[endLoc]
+	#print "pivot: " + str(pivotValue)
+	for location in range(startLoc,endLoc+1):
+		locVal=ar[location]
+		#print "locval: " + str(locVal)
+		if (locVal<pivotValue):
+			#print "less than"
 			pass
-		elif (ar[location]==piv):
-			for x in range(len(ar)):
-				if (ar[x]>piv):
-					ar=swapPositions(ar,x,-1)
-					if (len(ar)==n):
-						retString+= str(ar).replace('[','').replace(']','').replace(',','')+"\n"
-					if (len(ar[:x])>1):
-						ar=quicksortInplace(ar[:x],n)+ar[x:]
-					if (len(ar)==n):
-						retString+= str(ar).replace('[','').replace(']','').replace(',','')+"\n"
-					if (len(ar[x:])>1):
-						ar=ar[:x]+quicksortInplace(ar[x:],n)
-					if (len(ar)==n):
-						retString+= str(ar).replace('[','').replace(']','').replace(',','')+"\n"
-					break
+		elif (locVal==pivotValue):
+			#print "switchingThePivots"
+			pivoted=False
+			for newLocation in range(startLoc,endLoc+1):
+				if ((ar[newLocation]>=pivotValue) and not(pivoted)):
+					swapPositions(ar,newLocation,endLoc)
+					pivoted=True
+					if ((newLocation - startLoc)>1):
+						quicksortInPlace(ar,startLoc=startLoc, endLoc=newLocation-1)
+					if ((endLoc - newLocation)>1):
+						quicksortInPlace(ar,startLoc=newLocation+1, endLoc=endLoc)
 		else:
-			curloc=location+1
-			placed=False
-			while ((not placed) and (curloc<len(ar))):
-				if (ar[curloc]<piv):
-					curlocval=ar[curloc]
-					ar[curloc]=ar[location]
-					ar[location]=curlocval
-					placed=True
-				curloc+=1
-	if (len(ar)==n):
-		print retString
-	else:
-		return ar
+			#print "else"
+			currentLocation = location + 1
+			placed = False
+			while ((not placed) and (currentLocation<endLoc)):
+				if (ar[currentLocation]<pivotValue):
+					currentLocationValue=ar[currentLocation]
+					ar[currentLocation] = ar[location]
+					ar[location] = currentLocationValue
+					placed = True
+				currentLocation+=1
+	return ar
 
 m = input()
 ar = [int(i) for i in raw_input().strip().split()]
