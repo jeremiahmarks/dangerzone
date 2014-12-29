@@ -1,3 +1,6 @@
+
+#from https://www.hackerrank.com/challenges/icecream-parlor
+
 t = int(input()) # m= number of test cases
 
 for eachCase in range(t):
