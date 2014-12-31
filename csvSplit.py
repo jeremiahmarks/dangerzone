@@ -18,6 +18,7 @@
 # 	Report done
 
 import urllib2
+import filecmp
 
 LOCALFILENAME="localCSV.csv"
 NUMBEROFLOCALFILES=0
@@ -72,10 +73,27 @@ def recombineAndDiff():
 		else:
 			firstline=smallerFile.readline()
 			recombinedFile.write(smallerFile.read())
+		smallerFile.close()
 	recombinedFile.close()
+	if filecmp.cmp(LOCALFILENAME,"recombinedFile.csv"):
+		print """
+		The file has been sucessfully broken into several smaller files and then rebuilt from
+		those smaller files. The rebuilt file is the same as the original file, so data integrity
+		appears intact.
+		"""
+	else:
+		print """
+		The file has been broken into several smaller files and then rebuilt from those 
+		smaller files.  The rebuilt file does not appear to be the same file as the original
+		so data integrity is in question
+		"""
 
 		
 if __name__ == '__main__':
-	getRemoteFile()
+	downloaded=raw_input("Is file downloaded and in current directory currently? \n\n (y or n): ")
+	if (downloaded=='y' or downloaded=='Y'):
+		LOCALFILENAME=raw_input("please enter file name")
+	else:
+		getRemoteFile()
 	processFile()
 	recombineAndDiff()
