@@ -20,6 +20,7 @@
 import urllib2
 
 LOCALFILENAME="localCSV.csv"
+NUMBEROFLOCALFILES=0
 
 def getRemoteFile():
 	global LOCALFILENAME
@@ -28,22 +29,24 @@ def getRemoteFile():
 	"""
 	floc=raw_input("Please provide location of file")
 	cfile= urllib2.urlopen(str(floc))
+	LOCALFILENAME = floc[floc.rindex('/')+1:]
 	outputFile = open(LOCALFILENAME,'wb')
 	outputFile.write(cfile.read())
 	outputFile.close()
 
 def processFile():
 	global LOCALFILENAME
+	global NUMBEROFLOCALFILES
 	numberOfLines=sum(1 for line in open(LOCALFILENAME)) - 1
 	print """
 	There are %s lines in this file.  How many files would you like this file broken into? 
 	""" %(str(numberOfLines))
-	numberOfFiles = int(raw_input())
-	linesPerNormalFile=numberOfLines/numberOfFiles
-	linesPerFirstFile= linesPerNormalFile+numberOfLines%numberOfFiles
+	NUMBEROFLOCALFILES = int(raw_input())
+	linesPerNormalFile=numberOfLines/NUMBEROFLOCALFILES
+	linesPerFirstFile= linesPerNormalFile+numberOfLines%NUMBEROFLOCALFILES
 	localFile=open(LOCALFILENAME)
 	firstLine=localFile.readline()
-	for x in range(numberOfFiles):
+	for x in range(NUMBEROFLOCALFILES):
 		smallerFileName="%03d" % x + LOCALFILENAME
 		smallerFile=open(smallerFileName,'wb')
 		smallerFile.write(firstLine)
@@ -54,4 +57,25 @@ def processFile():
 			for y in range(linesPerNormalFile):
 				smallerFile.write(localFile.readline())
 		smallerFile.close()
+	localFile.close()
+
+def recombineAndDiff():
+	global LOCALFILENAME
+	global NUMBEROFLOCALFILES
+	recombinedFileName="recombinedFile.csv"
+	recombinedFile=open(recombinedFileName,'wb')
+	for x in range(NUMBEROFLOCALFILES):
+		smallerFileName="%03d" % x + LOCALFILENAME
+		smallerFile=open(smallerFileName)
+		if (x==0):
+			recombinedFile.write(smallerFile.read())
+		else:
+			firstline=smallerFile.readline()
+			recombinedFile.write(smallerFile.read())
+	recombinedFile.close()
+
 		
+if __name__ == '__main__':
+	getRemoteFile()
+	processFile()
+	recombineAndDiff()
