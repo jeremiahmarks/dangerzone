@@ -1,0 +1,12 @@
+"Double quote" _every_ expansion, and anything that could contain a special character, eg. "$var", "$@", "${array[@]}", "$(command)". Use 'single quotes' to make something literal, eg. 'Costs $5 USD'. See <http://mywiki.wooledge.org/Quotes>, <http://mywiki.wooledge.org/Arguments> and <http://wiki.bash-hackers.org/syntax/words>.
+
+jlmarks: Always use [[ .. ]] for testing strings or files, (( .. )) for testing numbers and 'if ..'' for testing commands. Do *NOT* use [ .. ] in bash (only in sh). See <http://mywiki.wooledge.org/BashSheet#Tests> and <http://mywiki.wooledge.org/tests>. Difference between [ and [[: <http://mywiki.wooledge.org/BashFAQ/031>
+
+$(*) is not AT ALL the same as (*)
+(01:24:02 PM) nDuff: jlmarks, files=(*), by contrast, forms an array.
+
+jlmarks: By convention, environment variables (PATH, EDITOR, SHELL, ...) and internal shell variables (BASH_VERSION, RANDOM, ...) are fully capitalized. All other variable names should be lowercase. Since variable names are case-sensitive, this convention avoids accidentally overriding environmental and internal variables.
+
+
+
+ jlmarks: Don't use extensions for your scripts. Scripts define new commands that you can run, and commands are generally not given extensions. Do you run ls.elf? Also: bash scripts are *not* sh scripts (so don't use .sh) and the extension will only cause dependencies headaches if the script gets rewritten in another language. See http://www.talisman.org/~erlkonig/documents/commandname-extensions-considered-harmful
