@@ -1,249 +1,0 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="DreamPie Format" content="1">
-<title>DreamPie History</title>
-<style>
-body {
-  white-space: pre-wrap;
-  font-family: Courier New;
-  font-size: 10240;
-  color: #ffffff;
-  background-color: #000000;
-}
-span.folded {
- display: none;
-}
-span.commandsep {
- display: none;
-}
-span.command-defs {
-}
-span.command {
-}
-span.output {
-}
-span.fold-message {
-  color: #a7a7a7;
-  background-color: #003b6c;
-}
-span.message {
-  color: #ffff00;
-}
-span.prompt {
-  color: #e400b6;
-}
-span.exception {
-  color: #ff8080;
-}
-span.result-ind {
-  color: #0000ff;
-}
-span.result {
-  color: #bcffff;
-}
-span.stderr {
-  color: #ff8080;
-}
-span.stdout {
-  color: #bcffff;
-}
-span.stdin {
-}
-span.bracket-match {
-  background-color: #00008b;
-}
-span.comment {
-  color: #c9a3a0;
-}
-span.number {
-  color: #aeacff;
-}
-span.string {
-  color: #00e400;
-}
-span.builtin {
-  color: #efcfcf;
-}
-span.keyword {
-  color: #ff7700;
-}
-</style>
-</head>
-<body><span class="message">Python 2.6 (r26:66721, Oct  2 2008, 11:35:03) [MSC v.1500 32 bit (Intel)] on win32
-Type "copyright", "credits" or "license()" for more information.
-DreamPie 1.1.1
-</span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> gdata
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> xml.etree <span class="keyword">import</span> ElementTree
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> gdata.calendar.data
-<span class="prompt">... </span><span class="keyword">import</span> gdata.calendar.client
-<span class="prompt">... </span><span class="keyword">import</span> gdata.acl.data
-<span class="prompt">... </span><span class="keyword">import</span> atom
-<span class="prompt">... </span><span class="keyword">import</span> getopt
-<span class="prompt">... </span><span class="keyword">import</span> sys
-<span class="prompt">... </span><span class="keyword">import</span> string
-<span class="prompt">... </span><span class="keyword">import</span> time
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">def</span> makemyclient():
-</span><span class="command-defs"><span class="command"><span class="prompt">... </span>    myemail=<span class="string">'jeremiah@themarkshousehold.com'</span>
-<span class="prompt">... </span>    mypassword=<span class="string">'99bottlesofb33r!'</span>
-<span class="prompt">... </span>
-<span class="prompt">... </span>    client=gdata.calendar.client.CalendarClient(source=<span class="string">"Jeremiahs twisted brain"</span>)
-<span class="prompt">... </span>    client.ClientLogin(myemail, mypassword, self.client.source);
-<span class="prompt">... </span>    <span class="keyword">return</span> client</span></span><span class="command">
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>apple=makemyclient()
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#4&gt;", line 1, in &lt;module&gt;
-    apple=makemyclient()
-  File "&lt;pyshell#3&gt;", line 6, in makemyclient
-    client.ClientLogin(myemail, mypassword, self.client.source);
-NameError: global name 'self' is not defined
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">def</span> makemyclient():
-</span><span class="command-defs"><span class="command"><span class="prompt">... </span>    myemail=<span class="string">'jeremiah@themarkshousehold.com'</span>
-<span class="prompt">... </span>    mypassword=<span class="string">'99bottlesofb33r!'</span>
-<span class="prompt">... </span>
-<span class="prompt">... </span>    client=gdata.calendar.client.CalendarClient(source=<span class="string">"Jeremiahs twisted brain"</span>)
-<span class="prompt">... </span>    client.ClientLogin(myemail, mypassword, client.source);
-<span class="prompt">... </span>    <span class="keyword">return</span> client</span></span><span class="command">
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>apple=makemyclient()
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#6&gt;", line 1, in &lt;module&gt;
-    apple=makemyclient()
-  File "&lt;pyshell#5&gt;", line 6, in makemyclient
-    client.ClientLogin(myemail, mypassword, client.source);
-  File "C:\Python26\Lib\site-packages\gdata\client.py", line 442, in client_login
-    captcha_token=captcha_token, captcha_response=captcha_response)
-  File "C:\Python26\Lib\site-packages\gdata\client.py", line 360, in request_client_login_token
-    raise BadAuthentication('Incorrect username or password')
-BadAuthentication: Incorrect username or password
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>myemail=<span class="string">'jeremiah@themarkshousehold.com'</span>
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>mypassword=<span class="string">'99bottlesofb33r!'</span>
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>apple=dgata.calendar.client.CalendarClient(source=<span class="string">'jeremiah'</span>)
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#9&gt;", line 1, in &lt;module&gt;
-    apple=dgata.calendar.client.CalendarClient(source='jeremiah')
-NameError: name 'dgata' is not defined
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>apple=gdata.calendar.client.CalendarClient(source=<span class="string">'jeremiah'</span>)
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>apple.ClientLogin(myemail,mypassword,apple.source,account_type=<span class="string">'HOSTED'</span>)
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#11&gt;", line 1, in &lt;module&gt;
-    apple.ClientLogin(myemail,mypassword,apple.source,account_type='HOSTED')
-  File "C:\Python26\Lib\site-packages\gdata\client.py", line 442, in client_login
-    captcha_token=captcha_token, captcha_response=captcha_response)
-  File "C:\Python26\Lib\site-packages\gdata\client.py", line 360, in request_client_login_token
-    raise BadAuthentication('Incorrect username or password')
-BadAuthentication: Incorrect username or password
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>thor=<span class="string">'thor@themarkshousehold.com'</span>
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>thorpass=<span class="string">'applepie'</span>
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>apple.ClientLogin(thor,thorpass,source=<span class="string">"me"</span>)
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>apple.GetAllCalendarsFeed()
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">0: </span><span class="result">&lt;gdata.calendar.data.CalendarFeed object at 0x02AB8C10&gt;
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>red=apple.GetAllCalendarsFeed()
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>red.entry()
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#17&gt;", line 1, in &lt;module&gt;
-    red.entry()
-TypeError: 'list' object is not callable
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>red.entry.count
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">1: </span><span class="result">&lt;built-in method count of list object at 0x02ACDA80&gt;
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>red.entry.count()
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#19&gt;", line 1, in &lt;module&gt;
-    red.entry.count()
-TypeError: count() takes exactly one argument (0 given)
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>red.entry.count(e)
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#20&gt;", line 1, in &lt;module&gt;
-    red.entry.count(e)
-NameError: name 'e' is not defined
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>red.entry.count(<span class="string">'e'</span>)
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">2: </span><span class="result">0
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">print</span>(thor, myemail)
-</span><span class="commandsep"></span><span class="output"><span class="stdout">('thor@themarkshousehold.com', 'jeremiah@themarkshousehold.com')
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>mypass
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#23&gt;", line 1, in &lt;module&gt;
-    mypass
-NameError: name 'mypass' is not defined
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>mypassword
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">3: </span><span class="result">'99bottlesofb33r!'
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile=<span class="builtin">open</span>(<span class="string">'/Users/Jeremiah/Documents/mypy/tester.jlm'</span>, <span class="string">'w'</span>)
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.write(<span class="string">'Something Awesome!'</span>)
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.read()
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">4: </span><span class="result">'l\x00l\x00_\x00c\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00s\x00_\x00f\x00e\x00e\x00d\x00(\x00s\x00e\x00l\x00f\x00,\x00 \x00d\x00e\x00s\x00i\x00r\x00e\x00d\x00_\x00c\x00l\x00a\x00s\x00s\x00=\x00g\x00d\x00a\x00t\x00a\x00.\x00c\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00.\x00d\x00a\x00t\x00a\x00.\x00C\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00F\x00e\x00e\x00d\x00,\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00a\x00u\x00t\x00h\x00_\x00t\x00o\x00k\x00e\x00n\x00=\x00N\x00o\x00n\x00e\x00,\x00 \x00*\x00*\x00k\x00w\x00a\x00r\x00g\x00s\x00)\x00:\x00\n\x00 \x00 \x00"\x00"\x00"\x00O\x00b\x00t\x00a\x00i\x00n\x00s\x00 \x00a\x00 \x00f\x00e\x00e\x00d\x00 \x00c\x00o\x00n\x00t\x00a\x00i\x00n\x00i\x00n\x00g\x00 \x00a\x00l\x00l\x00 \x00t\x00h\x00e\x00 \x00c\x00c\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00s\x00 \x00t\x00h\x00e\x00 \x00c\x00u\x00r\x00r\x00e\x00n\x00t\x00 \x00u\x00s\x00e\x00r\x00 \x00h\x00a\x00s\x00 \x00a\x00c\x00c\x00e\x00s\x00s\x00 \x00t\x00o\x00.\x00\n\x00\n\x00 \x00 \x00A\x00r\x00g\x00s\x00:\x00\n\x00 \x00 \x00 \x00 \x00d\x00e\x00s\x00i\x00r\x00e\x00d\x00_\x00c\x00l\x00a\x00s\x00s\x00:\x00 \x00c\x00l\x00a\x00s\x00s\x00 \x00d\x00e\x00s\x00c\x00e\x00n\x00d\x00e\x00d\x00 \x00f\x00r\x00o\x00m\x00 \x00a\x00t\x00o\x00m\x00.\x00c\x00o\x00r\x00e\x00.\x00X\x00m\x00l\x00E\x00l\x00e\x00m\x00e\x00n\x00t\x00 \x00t\x00o\x00 \x00w\x00h\x00i\x00c\x00h\x00 \x00a\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00s\x00u\x00c\x00c\x00e\x00s\x00s\x00f\x00u\x00l\x00 \x00r\x00e\x00s\x00p\x00o\x00n\x00s\x00e\x00 \x00s\x00h\x00o\x00u\x00l\x00d\x00 \x00b\x00e\x00 \x00c\x00o\x00n\x00v\x00e\x00r\x00t\x00e\x00d\x00.\x00 \x00I\x00f\x00 \x00t\x00h\x00e\x00r\x00e\x00 \x00i\x00s\x00 \x00n\x00o\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00c\x00o\x00n\x00v\x00e\x00r\x00t\x00e\x00r\x00 \x00f\x00u\x00n\x00c\x00t\x00i\x00o\x00n\x00 \x00s\x00p\x00e\x00c\x00i\x00f\x00i\x00e\x00d\x00 \x00(\x00d\x00e\x00s\x00i\x00r\x00e\x00d\x00_\x00c\x00l\x00a\x00s\x00s\x00=\x00N\x00o\x00n\x00e\x00)\x00 \x00t\x00h\x00e\x00n\x00 \x00t\x00h\x00e\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00d\x00e\x00s\x00i\x00r\x00e\x00d\x00_\x00c\x00l\x00a\x00s\x00s\x00 \x00w\x00i\x00l\x00l\x00 \x00b\x00e\x00 \x00u\x00s\x00e\x00d\x00 \x00i\x00n\x00 \x00c\x00a\x00l\x00l\x00i\x00n\x00g\x00 \x00t\x00h\x00e\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00a\x00t\x00o\x00m\x00.\x00c\x00o\x00r\x00e\x00.\x00p\x00a\x00r\x00s\x00e\x00 \x00f\x00u\x00n\x00c\x00t\x00i\x00o\x00n\x00.\x00 \x00I\x00f\x00 \x00n\x00e\x00i\x00t\x00h\x00e\x00r\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00t\x00h\x00e\x00 \x00d\x00e\x00s\x00i\x00r\x00e\x00d\x00_\x00c\x00l\x00a\x00s\x00s\x00 \x00n\x00o\x00r\x00 \x00t\x00h\x00e\x00 \x00c\x00o\x00n\x00v\x00e\x00r\x00t\x00e\x00r\x00 \x00i\x00s\x00 \x00s\x00p\x00e\x00c\x00i\x00f\x00i\x00e\x00d\x00,\x00 \x00a\x00n\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00H\x00T\x00T\x00P\x00 \x00r\x00e\x00p\x00o\x00n\x00s\x00e\x00 \x00o\x00b\x00j\x00e\x00c\x00t\x00 \x00w\x00i\x00l\x00l\x00 \x00b\x00e\x00 \x00r\x00e\x00t\x00u\x00r\x00n\x00e\x00d\x00.\x00 \x00D\x00e\x00f\x00a\x00u\x00l\x00t\x00s\x00 \x00t\x00o\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00g\x00d\x00a\x00t\x00a\x00.\x00c\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00.\x00d\x00a\x00t\x00a\x00.\x00C\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00F\x00e\x00e\x00d\x00.\x00\n\x00 \x00 \x00 \x00 \x00a\x00u\x00t\x00h\x00_\x00t\x00o\x00k\x00e\x00n\x00:\x00 \x00A\x00n\x00 \x00o\x00b\x00j\x00e\x00c\x00t\x00 \x00w\x00h\x00i\x00c\x00h\x00 \x00s\x00e\x00t\x00s\x00 \x00t\x00h\x00e\x00 \x00A\x00u\x00t\x00h\x00o\x00r\x00i\x00z\x00a\x00t\x00i\x00o\x00n\x00 \x00H\x00T\x00T\x00P\x00 \x00h\x00e\x00a\x00d\x00e\x00r\x00 \x00i\x00n\x00 \x00i\x00t\x00s\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00m\x00o\x00d\x00i\x00f\x00y\x00_\x00r\x00e\x00q\x00u\x00e\x00s\x00t\x00 \x00m\x00e\x00t\x00h\x00o\x00d\x00.\x00 \x00R\x00e\x00c\x00o\x00m\x00m\x00e\x00n\x00d\x00e\x00d\x00 \x00c\x00l\x00a\x00s\x00s\x00e\x00s\x00 \x00i\x00n\x00c\x00l\x00u\x00d\x00e\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00g\x00d\x00a\x00t\x00a\x00.\x00g\x00a\x00u\x00t\x00h\x00.\x00C\x00l\x00i\x00e\x00n\x00t\x00L\x00o\x00g\x00i\x00n\x00T\x00o\x00k\x00e\x00n\x00 \x00a\x00n\x00d\x00 \x00g\x00d\x00a\x00t\x00a\x00.\x00g\x00a\x00u\x00t\x00h\x00.\x00A\x00u\x00t\x00h\x00S\x00u\x00b\x00T\x00o\x00k\x00e\x00n\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00a\x00m\x00o\x00n\x00g\x00 \x00o\x00t\x00h\x00e\x00r\x00s\x00.\x00 \x00R\x00e\x00p\x00r\x00e\x00s\x00e\x00n\x00t\x00s\x00 \x00t\x00h\x00e\x00 \x00c\x00u\x00r\x00r\x00e\x00n\x00t\x00 \x00u\x00s\x00e\x00r\x00.\x00 \x00D\x00e\x00f\x00a\x00u\x00l\x00t\x00s\x00 \x00t\x00o\x00 \x00N\x00o\x00n\x00e\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00a\x00n\x00d\x00 \x00i\x00f\x00 \x00N\x00o\x00n\x00e\x00,\x00 \x00t\x00h\x00i\x00s\x00 \x00m\x00e\x00t\x00h\x00o\x00d\x00 \x00w\x00i\x00l\x00l\x00 \x00l\x00o\x00o\x00k\x00 \x00f\x00o\x00r\x00 \x00a\x00 \x00v\x00a\x00l\x00u\x00e\x00 \x00i\x00n\x00 \x00t\x00h\x00e\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00a\x00u\x00t\x00h\x00_\x00t\x00o\x00k\x00e\x00n\x00 \x00m\x00e\x00m\x00b\x00e\x00r\x00 \x00o\x00f\x00 \x00S\x00p\x00r\x00e\x00a\x00d\x00s\x00h\x00e\x00e\x00t\x00s\x00C\x00l\x00i\x00e\x00n\x00t\x00.\x00\n\x00 \x00 \x00"\x00"\x00"\x00\n\x00 \x00 \x00r\x00e\x00t\x00u\x00r\x00n\x00 \x00s\x00e\x00l\x00f\x00.\x00G\x00e\x00t\x00C\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00s\x00F\x00e\x00e\x00d\x00(\x00u\x00r\x00i\x00=\x00s\x00e\x00l\x00f\x00.\x00G\x00e\x00t\x00C\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00F\x00e\x00e\x00d\x00U\x00r\x00i\x00(\x00f\x00e\x00e\x00d\x00=\x00\'\x00a\x00l\x00l\x00c\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00s\x00\'\x00)\x00,\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00d\x00e\x00s\x00i\x00r\x00e\x00d\x00_\x00c\x00l\x00a\x00s\x00s\x00=\x00d\x00e\x00s\x00i\x00r\x00e\x00d\x00_\x00c\x00l\x00a\x00s\x00s\x00,\x00 \x00a\x00u\x00t\x00h\x00_\x00t\x00o\x00k\x00e\x00n\x00=\x00a\x00u\x00t\x00h\x00_\x00t\x00o\x00k\x00e\x00n\x00,\x00\n\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00*\x00*\x00k\x00w\x00a\x00r\x00g\x00s\x00)\x00\x00\x00\xa4\x00\x00\xa4yP.\x00\xd8\x05\xb4\x02\x10,\xaf\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.close()
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile=<span class="builtin">open</span>(<span class="string">'/Users/Jeremiah/Documents/mypy/tester.jlm'</span>, <span class="string">'rb'</span>)
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.<span class="builtin">next</span>
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">5: </span><span class="result">&lt;method-wrapper 'next' of file object at 0x02B5B200&gt;
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.<span class="builtin">next</span>()
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">6: </span><span class="result">'Something Awesome!l\x00l\x00_\x00c\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00s\x00_\x00f\x00e\x00e\x00d\x00(\x00s\x00e\x00l\x00f\x00,\x00 \x00d\x00e\x00s\x00i\x00r\x00e\x00d\x00_\x00c\x00l\x00a\x00s\x00s\x00=\x00g\x00d\x00a\x00t\x00a\x00.\x00c\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00.\x00d\x00a\x00t\x00a\x00.\x00C\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00F\x00e\x00e\x00d\x00,\x00\r\n'
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.<span class="builtin">next</span>()
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">7: </span><span class="result">'\x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00 \x00a\x00u\x00t\x00h\x00_\x00t\x00o\x00k\x00e\x00n\x00=\x00N\x00o\x00n\x00e\x00,\x00 \x00*\x00*\x00k\x00w\x00a\x00r\x00g\x00s\x00)\x00:\x00\r\n'
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.read(size)
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#33&gt;", line 1, in &lt;module&gt;
-    openfile.read(size)
-NameError: name 'size' is not defined
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pl=<span class="builtin">str</span>(red)
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pl
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">8: </span><span class="result">'&lt;ns0:feed ns1:etag="W/&amp;quot;Ak8ARng8fCp7JGA9WhZSFEk.&amp;quot;" ns1:kind="calendar#calendarFeed" xmlns:ns0="http://www.w3.org/2005/Atom" xmlns:ns1="http://schemas.google.com/g/2005"&gt;&lt;ns0:updated&gt;2011-03-30T01:34:07.674Z&lt;/ns0:updated&gt;&lt;ns0:category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/gCal/2005#calendarmeta" /&gt;&lt;ns0:id&gt;http://www.google.com/calendar/feeds/default/allcalendars/full&lt;/ns0:id&gt;&lt;ns0:generator uri="http://www.google.com/calendar" version="1.0"&gt;Google Calendar&lt;/ns0:generator&gt;&lt;ns0:author&gt;&lt;ns0:name&gt;thor@themarkshousehold.com&lt;/ns0:name&gt;&lt;ns0:email&gt;thor@themarkshousehold.com&lt;/ns0:email&gt;&lt;/ns0:author&gt;&lt;ns0:link href="https://www.google.com/calendar/render" rel="alternate" type="text/html" /&gt;&lt;ns0:link href="https://www.google.com/calendar/feeds/default/allcalendars/full" rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml" /&gt;&lt;ns0:link href="https://www.google.com/calendar/feeds/default/allcalendars/full" rel="http://schemas.google.com/g/2005#post" type="application/atom+xml" /&gt;&lt;ns0:link href="https://www.google.com/calendar/feeds/default/allcalendars/full" rel="self" type="application/atom+xml" /&gt;&lt;ns2:startIndex xmlns:ns2="http://a9.com/-/spec/opensearchrss/1.0/"&gt;1&lt;/ns2:startIndex&gt;&lt;ns0:entry ns1:etag="W/&amp;quot;AkENSH47eCp7JGA9WhZSFEk.&amp;quot;" ns1:kind="calendar#calendar"&gt;&lt;ns0:category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/gCal/2005#calendarmeta" /&gt;&lt;ns0:id&gt;http://www.google.com/calendar/feeds/default/calendars/thor%40themarkshousehold.com&lt;/ns0:id&gt;&lt;ns0:author&gt;&lt;ns0:name&gt;thor@themarkshousehold.com&lt;/ns0:name&gt;&lt;ns0:email&gt;thor@themarkshousehold.com&lt;/ns0:email&gt;&lt;/ns0:author&gt;&lt;ns0:content src="https://www.google.com/calendar/feeds/thor%40themarkshousehold.com/private/full" type="application/atom+xml" /&gt;&lt;ns0:updated&gt;2011-03-30T01:31:39.000Z&lt;/ns0:updated&gt;&lt;ns0:published&gt;2011-03-30T01:34:07.672Z&lt;/ns0:published&gt;&lt;ns0:title type="text"&gt;thor@themarkshousehold.com&lt;/ns0:title&gt;&lt;ns0:link href="https://www.google.com/calendar/feeds/thor%40themarkshousehold.com/private/full" rel="alternate" type="application/atom+xml" /&gt;&lt;ns0:link href="https://www.google.com/calendar/feeds/thor%40themarkshousehold.com/private/full" rel="http://schemas.google.com/gCal/2005#eventFeed" type="application/atom+xml" /&gt;&lt;ns0:link href="https://www.google.com/calendar/feeds/thor%40themarkshousehold.com/acl/full" rel="http://schemas.google.com/acl/2007#accessControlList" type="application/atom+xml" /&gt;&lt;ns0:link href="https://www.google.com/calendar/feeds/default/allcalendars/full/thor%40themarkshousehold.com" rel="self" type="application/atom+xml" /&gt;&lt;ns0:link href="https://www.google.com/calendar/feeds/default/allcalendars/full/thor%40themarkshousehold.com" rel="edit" type="application/atom+xml" /&gt;&lt;ns2:edited xmlns:ns2="http://www.w3.org/2007/app"&gt;2011-03-30T01:31:39.000Z&lt;/ns2:edited&gt;&lt;ns2:accesslevel value="owner" xmlns:ns2="http://schemas.google.com/gCal/2005" /&gt;&lt;ns2:color value="#182C57" xmlns:ns2="http://schemas.google.com/gCal/2005" /&gt;&lt;ns2:hidden value="false" xmlns:ns2="http://schemas.google.com/gCal/2005" /&gt;&lt;ns2:selected value="true" xmlns:ns2="http://schemas.google.com/gCal/2005" /&gt;&lt;ns2:timezone value="America/Phoenix" xmlns:ns2="http://schemas.google.com/gCal/2005" /&gt;&lt;ns2:timesCleaned value="0" xmlns:ns2="http://schemas.google.com/gCal/2005" /&gt;&lt;/ns0:entry&gt;&lt;ns0:entry ns1:etag="W/&amp;quot;DUYFSH47eCp7JGA9WhZSFEk.&amp;quot;" ns1:kind="calendar#calendar"&gt;&lt;ns0:category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/gCal/2005#calendarmeta" /&gt;&lt;ns0:id&gt;http://www.google.com/calendar/feeds/default/calendars/en.usa%23holiday%40group.v.calendar.google.com&lt;/ns0:id&gt;&lt;ns0:author&gt;&lt;ns0:name&gt;US Holidays&lt;/ns0:name&gt;&lt;/ns0:author&gt;&lt;ns0:content src="https://www.google.com/calendar/feeds/en.usa%23holiday%40group.v.calendar.google.com/private/full" type="application/atom+xml" /&gt;&lt;ns0:updated&gt;2011-03-30T01:05:19.000Z&lt;/ns0:updated&gt;&lt;ns0:published&gt;2011-03-30T01:34:07.673Z&lt;/ns0:published&gt;&lt;ns0:summary type="text"&gt;US Holidays&lt;/ns0:summary&gt;&lt;ns0:title type="text"&gt;US Holidays&lt;/ns0:title&gt;&lt;ns0:link href="https://www.google.com/calendar/feeds/en.usa%23holiday%40group.v.calendar.google.com/private/full" rel="alternate" type="application/atom+xml" /&gt;&lt;ns0:link href="https://www.google.com/calendar/feeds/en.usa%23holiday%40group.v.calendar.google.com/private/full" rel="http://schemas.google.com/gCal/2005#eventFeed" type="application/atom+xml" /&gt;&lt;ns0:link href="https://www.google.com/calendar/feeds/default/allcalendars/full/en.usa%23holiday%40group.v.calendar.google.com" rel="self" type="application/atom+xml" /&gt;&lt;ns0:link href="https://www.google.com/calendar/feeds/default/allcalendars/full/en.usa%23holiday%40group.v.calendar.google.com" rel="edit" type="application/atom+xml" /&gt;&lt;ns2:edited xmlns:ns2="http://www.w3.org/2007/app"&gt;2011-03-30T01:05:19.000Z&lt;/ns2:edited&gt;&lt;ns2:accesslevel value="read" xmlns:ns2="http://schemas.google.com/gCal/2005" /&gt;&lt;ns2:color value="#691426" xmlns:ns2="http://schemas.google.com/gCal/2005" /&gt;&lt;ns2:hidden value="false" xmlns:ns2="http://schemas.google.com/gCal/2005" /&gt;&lt;ns2:selected value="true" xmlns:ns2="http://schemas.google.com/gCal/2005" /&gt;&lt;ns2:timezone value="America/Phoenix" xmlns:ns2="http://schemas.google.com/gCal/2005" /&gt;&lt;ns2:timesCleaned value="0" xmlns:ns2="http://schemas.google.com/gCal/2005" /&gt;&lt;/ns0:entry&gt;&lt;ns0:title&gt;thor@themarkshousehold.com\'s Calendar List&lt;/ns0:title&gt;&lt;/ns0:feed&gt;'
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.close
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">9: </span><span class="result">&lt;built-in method close of file object at 0x02B5B200&gt;
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.close()
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile=<span class="builtin">open</span>(<span class="string">'/Users/Jeremiah/Documents/mypy/tester.jlm'</span>, <span class="string">'r'</span>)
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.name()
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#39&gt;", line 1, in &lt;module&gt;
-    openfile.name()
-TypeError: 'str' object is not callable
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.name
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">10: </span><span class="result">'/Users/Jeremiah/Documents/mypy/tester.jlm'
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.mode
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">11: </span><span class="result">'r'
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.encoding
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.encoding()
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#43&gt;", line 1, in &lt;module&gt;
-    openfile.encoding()
-TypeError: 'NoneType' object is not callable
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.<span class="builtin">next</span>()
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">12: </span><span class="result">'Something Awesome!l\x00l\x00_\x00c\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00s\x00_\x00f\x00e\x00e\x00d\x00(\x00s\x00e\x00l\x00f\x00,\x00 \x00d\x00e\x00s\x00i\x00r\x00e\x00d\x00_\x00c\x00l\x00a\x00s\x00s\x00=\x00g\x00d\x00a\x00t\x00a\x00.\x00c\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00.\x00d\x00a\x00t\x00a\x00.\x00C\x00a\x00l\x00e\x00n\x00d\x00a\x00r\x00F\x00e\x00e\x00d\x00,\x00\n'
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.decode()
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#45&gt;", line 1, in &lt;module&gt;
-    openfile.decode()
-AttributeError: 'file' object has no attribute 'decode'
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.encoding=<span class="string">'UTF16'</span>
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#46&gt;", line 1, in &lt;module&gt;
-    openfile.encoding='UTF16'
-TypeError: readonly attribute
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.encoding
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.close
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">13: </span><span class="result">&lt;built-in method close of file object at 0x02B5B110&gt;
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.close()
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile=<span class="builtin">open</span>(<span class="string">'/Users/Jeremiah/Documents/mypy/tester.txt'</span>, <span class="string">'rwb'</span>)
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#50&gt;", line 1, in &lt;module&gt;
-    openfile=open('/Users/Jeremiah/Documents/mypy/tester.txt', 'rwb')
-IOError: [Errno 22] invalid mode ('rwb') or filename: '/Users/Jeremiah/Documents/mypy/tester.txt'
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile=<span class="builtin">open</span>(<span class="string">'/Users/Jeremiah/Documents/mypy/tester.txt'</span>, <span class="string">'r+b'</span>)
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#51&gt;", line 1, in &lt;module&gt;
-    openfile=open('/Users/Jeremiah/Documents/mypy/tester.txt', 'r+b')
-IOError: [Errno 2] No such file or directory: '/Users/Jeremiah/Documents/mypy/tester.txt'
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile=<span class="builtin">open</span>(<span class="string">'/Users/Jeremiah/Documents/mypy/tester.txt'</span>, <span class="string">'wb'</span>)
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>openfile.tell()
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">14: </span><span class="result">0L
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>apple.get.im_class
-</span><span class="commandsep"></span><span class="output"><span class="result-ind">15: </span><span class="result">&lt;class 'gdata.calendar.client.CalendarClient'&gt;
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">print</span>(apple.get.im_class)
-</span><span class="commandsep"></span><span class="output"><span class="stdout">&lt;class 'gdata.calendar.client.CalendarClient'&gt;
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>red=apple.get.im_class
-</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>red.GetCalendarsFeed()
-</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
-  File "&lt;pyshell#57&gt;", line 1, in &lt;module&gt;
-    red.GetCalendarsFeed()
-TypeError: unbound method get_calendars_feed() must be called with CalendarClient instance as first argument (got nothing instead)
-</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span></span></body>
-</html>
