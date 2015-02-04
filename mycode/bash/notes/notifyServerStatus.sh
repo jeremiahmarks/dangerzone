@@ -84,7 +84,8 @@ ipisup(){
 
 
 setips
-ipisup $ip_addr || echo "That server is not up"
+ipisup $ip_addr && echo "Server 1 is up" || echo "That server is not up"
+ipisup $ip_addr2 && echo "Server 2 is up" || echo "server two is down"
 #echotest
 #modulerizedsendmessage $TOADDRESS $FROMADDRESS "$SUBJECT" $ip_addr
 #echofunction $ip_addr
