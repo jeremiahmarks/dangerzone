@@ -31,6 +31,7 @@
                 * regular expressions (regex) matches a single character
         - "
             + Partial quoting - preserves most special characters
+                * does not touch $, `, \
         - '
             + Full quoting - preserves all special characters
         - ,
@@ -56,3 +57,12 @@
                 * synonomis with 'true' 
             + Provide a placeholder where a binary operation is expected
             + Provide a placeholder where a command is expected in a here document.
+
+#from 5.1 - Quoting variables  
+
+* double quotes ignores speciaal chars except
+    - $
+    - `
+    - \
+* double quotes prevent word splitting
+* 
