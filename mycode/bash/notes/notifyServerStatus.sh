@@ -2,7 +2,7 @@
 # @Author: Jeremiah Marks
 # @Date:   2015-02-03 23:29:02
 # @Last Modified by:   Jeremiah Marks
-# @Last Modified time: 2015-02-04 00:30:12
+# @Last Modified time: 2015-02-04 01:01:24
 
 # An application that I did a long time ago asked that I write a 
 # script in either bash or python that checks the status of a server
@@ -15,6 +15,13 @@
 # I am using the solution found at 
 #	http://stackoverflow.com/a/8937694/492549
 # as a jumping off point
+
+TOADDRESS="jeremiah@jlmarks.org"
+FROMADDRESS="jeremiah.l.marks@gmail.com"
+SUBJECT="I think that I have tried sagan times tonight."
+BODY="
+
+This is the body of this message.  Oh my joy if I see it"
 
 setips()
 {
@@ -29,11 +36,15 @@ echotest()
 }
 
 sendmessage(){
-	messageText="To:jeremiah@jlmarks.org	
-	From: jeremiah.l.marks@gmail.com	
-	Subject: Crossing my fingers on the first attempt!	
-	Hey this is just me. "	
-	echo $messageText  > ~/thismessage.txt
+	rm ~/thismessage.txt
+	touch ~/thismessage.txt
+	chmod 777 ~/thismessage.txt
+	echo "To: $TOADDRESS" >> ~/thismessage.txt
+	echo "From: $FROMADDRESS" >> ~/thismessage.txt
+	echo "Subject: $SUBJECT" >> ~/thismessage.txt
+	echo "$BODY" >> ~/thismessage.txt
+	#echo $messageText  > ~/thismessage.txt
+	cat ~/thismessage.txt
 	ssmtp jeremiah@jlmarks.org < ~/thismessage.txt
 }
 
