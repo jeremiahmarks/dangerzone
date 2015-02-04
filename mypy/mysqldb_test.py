@@ -10,7 +10,7 @@ import urlparse
 import MySQLdb
 DEBUG = 0
 
-db = MySQLdb.connect(host="grid50mysql2451.secureserver.net", user="jlm1232505575334", passwd="B0ttles0fb33r!", db="jlm1232505575334")
+db = MySQLdb.connect(host="", user="", passwd="!", db="")
 
 #create a cursor for the select
 cur = db.cursor()

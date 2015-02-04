@@ -1,8 +1,9 @@
 #!/usr/bin/python
 
 import _mysql
+import pw
 
-conn = _mysql.connect("jeremiahmarks.db.6816406.hostedresource.com", 'jeremiahmarks','B0ttles0fb33r!','jeremiahmarks')
+conn = _mysql.connect(pw.dbhost, 'jeremiahmarks',pw.pw,'jeremiahmarks')
 
 
 class bookshelf:

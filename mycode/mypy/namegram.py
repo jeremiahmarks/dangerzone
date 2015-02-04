@@ -3,7 +3,7 @@ import ngrams
 import re
 
 username='usernameanagrambot'
-password='b0ttles0fb33r'
+password=''
 
 title_trans=''.join(chr(c) if chr(c).isupper() or chr(c).islower() else '' for c in range(256))
 
