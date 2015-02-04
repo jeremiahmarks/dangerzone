@@ -2,7 +2,7 @@
 # @Author: Jeremiah Marks
 # @Date:   2015-02-03 23:29:02
 # @Last Modified by:   Jeremiah Marks
-# @Last Modified time: 2015-02-04 01:01:24
+# @Last Modified time: 2015-02-04 01:37:09
 
 # An application that I did a long time ago asked that I write a 
 # script in either bash or python that checks the status of a server
@@ -15,6 +15,8 @@
 # I am using the solution found at 
 #	http://stackoverflow.com/a/8937694/492549
 # as a jumping off point
+
+LOGFILE=~/nsslog.txt
 
 TOADDRESS="jeremiah@jlmarks.org"
 FROMADDRESS="jeremiah.l.marks@gmail.com"
@@ -43,12 +45,47 @@ sendmessage(){
 	echo "From: $FROMADDRESS" >> ~/thismessage.txt
 	echo "Subject: $SUBJECT" >> ~/thismessage.txt
 	echo "$BODY" >> ~/thismessage.txt
-	#echo $messageText  > ~/thismessage.txt
-	cat ~/thismessage.txt
 	ssmtp jeremiah@jlmarks.org < ~/thismessage.txt
 }
 
-#setips
+echofunction(){
+	#This function will accept the ip address of a server and state if it is up or not
+	echo "\n\nNew File attempt\n\n" >> LOGFILE
+	ping -c1 -W1 $1 >> LOGFILE || echo "\n\n$1 is down\n\n"
+
+}
+
+modulerizedsendmessage(){
+	# this function requires four variables
+	rm ~/thismessage.txt
+	touch ~/thismessage.txt
+	chmod 777 ~/thismessage.txt
+	echo "To: $1" >> ~/thismessage.txt
+	echo "From: $2" >> ~/thismessage.txt
+	echo "Subject: $3" >> ~/thismessage.txt
+	createmessage $4  #This is the ip address of the server
+	# echo "$4" >> ~/thismessage.txt
+
+}
+
+createmessage(){
+	#this function requires the ipaddress that failed and the location of the file to save it to
+	dtstamp=$(date +%c)
+	echo $dtstamp
+	message="At $dtstamp server $1 was down."
+	echo "
+
+	$message" >> ~/thismessage.txt
+}
+
+
+
+
+setips
 #echotest
-sendmessage
+modulerizedsendmessage $TOADDRESS $FROMADDRESS "$SUBJECT" $ip_addr
+#echofunction $ip_addr
+#echofunction $ip_addr2
+#createmessage
+#sendmessage
 
