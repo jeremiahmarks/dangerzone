@@ -78,12 +78,15 @@ createmessage(){
 	$message" >> ~/thismessage.txt
 }
 
-
+ipisup(){
+	ping -c1 -W1 $1 >> LOGFILE
+}
 
 
 setips
+ipisup $ip_addr || echo "That server is not up"
 #echotest
-modulerizedsendmessage $TOADDRESS $FROMADDRESS "$SUBJECT" $ip_addr
+#modulerizedsendmessage $TOADDRESS $FROMADDRESS "$SUBJECT" $ip_addr
 #echofunction $ip_addr
 #echofunction $ip_addr2
 #createmessage
