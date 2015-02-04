@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 # @Author: Jeremiah Marks
 # @Date:   2015-02-03 23:29:02
 # @Last Modified by:   Jeremiah Marks
 # @Last Modified time: 2015-02-04 01:37:09
 
-# An application that I did a long time ago asked that I write a 
+# An application that I did a long time ago asked that I write a
 # script in either bash or python that checks the status of a server
 # and if it is down emails to a notification address.
 
@@ -12,11 +12,14 @@
 # pieces of code I think that I have ever written.
 # This is that attempt, except in bash.  I hope that this is actually worth sharing!
 
-# I am using the solution found at 
+# I am using the solution found at
 #	http://stackoverflow.com/a/8937694/492549
 # as a jumping off point
 
 LOGFILE=~/nsslog.txt
+ANOTHERLOGFILE=~/thislogfile.txt
+
+addresses=( 192.168.1.110 192.168.168.1 google.com )
 
 TOADDRESS="jeremiah@jlmarks.org"
 FROMADDRESS="jeremiah.l.marks@gmail.com"
@@ -25,11 +28,11 @@ BODY="
 
 This is the body of this message.  Oh my joy if I see it"
 
-setips()
-{
-	ip_addr=192.168.1.110
-	ip_addr2=192.168.112.2
-}
+# setips()
+# {
+# 	ip_addr=192.168.1.110
+# 	ip_addr2=192.168.112.2
+# }
 
 echotest()
 {
@@ -82,17 +85,23 @@ ipisup(){
 	ping -c1 -W1 $1 >> LOGFILE
 }
 
-setips(){
-	addresses=( 192.168.1.110 192.168.168.1 http://google.com )
+# setips(){
+#     addresses=( "192.168.1.110" "192.168.168.1" )
+# }
+
+recordServerSatus(){
+	dtstamp=$(date +%c)
+	echo "At $dtstamp server $1 was $2" >> $ANOTHERLOGFILE
 }
 
 testips(){
 	for i in "${addresses[@]}"
 	do
-		ipisup $i && echo "$i is up" || echo "$1 is down"
+		ipisup $i && recordServerSatus $i up || recordServerSatus $i down
+	done
 }
 
-setips
+#setips
 testips
 #ipisup $ip_addr && echo "Server 1 is up" || echo "That server is not up"
 #ipisup $ip_addr2 && echo "Server 2 is up" || echo "server two is down"
