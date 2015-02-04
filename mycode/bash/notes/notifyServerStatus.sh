@@ -82,10 +82,20 @@ ipisup(){
 	ping -c1 -W1 $1 >> LOGFILE
 }
 
+setips(){
+	addresses=( 192.168.1.110 192.168.168.1 http://google.com )
+}
+
+testips(){
+	for i in "${addresses[@]}"
+	do
+		ipisup $i && echo "$i is up" || echo "$1 is down"
+}
 
 setips
-ipisup $ip_addr && echo "Server 1 is up" || echo "That server is not up"
-ipisup $ip_addr2 && echo "Server 2 is up" || echo "server two is down"
+testips
+#ipisup $ip_addr && echo "Server 1 is up" || echo "That server is not up"
+#ipisup $ip_addr2 && echo "Server 2 is up" || echo "server two is down"
 #echotest
 #modulerizedsendmessage $TOADDRESS $FROMADDRESS "$SUBJECT" $ip_addr
 #echofunction $ip_addr
