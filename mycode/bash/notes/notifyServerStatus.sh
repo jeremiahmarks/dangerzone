@@ -2,7 +2,7 @@
 # @Author: Jeremiah Marks
 # @Date:   2015-02-03 23:29:02
 # @Last Modified by:   Jeremiah Marks
-# @Last Modified time: 2015-02-04 00:27:37
+# @Last Modified time: 2015-02-04 00:30:12
 
 # An application that I did a long time ago asked that I write a 
 # script in either bash or python that checks the status of a server
@@ -29,9 +29,12 @@ echotest()
 }
 
 sendmessage(){
-	messageText="To:jeremiah@jlmarks.org	From: jeremiah.l.marks@gmail.com	Subject: Crossing my fingers on the first attempt!	Hey this is just me. "	
-	echo $messageText # > ~/thismessage.txt
-	# ssmtp jeremiah@jlmarks.org < $messageText
+	messageText="To:jeremiah@jlmarks.org	
+	From: jeremiah.l.marks@gmail.com	
+	Subject: Crossing my fingers on the first attempt!	
+	Hey this is just me. "	
+	echo $messageText  > ~/thismessage.txt
+	ssmtp jeremiah@jlmarks.org < ~/thismessage.txt
 }
 
 #setips
