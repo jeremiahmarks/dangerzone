@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 # @Author: Jeremiah Marks
 # @Date:   2015-02-04 22:03:21
 # @Last Modified by:   Jeremiah Marks
-# @Last Modified time: 2015-02-04 22:22:06
+# @Last Modified time: 2015-02-04 22:24:28
 
 
 LOGFILE=~/thislogfile.txt
