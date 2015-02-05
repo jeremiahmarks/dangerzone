@@ -17,3 +17,49 @@
 8. Push the changes to github
     1. run git push origin master
 
+#Commands
+
+##git status
+
+Provide the status of the local git environment
+
+##git stash
+
+saves your files that are not in sync locally so that you can access them when you need them (This is a best understanding after a first read through.)
+
+##git stash list
+
+provides list of stashes saved
+
+##git stash apply
+
+reverts to most recently saved stash
+
+##git stash apply stash@{incrementer}
+
+not that I am not 100% sure but from how I read it it will generally default to the naming convention of stash@{incrementer} ex:(stash@{0}, stash@{1}, stash@{3})
+
+##git stash --keep-index
+
+do not stash what has already been staged
+
+##git stash -u
+
+this will include untracked files in the stash
+
+##git stash --patch
+
+prompts you for which changes to stash and which not to.
+
+##git stash --all
+
+safer alternative to `git clean`.  Where `git clean` deletes the changed file, this will stash it
+
+##git clean
+
+deletes all changed files. They are not stashed, they do not pass go, they do not collect anything.
+
+
+
+
+
