@@ -39,6 +39,10 @@ reverts to most recently saved stash
 
 not that I am not 100% sure but from how I read it it will generally default to the naming convention of stash@{incrementer} ex:(stash@{0}, stash@{1}, stash@{3})
 
+##git stash drop stash@{incrementer}
+
+drops the identified stash from existance. 
+
 ##git stash --keep-index
 
 do not stash what has already been staged
@@ -58,6 +62,13 @@ safer alternative to `git clean`.  Where `git clean` deletes the changed file, t
 ##git clean
 
 deletes all changed files. They are not stashed, they do not pass go, they do not collect anything.
+
+##git reset HEAD path/to/file
+
+Plainspeak: removes a file from an intended commit
+slightly more technical : resets the get pointer for the file to what it is in the head
+
+
 
 
 
