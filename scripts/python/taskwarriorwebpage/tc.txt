@@ -1,0 +1,121 @@
+
+Columns     Supported Formats Example
+----------- ----------------- --------------------------------------------------
+depends     list*             1 2 10
+            count             [3]
+            indicator         D
+
+description combined*         Move your clothes down on to the lower peg
+                                2014-03-16 Immediately before your lunch
+                                2014-03-16 If you are playing in the match this
+                              afternoon
+                                2014-03-16 Before you write your letter home
+                                2014-03-16 If you're not getting your hair cut
+            desc              Move your clothes down on to the lower peg
+            oneline           Move your clothes down on to the lower peg
+                              2014-03-16 Immediately before your lunch
+                              2014-03-16 If you are playing in the match this
+                              afternoon 2014-03-16 Before you write your letter
+                              home 2014-03-16 If you're not getting your hair
+                              cut
+            truncated         Move your clothes do...
+            count             Move your clothes down on to the lower peg [4]
+
+due         formatted*        2014-03-16
+            julian            2456733.62119
+            epoch             1395024871
+            iso               20140317T025431Z
+            age               2m
+            remaining         
+            countdown         2 mins
+
+end         formatted*        2014-03-16
+            julian            2456733.62119
+            epoch             1395024871
+            iso               20140317T025431Z
+            age               2m
+            remaining
+            countdown         2 mins
+
+entry       formatted*        2014-03-16
+            julian            2456733.62119
+            epoch             1395024871
+            iso               20140317T025431Z
+            age               2m
+            remaining         
+            countdown         2 mins
+
+id          number*           123
+
+imask       number*           12
+
+mask        default*          ++++---
+
+modified    formatted*        2014-03-16
+            julian            2456733.62119
+            epoch             1395024871
+            iso               20140317T025431Z
+            age               2m
+            remaining         
+            countdown         2 mins
+
+parent      long*             f30cb9c3-3fc0-483f-bfb2-3bf134f00694
+            short             34f00694
+
+priority    short*            H
+            long              High
+
+project     full*             home.garden
+            parent            home
+            indented            home.garden
+
+recur       duration*         weekly
+            indicator         R
+
+scheduled   formatted*        2014-03-16
+            julian            2456733.62119
+            epoch             1395024871
+            iso               20140317T025431Z
+            age               2m
+            remaining         
+            countdown         2 mins
+
+start       formatted*        2014-03-16
+            julian            2456733.62119
+            epoch             1395024871
+            iso               20140317T025431Z
+            age               2m
+            remaining
+            countdown         2 mins
+            active            *
+
+status      long*             Pending
+            short             P
+
+tags        list*             home @chore next
+            indicator         +
+            count             [2]
+
+until       formatted*        2014-03-16
+            julian            2456733.62119
+            epoch             1395024871
+            iso               20140317T025431Z
+            age               2m
+            remaining         
+            countdown         2 mins
+
+urgency     real*             4.6
+            integer           4
+
+uuid        long*             f30cb9c3-3fc0-483f-bfb2-3bf134f00694
+            short             f30cb9c3
+
+wait        formatted*        2014-03-16
+            julian            2456733.62119
+            epoch             1395024871
+            iso               20140317T025431Z
+            age               2m
+            remaining
+            countdown         2 mins
+
+* Means default format, and therefore optional.  For example, 'due' and 'due.formatted' are equivalent.

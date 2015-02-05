@@ -1,0 +1,1560 @@
+
+Name          Value
+------------- ------------------------------------
+ID            1
+Description   pick up bathroom
+Status        Pending
+Project       house cleaning
+UUID          e5dbba85-8416-4138-834c-3c72616699da
+Entered       2014-03-06 07:35:55 (10 days)
+Urgency       1.055
+Last modified 2014-03-16 18:23:47 (1 hr)
+[progress     0.000000]
+
+Date                Modification
+------------------- --------------------------------------
+2014-03-16 18:23:47 Modified set to '2014-03-16 18:23:47'.
+                    Progress set to '0.000000'.
+                    Project set to 'house cleaning'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            2
+Description   clean toilet
+Status        Pending
+Project       house cleaning
+UUID          0ed6fba7-df24-4401-8dca-cee038d490f6
+Entered       2014-03-06 07:36:17 (10 days)
+Urgency       1.055
+Last modified 2014-03-16 18:23:47 (1 hr)
+
+Date                Modification
+------------------- --------------------------------------
+2014-03-16 18:23:47 Modified set to '2014-03-16 18:23:47'.
+                    Progress set to '0.000000'.
+                    Project set to 'house cleaning'.
+
+
+Name          Value
+------------- ------------------------------------------------------------------
+ID            3
+Description   Write script that moves certs out of .tar file, places then in
+              correct position, and then updates .taskrc so that it will sync
+              with
+Status        Pending
+Project       MirakelTW
+UUID          9e069c84-7dbf-46b3-8bbf-0810f14e8d56
+Entered       2014-03-06 16:07:29 (10 days)
+Urgency       1.055
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 Modified set to '2014-03-13 17:11:42'.
+                    Project set to 'MirakelTW'.
+                    Description changed from 'create exec tasksh script that
+                    moves files around appropriatly and enables taskwarrior from
+                    other computers to sync with server.' to 'Write script that
+                    moves certs out of .tar file, places then in correct
+                    position, and then updates .taskrc so that it will sync
+                    with'.
+2014-03-13 17:47:41 Progress set to '0.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            4
+Description   set up backup for server
+Status        Pending
+Project       personal computers
+UUID          167e7db6-53a0-47f0-b026-86accdd4fe59
+Entered       2014-03-06 19:55:38 (10 days)
+Urgency       1.055
+Last modified 2014-03-16 18:23:47 (1 hr)
+
+Date                Modification
+------------------- --------------------------------------
+2014-03-16 18:23:47 Modified set to '2014-03-16 18:23:47'.
+                    Progress set to '1.000000'.
+                    Project set to 'personal computers'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            5
+Description   set up external drives on server
+Status        Pending
+Project       personal computers
+UUID          ace46164-4760-4837-9041-e57cf63c4c0c
+Entered       2014-03-06 19:56:14 (10 days)
+Urgency       1.055
+Last modified 2014-03-16 18:23:47 (1 hr)
+
+Date                Modification
+------------------- --------------------------------------
+2014-03-16 18:23:47 Modified set to '2014-03-16 18:23:47'.
+                    Progress set to '0.000000'.
+                    Project set to 'personal computers'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            6
+Description   set up task sync cron jobs
+Status        Pending
+Project       personal computers
+UUID          cdfcc4b8-7bd1-406d-b354-3bcc56b482a9
+Entered       2014-03-06 19:59:48 (10 days)
+Urgency       1.055
+Last modified 2014-03-16 18:23:47 (1 hr)
+
+Date                Modification
+------------------- --------------------------------------
+2014-03-16 18:23:47 Modified set to '2014-03-16 18:23:47'.
+                    Progress set to '0.000000'.
+                    Project set to 'personal computers'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            7
+Description   clear out huge backup files
+Status        Pending
+Project       personal computers
+UUID          be887941-9b39-4709-86e1-0ccab1b051e0
+Entered       2014-03-06 20:00:09 (9 days)
+Urgency       1.049
+Last modified 2014-03-16 18:23:47 (1 hr)
+
+Date                Modification
+------------------- --------------------------------------
+2014-03-16 18:23:47 Modified set to '2014-03-16 18:23:47'.
+                    Progress set to '0.000000'.
+                    Project set to 'personal computers'.
+
+
+Name          Value
+------------- ------------------------------------------------
+ID            8
+Description   finish setting up rsnapshot on server and laptop
+Status        Pending
+Project       personal computers
+UUID          2ed1bf2c-2a01-4138-b385-0e2975ea2fe2
+Entered       2014-03-06 20:24:25 (9 days)
+Urgency       1.049
+Last modified 2014-03-16 18:23:47 (1 hr)
+
+Date                Modification
+------------------- --------------------------------------
+2014-03-16 18:23:47 Modified set to '2014-03-16 18:23:47'.
+                    Progress set to '0.000000'.
+                    Project set to 'personal computers'.
+
+
+Name          Value
+------------- ------------------------------------------------------------------
+ID            9
+Description   download and install webscarab
+              https://www.owasp.org/index.php/Category:OWASP_WebScarab_Project
+Status        Pending
+Project       personal computers
+UUID          dd2431ed-1b1f-4e81-b254-7a3ef7ef5fa9
+Entered       2014-03-13 15:46:34 (3 days)
+Urgency       1.016
+Last modified 2014-03-16 18:23:47 (1 hr)
+
+Date                Modification
+------------------- --------------------------------------
+2014-03-16 18:23:47 Modified set to '2014-03-16 18:23:47'.
+                    Progress set to '0.000000'.
+                    Project set to 'personal computers'.
+
+
+Name          Value
+------------- ------------------------------------------------------------------
+ID            10
+Description   download and install webgoat
+              https://www.owasp.org/index.php/WebGoat_Installation
+Status        Pending
+Project       personal computers
+UUID          88fc41b7-2497-49a9-9cd0-02df7f6cd4e1
+Entered       2014-03-13 15:47:47 (3 days)
+Urgency       1.016
+Last modified 2014-03-16 18:23:47 (1 hr)
+
+Date                Modification
+------------------- --------------------------------------
+2014-03-16 18:23:47 Modified set to '2014-03-16 18:23:47'.
+                    Progress set to '0.000000'.
+                    Project set to 'personal computers'.
+
+
+Name          Value
+------------- ------------------------------------------------------------------
+ID            11
+Description   download, install, and explore some basic twisted applications
+              https://twistedmatrix.com/trac/
+Status        Pending
+Project       personal computers
+UUID          7870a9a2-ab4d-4e31-9009-b97f01eaad10
+Entered       2014-03-13 15:52:26 (3 days)
+Urgency       1.016
+Last modified 2014-03-16 18:23:47 (1 hr)
+
+Date                Modification
+------------------- --------------------------------------
+2014-03-16 18:23:47 Modified set to '2014-03-16 18:23:47'.
+                    Progress set to '0.000000'.
+                    Project set to 'personal computers'.
+
+
+Name        Value
+----------- -------------------------------------
+ID          12
+Description set up some sort of versioning system
+Status      Pending
+UUID        527a5603-8f11-4712-839a-ded65d638481
+Entered     2014-03-13 19:59:08 (3 days)
+Urgency     0.02
+
+
+Name        Value
+----------- -------------------------------------------------
+ID          13
+Description build page that gives me control of virtual boxes
+Status      Pending
+UUID        409e34bd-2de7-4c99-b697-051f43cb6b48
+Entered     2014-03-13 20:07:54 (2 days)
+Urgency     0.01
+
+
+Name          Value
+------------- ------------------------------------
+ID            14
+Description   set up sync between editors
+Status        Pending
+Project       personal computers
+UUID          64948773-80d3-4b39-be0c-4d6c8d7cc41a
+Entered       2014-03-13 13:09:36 (3 days)
+Urgency       1.016
+Last modified 2014-03-16 18:23:47 (1 hr)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-16 18:23:47 Modified changed from '2014-03-13 13:09:36' to '2014-03-16
+                    18:23:47'.
+                    Project changed from 'Inbox' to 'personal computers'.
+
+
+Name          Value
+------------- -----------------------------------------------
+ID            15
+Description   build bj such that homepage helps look for jobs
+Status        Pending
+Project       personal computers
+UUID          649bea98-0011-4f92-a27e-b6ac1efa4e29
+Entered       2014-03-13 15:10:13 (3 days)
+Urgency       1.016
+Last modified 2014-03-13 15:12:15 (3 days)
+
+
+Name                 Value
+-------------------- -----------------------------------------------
+ID                   16
+Description          find a job
+Status               Pending
+Project              Inbox
+Priority             H
+This task blocked by 18 apply to lots of positions
+                     19 attempt to find and apply to uverse position
+UUID                 a4950faa-1594-4294-8fca-33883e6d8c4e
+Entered              2014-03-13 15:13:15 (3 days)
+Urgency              2.016
+Last modified        2014-03-13 15:13:21 (3 days)
+
+
+Name          Value
+------------- ----------------------------------------------
+ID            17
+Description   write page for taskwarrior manipulation for bj
+Status        Pending
+Project       personal computers
+UUID          51231239-a946-4513-b47d-04ede67500bc
+Entered       2014-03-13 15:14:00 (3 days)
+Urgency       1.016
+Last modified 2014-03-13 15:14:08 (3 days)
+
+
+Name                  Value
+--------------------- ------------------------------------
+ID                    18
+Description           apply to lots of positions
+Status                Pending
+Project               Inbox
+This task is blocking 16 find a job
+UUID                  0ce91435-01ff-445b-a007-2854e13aeb5a
+Entered               2014-03-13 15:14:43 (3 days)
+Urgency               9.016
+Last modified         2014-03-13 15:14:43 (3 days)
+
+
+Name                  Value
+--------------------- --------------------------------------------
+ID                    19
+Description           attempt to find and apply to uverse position
+Status                Pending
+Project               Inbox
+This task is blocking 16 find a job
+UUID                  6b97fb6c-49cc-457a-9d1e-9a3a2f09921b
+Entered               2014-03-13 15:15:06 (3 days)
+Urgency               9.016
+Last modified         2014-03-13 15:15:06 (3 days)
+
+
+Name          Value
+------------- -----------------------------------------
+ID            20
+Description   restore old sublimetext file from dropbox
+Status        Pending
+Project       Inbox
+UUID          4063f783-0806-49b4-9e77-3706fa207b93
+Entered       2014-03-13 15:19:20 (3 days)
+Urgency       1.016
+Last modified 2014-03-13 15:19:20 (3 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            21
+Description   clean off dresser
+Status        Pending
+Project       house cleaning
+UUID          5d256969-f367-4813-8543-e5eca22b3124
+Entered       2014-03-13 15:21:31 (3 days)
+Urgency       1.016
+Last modified 2014-03-13 15:21:40 (3 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            22
+Description   doctors appointment
+Status        Pending
+Project       Inbox
+UUID          62a2b30f-fa5d-4608-ac89-fb96f7014023
+Entered       2014-03-13 16:18:13 (3 days)
+Urgency       1.016
+Last modified 2014-03-13 16:18:13 (3 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            23
+Description   dentist appointment
+Status        Pending
+Project       Inbox
+UUID          a27e681b-c9c7-4d94-a8f6-60fe0c3cf14f
+Entered       2014-03-13 16:18:26 (3 days)
+Urgency       1.016
+Last modified 2014-03-13 16:18:26 (3 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            24
+Description   fix bathroom sink
+Status        Pending
+Project       Inbox
+UUID          d873a9a3-f1f9-4e0e-b1ba-59b608ce4412
+Entered       2014-03-13 16:18:39 (3 days)
+Urgency       1.016
+Last modified 2014-03-13 16:18:39 (3 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            25
+Description   set up home vpn
+Status        Pending
+Project       Inbox
+UUID          0d7729bd-937d-4f28-a80d-a7245d46f2be
+Entered       2014-03-13 16:18:54 (3 days)
+Urgency       1.016
+Last modified 2014-03-13 16:18:54 (3 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            26
+Description   set up home webserver
+Status        Pending
+Project       Inbox
+UUID          97ac9603-e565-4b28-9572-d17bc915994e
+Entered       2014-03-13 16:19:07 (3 days)
+Urgency       1.016
+Last modified 2014-03-13 16:19:07 (3 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            27
+Description   shave
+Status        Pending
+Project       Inbox
+UUID          28b1bfdb-0df9-443d-a9e1-ca1515c9bcd0
+Entered       2014-03-13 16:33:36 (3 days)
+Urgency       1.016
+Last modified 2014-03-13 16:33:36 (3 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            28
+Description   haircut
+Status        Pending
+Project       Inbox
+UUID          26d40e72-49a4-4e29-8292-791e9c807ea5
+Entered       2014-03-13 16:33:49 (3 days)
+Urgency       1.016
+Last modified 2014-03-13 16:33:49 (3 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            29
+Description   walk at least 10 minutes
+Status        Pending
+Project       Inbox
+Priority      M
+UUID          8db218a5-37ab-42b3-a9bd-c4c724bffe08
+Entered       2014-03-13 16:50:50 (3 days)
+Urgency       4.916
+Last modified 2014-03-16 18:23:47 (1 hr)
+[reminder     20140315T182720Z]
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-16 18:23:47 Modified changed from '2014-03-13 16:53:28' to '2014-03-16
+                    18:23:47'.
+                    Progress changed from '67.000000' to '0.000000'.
+2014-03-16 18:23:47 Reminder changed from '20140314T110021Z' to
+                    '20140315T175315Z'.
+2014-03-16 18:23:47 Reminder changed from '20140315T175315Z' to
+                    '20140315T182720Z'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            30
+Description   clean front froom
+Status        Pending
+Project       daily
+Recurrence    daily
+Parent task   19dcdb07-236a-4e5a-8070-1337221a4d71
+Mask Index    81
+Due           2014-03-14 18:59:55
+UUID          5efb7db9-4a35-4c4d-8bd1-37d84fc39e8b
+Entered       2014-03-13 21:47:52 (2 days)
+Urgency       10.74
+Last modified 2014-03-12 23:42:43 (3 days)
+
+
+Name        Value
+----------- -------------------------------------------------------------------------------------
+ID          31
+Description clean front froom
+Status      Recurring
+Project     daily
+Recurrence  daily
+Mask        +X++XXXXXX---------------------------------------------------------------------------
+Due         2013-12-23 18:59:55
+UUID        19dcdb07-236a-4e5a-8070-1337221a4d71
+Entered     2013-12-22 18:51:52 (2 mths)
+Urgency     13.46
+Last        2014-03-16 19:55:58 (3 mins)
+modified
+
+Date       Modification
+---------- -----------------------------------------------------------------------------------------------
+2014-03-16 Mask changed from
+18:23:58   '+X++XXXXXX------------------------------------------------------------------------' to
+           '+X++XXXXXX--------------------------------------------------------------------------'.
+           Modified changed from '2014-03-13 21:47:52' to '2014-03-16 18:23:58'.
+2014-03-16 Mask changed from
+19:55:58   '+X++XXXXXX--------------------------------------------------------------------------' to
+           '+X++XXXXXX---------------------------------------------------------------------------'.
+           Modified changed from '2014-03-16 18:23:58' to '2014-03-16 19:55:58'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            32
+Description   clean kitchen
+Status        Pending
+Project       daily
+Recurrence    daily
+Parent task   d9b8c24b-8a3b-4b60-9370-210d55b642af
+Mask Index    81
+Due           2014-03-14 19:00:21
+UUID          02634cf5-baee-4682-93cd-6a71db40f7ed
+Entered       2014-03-13 21:47:52 (2 days)
+Urgency       10.74
+Last modified 2014-03-12 23:42:43 (3 days)
+
+
+Name        Value
+----------- -------------------------------------------------------------------------------------
+ID          33
+Description clean kitchen
+Status      Recurring
+Project     daily
+Recurrence  daily
+Mask        +X++XXXXXX---------------------------------------------------------------------------
+Due         2013-12-23 19:00:21
+UUID        d9b8c24b-8a3b-4b60-9370-210d55b642af
+Entered     2013-12-22 18:52:01 (2 mths)
+Urgency     13.46
+Last        2014-03-16 19:55:58 (3 mins)
+modified
+
+Date       Modification
+---------- -----------------------------------------------------------------------------------------------
+2014-03-16 Mask changed from
+18:23:58   '+X++XXXXXX------------------------------------------------------------------------' to
+           '+X++XXXXXX--------------------------------------------------------------------------'.
+           Modified changed from '2014-03-13 21:47:52' to '2014-03-16 18:23:58'.
+2014-03-16 Mask changed from
+19:55:58   '+X++XXXXXX--------------------------------------------------------------------------' to
+           '+X++XXXXXX---------------------------------------------------------------------------'.
+           Modified changed from '2014-03-16 18:23:58' to '2014-03-16 19:55:58'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            34
+Description   meditate for twenty minutes
+Status        Pending
+Recurrence    daily
+Parent task   48381104-afb2-4f94-a329-cd3add13d410
+Mask Index    80
+Due           2014-03-14 00:00:00
+UUID          e265d047-7a77-436f-b642-d210842d8e4f
+Entered       2014-03-13 21:47:52 (2 days)
+Urgency       10.11
+Last modified 2014-03-12 23:42:43 (3 days)
+
+
+Name        Value
+----------- ------------------------------------------------------------------------------------
+ID          35
+Description meditate for twenty minutes
+Status      Recurring
+Recurrence  daily
+Mask        +++XXXXX+---------------------------------------------------------------------------
+Due         2013-12-24 00:00:00
+UUID        48381104-afb2-4f94-a329-cd3add13d410
+Entered     2013-12-22 23:05:44 (11 wks)
+Urgency     12.45
+Last        2014-03-16 18:23:58 (1 hr)
+modified
+
+Date       Modification
+---------- ----------------------------------------------------------------------------------------------
+2014-03-16 Mask changed from
+18:23:58   '+++XXXXX+------------------------------------------------------------------------' to
+           '+++XXXXX+---------------------------------------------------------------------------'.
+           Modified changed from '2014-03-13 21:47:52' to '2014-03-16 18:23:58'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            36
+Description   dishes
+Status        Pending
+Recurrence    daily
+Parent task   3a8d558d-7da8-48a2-b115-82b40507a2ca
+Mask Index    81
+Due           2014-03-14 00:00:00
+UUID          54e4a4c9-4801-4684-be02-1fab7c22c37d
+Entered       2014-03-13 21:47:52 (2 days)
+Urgency       10.11
+Last modified 2014-03-12 23:42:43 (3 days)
+
+
+Name        Value
+----------- -------------------------------------------------------------------------------------
+ID          37
+Description dishes
+Status      Recurring
+Recurrence  daily
+Mask        ++++XXXXXX+--------------------------------------------------------------------------
+Due         2013-12-23 00:00:00
+UUID        3a8d558d-7da8-48a2-b115-82b40507a2ca
+Entered     2013-12-23 00:47:39 (11 wks)
+Urgency     12.45
+Last        2014-03-16 18:23:58 (1 hr)
+modified
+
+Date       Modification
+---------- -----------------------------------------------------------------------------------------------
+2014-03-16 Mask changed from
+18:23:58   '++++XXXXXX+-----------------------------------------------------------------------' to
+           '++++XXXXXX+--------------------------------------------------------------------------'.
+           Modified changed from '2014-03-13 21:47:52' to '2014-03-16 18:23:58'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            38
+Description   declutter living room
+Status        Pending
+Recurrence    daily
+Parent task   1f56223d-ac8f-4feb-9602-8092a2d352d8
+Mask Index    80
+Due           2014-03-14 00:00:00
+UUID          56c7f717-3ec9-42be-8704-bec3e1e64ce0
+Entered       2014-03-13 21:47:52 (2 days)
+Urgency       10.11
+Last modified 2014-03-12 23:42:43 (3 days)
+
+
+Name        Value
+----------- ------------------------------------------------------------------------------------
+ID          39
+Description declutter living room
+Status      Recurring
+Recurrence  daily
+Mask        +++XXXXX++--------------------------------------------------------------------------
+Due         2013-12-24 00:00:00
+UUID        1f56223d-ac8f-4feb-9602-8092a2d352d8
+Entered     2013-12-23 01:25:06 (11 wks)
+Urgency     12.45
+Last        2014-03-16 18:23:58 (1 hr)
+modified
+
+Date       Modification
+---------- ----------------------------------------------------------------------------------------------
+2014-03-16 Mask changed from
+18:23:58   '+++XXXXX++-----------------------------------------------------------------------' to
+           '+++XXXXX++--------------------------------------------------------------------------'.
+           Modified changed from '2014-03-13 21:47:52' to '2014-03-16 18:23:58'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            40
+Description   declutter bedroom
+Status        Pending
+Recurrence    daily
+Parent task   eebcc891-1aa3-44d8-8e49-54c9b75a0523
+Mask Index    80
+Due           2014-03-14 00:00:00
+UUID          71d728d5-fa41-4a16-bfac-7407e005695a
+Entered       2014-03-13 21:47:52 (2 days)
+Urgency       10.11
+Last modified 2014-03-12 23:42:43 (3 days)
+
+
+Name        Value
+----------- ------------------------------------------------------------------------------------
+ID          41
+Description declutter bedroom
+Status      Recurring
+Recurrence  daily
+Mask        +++XXXXXX+--------------------------------------------------------------------------
+Due         2013-12-24 00:00:00
+UUID        eebcc891-1aa3-44d8-8e49-54c9b75a0523
+Entered     2013-12-23 01:25:28 (11 wks)
+Urgency     12.45
+Last        2014-03-16 18:23:58 (1 hr)
+modified
+
+Date       Modification
+---------- ----------------------------------------------------------------------------------------------
+2014-03-16 Mask changed from
+18:23:58   '+++XXXXXX+-----------------------------------------------------------------------' to
+           '+++XXXXXX+--------------------------------------------------------------------------'.
+           Modified changed from '2014-03-13 21:47:52' to '2014-03-16 18:23:58'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            42
+Description   clean front froom
+Status        Pending
+Project       daily
+Recurrence    daily
+Parent task   19dcdb07-236a-4e5a-8070-1337221a4d71
+Mask Index    82
+Due           2014-03-15 18:59:55
+UUID          33e12c4a-2623-4843-9c3e-f29629c0734a
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       10.28
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            43
+Description   clean front froom
+Status        Pending
+Project       daily
+Recurrence    daily
+Parent task   19dcdb07-236a-4e5a-8070-1337221a4d71
+Mask Index    83
+Due           2014-03-16 18:59:55
+UUID          3a66dd33-d702-4016-8d9a-f8ca749c712a
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       9.819
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            44
+Description   clean kitchen
+Status        Pending
+Project       daily
+Recurrence    daily
+Parent task   d9b8c24b-8a3b-4b60-9370-210d55b642af
+Mask Index    82
+Due           2014-03-15 19:00:21
+UUID          ca6c9a5f-6787-4a4c-b5da-88996ef3b12a
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       10.28
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            45
+Description   clean kitchen
+Status        Pending
+Project       daily
+Recurrence    daily
+Parent task   d9b8c24b-8a3b-4b60-9370-210d55b642af
+Mask Index    83
+Due           2014-03-16 19:00:21
+UUID          a61e7574-93d4-4a82-971a-48b538d41c24
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       9.819
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            46
+Description   meditate for twenty minutes
+Status        Pending
+Recurrence    daily
+Parent task   48381104-afb2-4f94-a329-cd3add13d410
+Mask Index    81
+Due           2014-03-15 00:00:00
+UUID          aa3aca2c-5357-4790-9731-5c13ba7cf9f4
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       9.638
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            47
+Description   meditate for twenty minutes
+Status        Pending
+Recurrence    daily
+Parent task   48381104-afb2-4f94-a329-cd3add13d410
+Mask Index    82
+Due           2014-03-16 00:00:00
+UUID          58441f32-3747-4ab2-aa29-2460d74f6e97
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       9.181
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            48
+Description   meditate for twenty minutes
+Status        Pending
+Recurrence    daily
+Parent task   48381104-afb2-4f94-a329-cd3add13d410
+Mask Index    83
+Due           2014-03-17 00:00:00
+UUID          ea6487b7-131d-4c9d-a97e-a334790d9077
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       8.724
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            49
+Description   dishes
+Status        Pending
+Recurrence    daily
+Parent task   3a8d558d-7da8-48a2-b115-82b40507a2ca
+Mask Index    82
+Due           2014-03-15 00:00:00
+UUID          071c74dd-e838-44c3-a521-288f551e8e71
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       9.638
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            50
+Description   dishes
+Status        Pending
+Recurrence    daily
+Parent task   3a8d558d-7da8-48a2-b115-82b40507a2ca
+Mask Index    83
+Due           2014-03-16 00:00:00
+UUID          2d6c6a4b-780a-4919-ae79-3b7fa185a515
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       9.181
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            51
+Description   dishes
+Status        Pending
+Recurrence    daily
+Parent task   3a8d558d-7da8-48a2-b115-82b40507a2ca
+Mask Index    84
+Due           2014-03-17 00:00:00
+UUID          bdb62c8d-005a-46d4-b393-4d43d9c29798
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       8.724
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            52
+Description   declutter living room
+Status        Pending
+Recurrence    daily
+Parent task   1f56223d-ac8f-4feb-9602-8092a2d352d8
+Mask Index    81
+Due           2014-03-15 00:00:00
+UUID          d6407aa2-1ba3-4f21-8901-07bfab8ee6bd
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       9.638
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            53
+Description   declutter living room
+Status        Pending
+Recurrence    daily
+Parent task   1f56223d-ac8f-4feb-9602-8092a2d352d8
+Mask Index    82
+Due           2014-03-16 00:00:00
+UUID          303fd606-491f-4922-b93a-f91f2068ab99
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       9.181
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            54
+Description   declutter living room
+Status        Pending
+Recurrence    daily
+Parent task   1f56223d-ac8f-4feb-9602-8092a2d352d8
+Mask Index    83
+Due           2014-03-17 00:00:00
+UUID          fb8e58a1-90d5-4825-a5cf-5840bf23ea65
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       8.724
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            55
+Description   declutter bedroom
+Status        Pending
+Recurrence    daily
+Parent task   eebcc891-1aa3-44d8-8e49-54c9b75a0523
+Mask Index    81
+Due           2014-03-15 00:00:00
+UUID          678f7daf-81ea-45fd-8e15-ee4e4dafa732
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       9.638
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            56
+Description   declutter bedroom
+Status        Pending
+Recurrence    daily
+Parent task   eebcc891-1aa3-44d8-8e49-54c9b75a0523
+Mask Index    82
+Due           2014-03-16 00:00:00
+UUID          34959f9e-42d2-43d9-9142-b9029b2b8df9
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       9.181
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            57
+Description   declutter bedroom
+Status        Pending
+Recurrence    daily
+Parent task   eebcc891-1aa3-44d8-8e49-54c9b75a0523
+Mask Index    83
+Due           2014-03-17 00:00:00
+UUID          fbfb2af1-f3ee-4554-886f-1030a1e402d5
+Entered       2014-03-16 18:23:58 (1 hr)
+Urgency       8.724
+Last modified 2014-03-13 21:47:52 (2 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            58
+Description   clean front froom
+Status        Pending
+Project       daily
+Recurrence    daily
+Parent task   19dcdb07-236a-4e5a-8070-1337221a4d71
+Mask Index    84
+Due           2014-03-17 18:59:55
+UUID          c18e0c80-d8cd-45ac-afdf-cd91fcbe219a
+Entered       2014-03-16 19:55:58 (3 mins)
+Urgency       9.362
+Last modified 2014-03-16 18:23:58 (1 hr)
+
+
+Name          Value
+------------- ------------------------------------
+ID            59
+Description   clean kitchen
+Status        Pending
+Project       daily
+Recurrence    daily
+Parent task   d9b8c24b-8a3b-4b60-9370-210d55b642af
+Mask Index    84
+Due           2014-03-17 19:00:21
+UUID          ac5e2fde-e6b6-4fa0-9792-296355785997
+Entered       2014-03-16 19:55:58 (3 mins)
+Urgency       9.362
+Last modified 2014-03-16 18:23:58 (1 hr)
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   reinstall centos on server
+Status        Completed
+End           2014-03-13 15:15:19
+UUID          83a2690a-3797-47c9-8a90-99285a857da2
+Entered       2014-03-06 16:07:59 (10 days)
+Urgency       0.05
+Last modified 2014-03-16 18:23:47 (1 hr)
+
+Date                Modification
+------------------- ---------------------------------------------
+2014-03-16 18:23:47 End set to '2014-03-13 15:15:19'.
+                    Modified set to '2014-03-16 18:23:47'.
+                    Progress set to '100.000000'.
+                    Status changed from 'pending' to 'completed'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   one
+Status        Deleted
+End           2014-03-13 13:19:36
+UUID          af9622bc-483a-41ca-a003-d0f7be8f0b91
+Entered       2014-03-10 09:49:06 (6 days)
+Urgency       0.03
+Last modified 2014-03-16 18:23:47 (1 hr)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 16:21:03'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+2014-03-16 18:23:47 End changed from '2014-03-13 16:21:03' to '2014-03-13
+                    13:19:36'.
+                    Modified changed from '2014-03-13 17:47:41' to '2014-03-16
+                    18:23:47'.
+                    Status changed from 'completed' to 'deleted'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   adapt twts script to auto start ts
+Status        Completed
+End           2014-03-13 17:08:05
+UUID          67f9ccb5-18fb-437a-84a1-c2bd5e097202
+Entered       2014-03-06 07:30:50 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:08:05'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   adapt twts script for ubuntu
+Status        Completed
+End           2014-03-13 17:08:07
+UUID          561b589a-1fda-47ca-b400-9cc8f486dcf0
+Entered       2014-03-06 07:31:13 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:08:07'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   adapt twts script for arch
+Status        Completed
+End           2014-03-13 17:08:08
+UUID          3db00c5a-54ca-4fc6-a202-090d40d65b0a
+Entered       2014-03-06 07:31:20 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:08:08'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   adapt twts script for centos
+Status        Completed
+End           2014-03-13 17:08:09
+UUID          3a7b74d6-7905-40ce-aa16-cb83a7a05184
+Entered       2014-03-06 07:31:25 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:08:09'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   fold laundry in drier
+Status        Completed
+End           2014-03-13 17:08:10
+UUID          18e02afb-558d-4abe-8a3a-515186b0ab9d
+Entered       2014-03-06 07:34:40 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:08:10'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   start next washer load
+Status        Completed
+End           2014-03-13 17:08:11
+UUID          c7c87398-0123-410b-9958-2bfbac2e8e10
+Entered       2014-03-06 07:34:50 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:08:11'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   do another load of dishes
+Status        Completed
+End           2014-03-13 17:08:12
+UUID          32bf1aa0-5499-4476-bd2c-783347eaf5b6
+Entered       2014-03-06 07:35:00 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:08:12'.
+                    Modified changed from '2014-03-06 07:35:33' to '2014-03-13
+                    17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   do another load
+Status        Completed
+End           2014-03-13 17:08:13
+UUID          a8c984c6-34d6-4501-a5e0-2514256bc5ba
+Entered       2014-03-06 07:35:11 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:08:13'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   sweep living room floor
+Status        Completed
+End           2014-03-13 17:08:15
+UUID          a8e870cc-5f39-4ed8-aca1-0d40227d62c0
+Entered       2014-03-06 07:35:49 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:08:15'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   sync completed
+Status        Completed
+End           2014-03-13 17:08:18
+UUID          762d1775-874c-4d35-941f-cffdc89594b4
+Entered       2014-03-06 15:40:27 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:08:18'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ---------------------------------------------
+ID            -
+Description   was able to sync after only loggin in via ssh
+Status        Completed
+End           2014-03-13 17:08:29
+UUID          68db3bb8-3b15-45d5-8734-ef86831a42f2
+Entered       2014-03-06 15:53:27 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:08:29'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ----------------------------------------------------------------
+ID            -
+Description   attempt twarrior setup where taskddata is in profile or similar.
+Status        Completed
+End           2014-03-13 17:08:37
+UUID          b16daf08-f9fb-42cf-8531-24d51f75f3ee
+Entered       2014-03-06 16:04:48 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:08:37'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   add repos for server
+Status        Completed
+End           2014-03-13 17:11:16
+UUID          7904deb2-3a13-4876-ae97-8cb62741add2
+Entered       2014-03-06 19:55:53 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:11:16'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- -------------------------------------
+ID            -
+Description   install webserver packages for server
+Status        Completed
+End           2014-03-13 17:11:15
+UUID          1ba1914d-1eb1-426e-80b1-7f6a91504a05
+Entered       2014-03-06 19:56:02 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:11:15'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ----------------------------------------------
+ID            -
+Description   install and configure task and taskd on server
+Status        Completed
+End           2014-03-13 17:11:08
+UUID          7e52c320-0151-4bb6-8d8f-d42e57a632f6
+Entered       2014-03-06 19:56:38 (10 days)
+Urgency       0.05
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:11:08'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   one
+Status        Completed
+End           2014-03-13 17:11:00
+UUID          34ecd1ae-d207-49a2-8e8a-ba62952f25d0
+Entered       2014-03-09 18:21:18 (7 days)
+Urgency       0.04
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:11:00'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   one
+Status        Completed
+End           2014-03-13 17:10:59
+UUID          934a06e1-4e6d-479a-9a3f-19e1df60de88
+Entered       2014-03-10 10:44:38 (6 days)
+Urgency       0.03
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:10:59'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   another one
+Status        Completed
+End           2014-03-13 17:10:59
+UUID          4f8687d0-ccb0-4f1c-9c5b-81f84ed39966
+Entered       2014-03-10 10:47:34 (6 days)
+Urgency       0.03
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:10:59'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   awesome
+Status        Completed
+End           2014-03-13 17:10:58
+UUID          7b74ee6b-f775-4fee-b81b-35732b96ba58
+Entered       2014-03-12 20:03:45 (3 days)
+Urgency       0.02
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:10:58'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   one
+Status        Completed
+End           2014-03-13 17:10:57
+UUID          596e13e5-f000-4df0-8fd8-e785b7333bae
+Entered       2014-03-13 04:26:11 (3 days)
+Urgency       0.02
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:10:57'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   awesome
+Status        Completed
+End           2014-03-13 17:10:57
+UUID          c150c862-aca3-4abf-a845-e94b91526b0b
+Entered       2014-03-13 05:34:25 (3 days)
+Urgency       0.02
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:10:57'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   one two three
+Status        Completed
+End           2014-03-13 17:11:22
+UUID          757a4454-2e95-48a2-abf5-5990399c27b5
+Entered       2014-03-13 07:53:22 (3 days)
+Urgency       0.02
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:11:22'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   new task
+Status        Completed
+End           2014-03-13 17:10:53
+UUID          c3511e3f-ebdd-4725-b248-81b234e16712
+Entered       2014-03-13 16:16:07 (3 days)
+Urgency       0.02
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 End set to '2014-03-13 17:10:53'.
+                    Modified set to '2014-03-13 17:11:42'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   This is a new task!
+Status        Completed
+End           2014-03-13 17:10:52
+UUID          c8827be8-4e51-4e8b-b866-98401fa5407a
+Entered       2014-03-13 16:16:23 (3 days)
+Urgency       0.02
+Last modified 2014-03-13 17:47:41 (3 days)
+
+Date                Modification
+------------------- ------------------------------------------------------------
+2014-03-13 17:11:42 Modified set to '2014-03-13 17:11:42'.
+                    Description changed from 'new task' to 'This is a new
+                    task!'.
+2014-03-13 17:11:42 End set to '2014-03-13 17:10:52'.
+                    Status changed from 'pending' to 'completed'.
+2014-03-13 17:47:41 Progress set to '100.000000'.
+                    Modified changed from '2014-03-13 17:11:42' to '2014-03-13
+                    17:47:41'.
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   one
+Status        Deleted
+End           2014-03-06 07:28:42
+UUID          b2ccd154-e8e3-43b8-95ff-a7df59a5ee7c
+Entered       2014-03-05 17:29:46 (11 days)
+Urgency       0.06
+Last modified 2014-03-06 07:28:44 (10 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   awesome
+Status        Deleted
+End           2014-03-06 07:28:52
+UUID          fcc4cb61-0b58-4249-8faf-919e82288c8d
+Entered       2014-03-05 17:29:50 (11 days)
+Urgency       0.06
+Last modified 2014-03-06 07:28:54 (10 days)
+
+
+Name          Value
+------------- ------------------------------------
+ID            -
+Description   reddd
+Status        Deleted
+Project       Inbox
+End           2014-03-06 07:29:06
+UUID          1891af64-8a97-4ea4-847e-24124978b901
+Entered       2014-03-05 11:21:21 (11 days)
+Urgency       1.06
+Last modified 2014-03-06 07:29:08 (10 days)
+
+
+Name          Value
+------------- ------------------------------------------------------------------
+ID            -
+Description   change taskdconfig into QR code
+                2014-03-06 07:30:07 qrcode was only for dl link, there is too
+              much data in the file
+Status        Completed
+End           2014-03-06 07:30:12
+UUID          0d0114a5-89c0-4403-95e3-893f5bf77afa
+Entered       2014-03-05 22:58:52 (10 days)
+Urgency       0.85
+Last modified 2014-03-06 07:30:12 (10 days)
+

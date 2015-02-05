@@ -1,3 +1,0 @@
-Thu Mar 27 19:13:21 MST 2014
-jlmarks 
- 19:13:21 up  2:51,  1 user,  load average: 0.40, 0.40, 0.35

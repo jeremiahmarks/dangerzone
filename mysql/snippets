@@ -1,3 +1,0 @@
-UPDATE `portfolio` SET field='newvalue' WHERE field='oldvalue'
-
-UPDATE `table` SET `datefield`=CURDATE() WHERE `datefield` IS NULL

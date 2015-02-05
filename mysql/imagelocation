@@ -1,1 +1,0 @@
-UPDATE `portfolio` SET field='newvalue' WHERE field='oldvalue'

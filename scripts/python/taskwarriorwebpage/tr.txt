@@ -1,0 +1,33 @@
+
+Report           Description
+---------------- --------------------------------------------------
+active           Lists active tasks
+all              Lists all pending and completed tasks
+blocked          Lists all blocked tasks
+blocking         Lists all blocking tasks
+burndown.daily   Shows a graphical burndown chart, by day
+burndown.monthly Shows a graphical burndown chart, by month
+burndown.weekly  Shows a graphical burndown chart, by week
+completed        Lists completed tasks
+ghistory.annual  Shows a graphical report of task history, by year
+ghistory.monthly Shows a graphical report of task history, by month
+history.annual   Shows a report of task history, by year
+history.monthly  Shows a report of task history, by month
+information      Shows all data and metadata
+list             Lists all pending tasks
+long             Lists all pending tasks
+ls               Minimal listing of all pending tasks
+minimal          Minimal listing of all pending tasks
+newest           Shows the newest tasks
+next             Lists the most urgent tasks
+oldest           Shows the oldest tasks
+overdue          Lists overdue tasks
+projects         Shows all project names used
+ready            Lists the most urgent tasks
+recurring        Lists recurring tasks
+summary          Shows a report of task status by project
+tags             Shows a list of all tags used
+unblocked        Lists all unblocked tasks
+waiting          Lists all waiting tasks
+
+28 reports

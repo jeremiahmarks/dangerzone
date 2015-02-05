@@ -1,0 +1,11 @@
+################################################################################
+################################################################################
+## get list of files and print out the index and file name. 
+## note this approach may be less effective than others to get file names
+## but traversing the array is what is more important. 
+
+
+files=(*)
+for i in "${!files[@]}"; do 
+  printf "%s\t%s\n" "$i" "${files[$i]}"
+done
