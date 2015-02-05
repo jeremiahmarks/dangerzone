@@ -1,9 +1,0 @@
-From /etc/rcS.d/README:
-	
-	The scripts in this directory whose names begin with an 'S' areexecuted once when booting the system, even when booting directly intosingle user mode.
-
-	The scripts are all symbolic links whose targets are located in/etc/init.d/ .
-
-	To disable a script in this directory, rename it so that it beginswith a 'K' and run 'update-rc.d script defaults' to update the orderusing the script dependencies.
-
-	For more information see /etc/init.d/README.
