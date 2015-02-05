@@ -1,2 +1,0 @@
-each computer will have ~/mycode which will be synched and backed up to a 7z file in Dropbox
-
