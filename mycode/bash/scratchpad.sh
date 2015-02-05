@@ -2,7 +2,7 @@
 # @Author: Jeremiah Marks
 # @Date:   2015-02-04 22:03:21
 # @Last Modified by:   Jeremiah Marks
-# @Last Modified time: 2015-02-04 23:03:30
+# @Last Modified time: 2015-02-04 23:34:19
 
 # NOTE:  	This script is dependent on you having ssmtp installed and configured.
 #			If you do not this script will not work as intended.
@@ -99,9 +99,10 @@ testips(){
 }
 
 runloop(){
-	while : do
+	while :
+	do
 		testips
-		sleep 10m
+		sleep $WAITTIME
 	done
 }
 
