@@ -21,9 +21,3 @@ EXAMPLE
         hash_with_symbols[key.to_sym] = hash_with_strings.delete(key)
     end
 
-###Access a nested hashs elements
-Assume that you have a hash this_hash[:keyname] = { thiskey: "val1", thatkey: "val2" }
-you could access val1 with
-    this_hash[:keyname][:thiskey]
-
-

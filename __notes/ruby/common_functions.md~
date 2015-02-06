@@ -51,8 +51,7 @@
     - returns true if value is a key, otherwise false
 * hash.has_value?(value)
     - returns true if the listed value is a value, otherwise false
-* hash.delete(key)
-    - returns the values of has[key] and removes the element from the hash
+
 
 ###loop control
 ####while

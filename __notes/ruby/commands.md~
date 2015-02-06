@@ -57,11 +57,6 @@ moves to next item in iterable
 ###hash
 seems very similar to python dictionary
 * creation
-    - syntax
-        Can use either
-            :pointer => "value"
-        or
-            pointer: "value"
     - via irb(example)
 
         irb(main):002:0> abc = {
@@ -71,28 +66,3 @@ seems very similar to python dictionary
         => {:a=>"a", :b=>"b"}
         irb(main):006:0> abc[:a]
         => "a"
-    - creating new, blank hash
-        hashname={}
-        OR
-        hashname = Hash.new
-* accessing elements
-    - individualy
-      hashname[:pointer]
-    - iterative
-      hashname.each do |keyname, valuename|
-          puts "#{keyname} has the value of #{valuename}"
-      end
-* adding elements
-    - hashname[:pointername] = "Value"
-
-###range
-two ways to make a range, either include last element or not
-works for both chars and integers
-* include last element
-    - ('a'..'f')
-      will have 'a' and 'f' in the end range
-* exclude last element
-    - ('a'...'f')
-      will have 'a' but not 'f'
-
-
