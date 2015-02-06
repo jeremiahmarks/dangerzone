@@ -1,10 +1,10 @@
 ##Commands and important structures
 
-###puts 
+###puts
 displays to screen and inserts a new line
 ###gets
 gets the most recent input the user typed in
-###print 
+###print
 displays to screen and does not put new line
 ###false
 you know, not true
@@ -17,7 +17,7 @@ EXAMPLE
     elsif multiline_comments == "=begin" && "=end"
         =begin
         when the else function evaluates before it's variables
-         can be set in every case, I hope that it errors when 
+         can be set in every case, I hope that it errors when
          loading it in irb
         The guards of the multiline comment may not be mentioned
          by name when you are between them, or anarchy will reign.
@@ -95,4 +95,6 @@ works for both chars and integers
     - ('a'...'f')
       will have 'a' but not 'f'
 
-
+###yield
+allows the code block passed to a method to run
+* can also be used in conjunction with splat params

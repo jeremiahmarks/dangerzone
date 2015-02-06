@@ -53,6 +53,8 @@
     - returns true if the listed value is a value, otherwise false
 * hash.delete(key)
     - returns the values of has[key] and removes the element from the hash
+*  block_given?  from within a function
+    - returns true if a block was passed to the function
 
 ###loop control
 ####while
