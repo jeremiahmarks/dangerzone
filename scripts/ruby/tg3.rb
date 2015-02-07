@@ -28,3 +28,13 @@ end
 def bt2
 	bm2 { puts "red" }
 end
+
+class Aa
+	@@class_var = 100
+
+	def initialize(var1, var2="fred")
+		@v1 = var1
+		@v2 = var2
+	end
+
+end

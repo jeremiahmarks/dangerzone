@@ -78,3 +78,31 @@ Can also be done by
 Since it is a one line thing, it can also be done like this:
 
     array_of_values.each{ |item| puts item }
+
+####times
+
+    5.times { |awesome| puts awesome }
+
+OUTPUT
+
+    0
+    1
+    2
+    3
+    4
+
+####upto
+
+    5.upto(10) do
+        puts "hello"
+    end
+
+OUTPUT
+
+    hello
+    hello
+    hello
+    hello
+    hello
+    hello
+
