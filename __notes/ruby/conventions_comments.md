@@ -41,3 +41,6 @@ Inside of a class if you define a method like this
 	end
 
 that method is accessable from the class, not from individual instances of that class.
+
+###!
+Exclamation mark uses the method on the named item.  basically rather than using `a = a.lower()` you can just `a.lower!`  Very nice

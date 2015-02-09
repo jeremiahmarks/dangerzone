@@ -27,3 +27,10 @@ you could access val1 with
     this_hash[:keyname][:thiskey]
 
 
+###Remove an element from array by value
+    >a=[1,2,4,5,6,7,3,9]
+    => [1, 2, 4, 5, 3, 7]
+    >a.delete(3)
+    => 3
+    >a
+    => [1, 2, 4, 5, 7]
