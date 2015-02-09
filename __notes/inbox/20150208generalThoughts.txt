@@ -1,0 +1,33 @@
+bash make and move
+
+this will check the validity of the destination path, if folders need to be made, it will make them. it will then move the file to the desired location. 
+
+will use this computer as main repo
+
+provide all tool files through git
+
+write a script that installs personal tools in common location - keep seperate from personal projects
+
+shares .git/config
+
+shares other handy config files.
+
+
+LISTOFFILES = the list
+
+for item in list :
+ - check for changes locally
+ - check for changes on central server
+ - if changeslocally AND changesOnCentral
+ - create listofdiffering files
+ - for each differingfile
+ 	add name to datetime list of files
+
+
+files to keep on server
+ - unencrypted tools
+ - encrypted files with information
+ - 
+
+
+http://www.adamboother.com/blog/install-git-on-a-godaddy-shared-hosting-account/

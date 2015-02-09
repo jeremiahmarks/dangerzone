@@ -34,3 +34,18 @@ you could access val1 with
     => 3
     >a
     => [1, 2, 4, 5, 7]
+
+###Complete a parents method
+
+    class A 
+        def initialize(variable_A_needs)
+            @a=variable_A_needs
+        end
+    end
+
+    class B < A
+        def initialize(variable_A_needs)
+            @b_only_var = 'a'
+            super
+        end
+    end
