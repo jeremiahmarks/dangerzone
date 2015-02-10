@@ -1,0 +1,1582 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wi",
+				"winners_share"
+			],
+			[
+				"winner",
+				"winners_share"
+			],
+			[
+				"this",
+				"thiswinner"
+			],
+			[
+				"value",
+				"value"
+			],
+			[
+				"li",
+				"list_of_winners"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"val",
+				"values_stood_on"
+			],
+			[
+				"v",
+				"values_stood_on"
+			],
+			[
+				"cu",
+				"current_pot"
+			],
+			[
+				"winn",
+				"winners_share"
+			],
+			[
+				"fla",
+				"flat_stats"
+			],
+			[
+				"hi",
+				"hit_stand_bust"
+			],
+			[
+				"rou",
+				"round_bust"
+			],
+			[
+				"round",
+				"round_hit"
+			],
+			[
+				"new",
+				"new_card"
+			],
+			[
+				"pl",
+				"player_status"
+			],
+			[
+				"get",
+				"get_values"
+			],
+			[
+				"play",
+				"player_status"
+			],
+			[
+				"add",
+				"add_card"
+			],
+			[
+				"Card",
+				"Card_Down"
+			],
+			[
+				"remove",
+				"remove_player"
+			],
+			[
+				"pla",
+				"player_to_remove"
+			],
+			[
+				"som",
+				"some_value"
+			],
+			[
+				"cut",
+				"cutoff_point"
+			],
+			[
+				"next",
+				"next_move"
+			],
+			[
+				"hand",
+				"hand_value"
+			],
+			[
+				"po",
+				"point_value"
+			],
+			[
+				"to",
+				"to_s"
+			],
+			[
+				"W",
+				"WAITTIME"
+			],
+			[
+				"d",
+				"dtstamp"
+			],
+			[
+				"ip",
+				"ip_addr"
+			],
+			[
+				"ech",
+				"echofunction"
+			],
+			[
+				"Su",
+				"SUBJECT"
+			],
+			[
+				"Fr",
+				"FROMADDRESS"
+			],
+			[
+				"me",
+				"messageText"
+			],
+			[
+				"lin",
+				"linesPerNormalFile"
+			],
+			[
+				"fir",
+				"firstLine"
+			],
+			[
+				"sma",
+				"smallerFile"
+			],
+			[
+				"nu",
+				"numberOfFiles"
+			],
+			[
+				"loca",
+				"localFile"
+			],
+			[
+				"numberOf",
+				"numberOfFiles"
+			],
+			[
+				"num",
+				"numberOfLines"
+			],
+			[
+				"c",
+				"cfile"
+			],
+			[
+				"fl",
+				"flowersToPurchase"
+			],
+			[
+				"rad",
+				"radius"
+			],
+			[
+				"r",
+				"radiusSquared"
+			],
+			[
+				"re",
+				"results"
+			],
+			[
+				"t",
+				"theValue"
+			],
+			[
+				"q",
+				"quicksortInPlace"
+			],
+			[
+				"in",
+				"insertionSort"
+			],
+			[
+				"p",
+				"pivotValue"
+			],
+			[
+				"e",
+				"endLoc"
+			],
+			[
+				"s",
+				"startLoc"
+			],
+			[
+				"st",
+				"startLoc"
+			],
+			[
+				"loc",
+				"locVal"
+			],
+			[
+				"qu",
+				"quicksortInplace"
+			],
+			[
+				"pos",
+				"pos1"
+			],
+			[
+				"cur",
+				"curlocval"
+			],
+			[
+				"par",
+				"partitioned"
+			],
+			[
+				"va",
+				"valAtY"
+			],
+			[
+				"sear",
+				"searchValue"
+			],
+			[
+				"dou",
+				"doubleGrowth"
+			],
+			[
+				"ret",
+				"retString"
+			],
+			[
+				"is",
+				"isFib"
+			],
+			[
+				"each",
+				"eachInt"
+			],
+			[
+				"inp",
+				"inputString"
+			],
+			[
+				"ra",
+				"raw_input"
+			],
+			[
+				"n",
+				"numofpoints"
+			],
+			[
+				"cl",
+				"cleanhome"
+			],
+			[
+				"des",
+				"destination"
+			],
+			[
+				"ea",
+				"eachrecord"
+			],
+			[
+				"ta",
+				"tagcounts"
+			],
+			[
+				"Cont",
+				"ContactGroupAssign"
+			],
+			[
+				"tag",
+				"tagids"
+			],
+			[
+				"eachtag",
+				"eachtagname"
+			],
+			[
+				"addT",
+				"addTagToContact"
+			],
+			[
+				"create",
+				"createNewTag"
+			],
+			[
+				"pr",
+				"prep"
+			],
+			[
+				"eac",
+				"eachContact"
+			],
+			[
+				"intere",
+				"interestingData"
+			],
+			[
+				"sel",
+				"selectedcontacts"
+			],
+			[
+				"ge",
+				"getAllContacts"
+			],
+			[
+				"contac",
+				"contactsinpool"
+			],
+			[
+				"email",
+				"emailAddress"
+			],
+			[
+				"emai",
+				"emailAddress"
+			],
+			[
+				"app",
+				"append"
+			],
+			[
+				"rec",
+				"records"
+			],
+			[
+				"list",
+				"listOfDicts"
+			],
+			[
+				"lis",
+				"listOfDicts"
+			],
+			[
+				"tagI",
+				"tagID"
+			],
+			[
+				"my",
+				"myfunc"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"all",
+				"allorsome"
+			],
+			[
+				"m",
+				"mysessions"
+			],
+			[
+				"contact",
+				"contactIDs"
+			],
+			[
+				"tota",
+				"totalpoolOfPotentialResults"
+			],
+			[
+				"contacts",
+				"contacts"
+			],
+			[
+				"a",
+				"allorsome"
+			],
+			[
+				"an",
+				"anotherquery"
+			],
+			[
+				"up",
+				"updatefeedbackoverviewtotal2"
+			],
+			[
+				"fee",
+				"feedbackoverviewtotal"
+			],
+			[
+				"update",
+				"updatefeedbackoverviewtotal1"
+			],
+			[
+				"total",
+				"totalup"
+			],
+			[
+				"tot",
+				"totalup"
+			],
+			[
+				"chat",
+				"chatid"
+			],
+			[
+				"that",
+				"thatinfo"
+			],
+			[
+				"incre",
+				"incrementFB"
+			],
+			[
+				"admin",
+				"adminnav"
+			],
+			[
+				"main",
+				"maincontent"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"user",
+				"userid"
+			],
+			[
+				"ex",
+				"execute"
+			],
+			[
+				"l",
+				"lname"
+			],
+			[
+				"reco",
+				"recordURL"
+			],
+			[
+				"con",
+				"contactID"
+			],
+			[
+				"infu",
+				"infusionsoftAPIKey"
+			],
+			[
+				"conta",
+				"contactID"
+			],
+			[
+				"tagapp",
+				"tagappreport"
+			],
+			[
+				"g",
+				"getContactsWithTag"
+			],
+			[
+				"prin",
+				"printStorage"
+			],
+			[
+				"se",
+				"selectionScreen"
+			],
+			[
+				"tags",
+				"tagsApplied"
+			],
+			[
+				"def",
+				"defaultEnd"
+			],
+			[
+				"defa",
+				"defaultStart"
+			],
+			[
+				"Date",
+				"DataService"
+			],
+			[
+				"cont",
+				"contactID"
+			],
+			[
+				"Grou",
+				"GroupId"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "__notes/ruby/commands.md",
+			"settings":
+			{
+				"buffer_size": 2555,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "__notes/ruby/common_functions.md",
+			"settings":
+			{
+				"buffer_size": 2634,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "__notes/ruby/conventions_comments.md",
+			"settings":
+			{
+				"buffer_size": 982,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "__notes/ruby/functions.md",
+			"settings":
+			{
+				"buffer_size": 677,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "__notes/ruby/howtos.md",
+			"settings":
+			{
+				"buffer_size": 1216,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/ruby/tg4.rb",
+			"settings":
+			{
+				"buffer_size": 2074,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Watch",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Breakpoints",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "Ruby version: 2.1.2 is not supported.\n",
+			"settings":
+			{
+				"buffer_size": 38,
+				"line_ending": "Unix",
+				"name": "Output",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Locals",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Immediate",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Threads",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Stack",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 362.0,
+		"selected_items":
+		[
+			[
+				"be",
+				"BeautifyRuby"
+			],
+			[
+				"bea",
+				"BeautifyRuby"
+			],
+			[
+				"ruby",
+				"BeautifyRuby"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add Current File"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"markd",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"hea",
+				"Auto Update Source Header"
+			],
+			[
+				"head",
+				"Auto Update Source Header"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"git p",
+				"Git: Pull"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			],
+			[
+				"diff",
+				"FileDiffs: Menu"
+			],
+			[
+				"dif",
+				"Set Syntax: Diff"
+			],
+			[
+				"pu",
+				"Git: Pull"
+			],
+			[
+				"add",
+				"Git: Add Current File"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"git c",
+				"Git: Commit"
+			],
+			[
+				"gis",
+				"Gist: Create Public Gist"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"pus",
+				"Git: Push"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"bro",
+				"SFTP: Browse Server…"
+			],
+			[
+				"sft",
+				"SFTP: Browse Server…"
+			],
+			[
+				"gist",
+				"Gist: Create Private Gist"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"set mark",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pyth",
+				"Set Syntax: Python"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"re",
+				"Set Syntax: Regular Expression"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 340.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/jlmarks/dangerzone/scripts/ruby/attempt0.rb",
+		"/home/jlmarks/Desktop/thoughts.txt",
+		"/home/jlmarks/dangerzone/README.md",
+		"/home/jlmarks/dangerzone/__notes/ruby/BeginnerRuby_RubyWizardry.md",
+		"/home/jlmarks/dangerzone/__notes/ruby/conventions_comments.md",
+		"/home/jlmarks/dangerzone/__notes/ruby/howtos.md",
+		"/home/jlmarks/dangerzone/__notes/ruby/common_functions.md",
+		"/home/jlmarks/dangerzone/__notes/ruby/commands.md",
+		"/home/jlmarks/dangerzone/scripts/ruby/testingGrounds1.rb",
+		"/home/jlmarks/dangerzone/scripts/ruby/tg2.rb",
+		"/home/jlmarks/dangerzone/__notes/ruby/howtos.md~",
+		"/home/jlmarks/dangerzone/tetest.txt",
+		"/home/jlmarks/dangerzone/mycode/mypy/tteesst",
+		"/home/jlmarks/dangerzone/mycode/mypy/__init__.py",
+		"/home/jlmarks/dangerzone/mycode/mypy/minesweeper.py",
+		"/home/jlmarks/dangerzone/mypy/words.txt",
+		"/home/jlmarks/dangerzone/mycode/mynotes/software notes/screen",
+		"/home/jlmarks/dangerzone/mycode/mynotes/software notes/rc_d",
+		"/home/jlmarks/dangerzone/mycode/mynotes/software notes/chcon.md",
+		"/home/jlmarks/dangerzone/mycode/mynotes/software notes/apache",
+		"/home/jlmarks/dangerzone/mycode/mynotes/cheatsheets/SublimeText2",
+		"/home/jlmarks/dangerzone/0notes/troubleshooting.md",
+		"/home/jlmarks/dangerzone/mycode/mynotes/gitnotes.md",
+		"/home/jlmarks/dangerzone/mycode/bash/notes/notifyServerStatus.sh",
+		"/home/jlmarks/dangerzone/mycode/bash/notes/3Feb.SpecialCharacters.md",
+		"/home/jlmarks/dangerzone/mycode/bash/scratchpad.sh",
+		"/home/jlmarks/dangerzone/mycode/bash/ex32.sh",
+		"/home/jlmarks/dangerzone/mycode/bash/ex31.sh",
+		"/home/jlmarks/dangerzone/mycode/bash/0new.sh",
+		"/home/jlmarks/thismessage.txt",
+		"/home/jlmarks/dangerzone/hackerrank/findMedian.py",
+		"/home/jlmarks/dangerzone/mycode/bash/advancedBashScriptingGuide/00Notes.md",
+		"/home/jlmarks/dangerzone/_in_progress/mypy2/3.29",
+		"/home/jlmarks/dangerzone/mycode/bash/advancedBashScriptingGuide/00Book-02Part2.txt",
+		"/home/jlmarks/dangerzone/mycode/bash/advancedBashScriptingGuide/00Book-02Part1.txt",
+		"/home/jlmarks/dangerzone/mycode/bash/advancedBashScriptingGuide/00Book-01IntroductionAndToC.txt",
+		"/home/jlmarks/dangerzone/mycode/bash/advancedBashScriptingGuide/00Book-04Part3.txt",
+		"/home/jlmarks/dangerzone/mycode/bash/advancedBashScriptingGuide/00Book-05Part4.txt",
+		"/home/jlmarks/dangerzone/mycode/bash/advancedBashScriptingGuide/00Book-06Part5.txt",
+		"/home/jlmarks/dangerzone/mycode/bash/advancedBashScriptingGuide/00Book-07Appendix.txt",
+		"/home/jlmarks/Desktop/abs-guide.txt",
+		"/home/jlmarks/.bashrc",
+		"/home/jlmarks/.config/sublime-text-2/Packages/FileHeader/FileHeader.py",
+		"/home/jlmarks/.config/sublime-text-2/Packages/FileHeader/FileHeader.sublime-settings",
+		"/home/jlmarks/dangerzone/hackerrank/test.py",
+		"/home/jlmarks/dangerzone/hackerrank/flowers.py",
+		"/home/jlmarks/dangerzone/hackerrank/pangrams.py",
+		"/home/jlmarks/dangerzone/csvSplit.py",
+		"/home/jlmarks/000localCSV.csv",
+		"/home/jlmarks/dangerzone/mycode/mybash/gpush.sh",
+		"/home/jlmarks/.cache/.fr-9tvCmr/Fielding.csv",
+		"/home/jlmarks/dangerzone/hackerrank/circleCity.py",
+		"/home/jlmarks/Desktop/expected.txt",
+		"/home/jlmarks/Desktop/output.txt",
+		"/home/jlmarks/.config/sublime-text-2/Packages/Diffy/Diffy.sublime-settings",
+		"/home/jlmarks/dangerzone/hackerrank/quicksort4.py",
+		"/home/jlmarks/dangerzone/hackerrank/quicksort3.py",
+		"/home/jlmarks/dangerzone/hackerrank/insertionSortP2.py",
+		"/home/jlmarks/dangerzone/hackerrank/countingSort4.py",
+		"/home/jlmarks/dangerzone/hackerrank/countingSort3.py",
+		"/home/jlmarks/dangerzone/hackerrank/countingSort2.py",
+		"/home/jlmarks/dangerzone/hackerrank/countingSort1.py",
+		"/home/jlmarks/dangerzone/hackerrank/runningTimeOfAlgorithms.py",
+		"/home/jlmarks/dangerzone/hackerrank/quicksort1.py",
+		"/home/jlmarks/dangerzone/hackerrank/quicksort2.py",
+		"/home/jlmarks/dangerzone/hackerrank/findDigits.py",
+		"/home/jlmarks/dangerzone/hackerrank/isFibo.py",
+		"/home/jlmarks/dangerzone/fibonacci.py",
+		"/home/jlmarks/dangerzone/hackerrank/utopianTree.py",
+		"/home/jlmarks/dangerzone/hackerrank/insertionSortP1.py",
+		"/home/jlmarks/dangerzone/hackerrank/IntroToTutChallenges.py",
+		"/home/jlmarks/dangerzone/hackerrank/__init__.py",
+		"/home/jlmarks/dangerzone/somemorefvhpy.py",
+		"/home/jlmarks/dangerzone/somemorefvh.py",
+		"/home/jlmarks/dangerzone/fvhmans.py",
+		"/home/jlmarks/dangerzone/fvh2.py",
+		"/home/jlmarks/dangerzone/fvh.py",
+		"/home/jlmarks/dangerzone/mycode/mypy/ctpng.py",
+		"/home/jlmarks/words.txt",
+		"/home/jlmarks/dangerzone/mypy/playingwithitertools.html",
+		"/media/jlmarks/SilverDrive/FromLaptopNov/mycode/mycode/mypy/fvhmans.py",
+		"/home/jlmarks/dangerzone/fvh1.py",
+		"/home/jlmarks/.config/sublime-text-2/Packages/User/sftp_servers/jlmarks",
+		"/home/jlmarks/.config/sublime-text-2/Packages/User/sftp_servers/jlmarks1",
+		"/home/jlmarks/Desktop/btar/mysessions.py",
+		"/home/jlmarks/.ssh/config",
+		"/home/jlmarks/Desktop/boomkin/savedURLs.txt",
+		"/home/jlmarks/Desktop/boomkin/testCode.py",
+		"/home/jlmarks/Desktop/boomkin/tagappreport.py",
+		"/home/jlmarks/Desktop/boomkin/sftp-config-alt.json",
+		"/home/jlmarks/Desktop/boomkin/test.py",
+		"/home/jlmarks/Desktop/boomkin/buildTables.py",
+		"/home/jlmarks/Desktop/boomkin/chatSamples.py",
+		"/home/jlmarks/Desktop/boomkin/todo.md",
+		"/home/jlmarks/Desktop/boomkin/moreTestFunctions.py",
+		"/home/jlmarks/Desktop/boomkin/thereallyoldmyfunc.py",
+		"/home/jlmarks/Desktop/boomkin/sftp-config.json",
+		"/home/jlmarks/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/home/jlmarks/dangerzone/mysql"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"value_of_hand",
+			"times",
+			"SELECT",
+			"~/thismessage.txt",
+			"addresses",
+			"LOGFILE",
+			"Appendix",
+			"chapter",
+			"ap",
+			"Part",
+			"		",
+			"image",
+			"wand",
+			"5",
+			" 	",
+			"fbSubmittedTotal",
+			"fbSubmittedData",
+			"fromAddress",
+			"tagID",
+			"myconfig.",
+			"parse",
+			"myconfig.",
+			"\"[abcdefghijkl]\"",
+			"try",
+			"\"\"\"\nChat",
+			"\"\"\"",
+			"rett.append",
+			"mysessions",
+			"myfunc.",
+			"creat"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "__notes/ruby/commands.md",
+					"settings":
+					{
+						"buffer_size": 2555,
+						"regions":
+						{
+							"breakpoint":
+							{
+								"flags": 16,
+								"icon": "circle",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"c_time": "cdatetime\ndatetime\np0\n(S'\\x07\\xdf\\x02\\x06\\x10\\x14.\\x00\\x00\\x00'\np1\ntp2\nRp3\n.",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1575.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "__notes/ruby/common_functions.md",
+					"settings":
+					{
+						"buffer_size": 2634,
+						"regions":
+						{
+							"breakpoint":
+							{
+								"flags": 16,
+								"icon": "circle",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								2426,
+								2426
+							]
+						],
+						"settings":
+						{
+							"c_time": "cdatetime\ndatetime\np0\n(S'\\x07\\xdf\\x02\\x06\\x13\\x08,\\x00\\x00\\x00'\np1\ntp2\nRp3\n.",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "__notes/ruby/conventions_comments.md",
+					"settings":
+					{
+						"buffer_size": 982,
+						"regions":
+						{
+							"breakpoint":
+							{
+								"flags": 16,
+								"icon": "circle",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								264,
+								264
+							]
+						],
+						"settings":
+						{
+							"c_time": "cdatetime\ndatetime\np0\n(S'\\x07\\xdf\\x02\\x06\\x13\\x08,\\x00\\x00\\x00'\np1\ntp2\nRp3\n.",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 882.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "__notes/ruby/functions.md",
+					"settings":
+					{
+						"buffer_size": 677,
+						"regions":
+						{
+							"breakpoint":
+							{
+								"flags": 16,
+								"icon": "circle",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"c_time": "cdatetime\ndatetime\np0\n(S'\\x07\\xdf\\x02\\x06\\x10\\x14.\\x00\\x00\\x00'\np1\ntp2\nRp3\n.",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 630.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "__notes/ruby/howtos.md",
+					"settings":
+					{
+						"buffer_size": 1216,
+						"regions":
+						{
+							"breakpoint":
+							{
+								"flags": 16,
+								"icon": "circle",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								1213,
+								1213
+							]
+						],
+						"settings":
+						{
+							"c_time": "cdatetime\ndatetime\np0\n(S'\\x07\\xdf\\x02\\x06\\x0e/\\x1c\\x00\\x00\\x00'\np1\ntp2\nRp3\n.",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 487.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "scripts/ruby/tg4.rb",
+					"settings":
+					{
+						"buffer_size": 2074,
+						"regions":
+						{
+							"breakpoint":
+							{
+								"flags": 16,
+								"icon": "circle",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								2015,
+								2015
+							]
+						],
+						"settings":
+						{
+							"c_time": "cdatetime\ndatetime\np0\n(S'\\x07\\xdf\\x02\\x08\\x11&\\x12\\x00\\x00\\x00'\np1\ntp2\nRp3\n.",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1769.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+							"breakpoint":
+							{
+								"flags": 16,
+								"icon": "circle",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+							"breakpoint":
+							{
+								"flags": 16,
+								"icon": "circle",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"settings":
+					{
+						"buffer_size": 38,
+						"regions":
+						{
+							"breakpoint":
+							{
+								"flags": 16,
+								"icon": "circle",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								38,
+								38
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+							"breakpoint":
+							{
+								"flags": 16,
+								"icon": "circle",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 10,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+							"breakpoint":
+							{
+								"flags": 16,
+								"icon": "circle",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+							"breakpoint":
+							{
+								"flags": 16,
+								"icon": "circle",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+							"breakpoint":
+							{
+								"flags": 16,
+								"icon": "circle",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.7,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.git":
+	{
+		"height": 135.0
+	},
+	"output.sftp":
+	{
+		"height": 167.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 254.0,
+	"status_bar_visible": true
+}
