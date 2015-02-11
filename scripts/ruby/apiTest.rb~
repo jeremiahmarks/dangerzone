@@ -12,8 +12,8 @@
 
 require 'xmlrpc/client'
 
-$appname = ' '
-$api_key = ' '
+$appname = 'if188'
+$api_key = 'cba73d2468b0ac184e63ae047ccdd852'
 
 $server = XMLRPC::Client.new2("https://#{$appname}.infusionsoft.com:443/api/xmlrpc")
 
@@ -49,5 +49,5 @@ end
 def test
 	#add_contact_to_application
 	dupe_add
-	dupe_add("dupeadd@example.com")
+	dupe_add("dupeadd@til.la")
 end
