@@ -1,0 +1,1 @@
+naming conventions - password files will be *.pw.* and that will be applied to all gitignores (I hope :) 
