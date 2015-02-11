@@ -9,7 +9,7 @@
 ## This file is the testing ground for the infusionsoft API
 ##
 #############################################################
-
+#making edit to update get
 require 'xmlrpc/client'
 require_relative 'my.pw'
 
