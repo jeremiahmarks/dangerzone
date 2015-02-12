@@ -2,13 +2,13 @@
 # @Author: jeremiah.marks
 # @Date:   2015-02-11 12:03:03
 # @Last Modified by:   jeremiah.marks
-# @Last Modified time: 2015-02-11 14:16:56
+# @Last Modified time: 2015-02-11 16:32:56
 
 require 'uri'
 require 'net/http'
 require 'rexml/document'
-
-$zipwise_key = "wtgi32od8rh37dee"
+require_relative 'my.pw'
+# $zipwise_key = "Your key would be here"
 
 
 def get_distance_between_zips(zip1, zip2)
