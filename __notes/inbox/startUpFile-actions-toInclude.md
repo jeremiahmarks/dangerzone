@@ -16,4 +16,5 @@ software to optionally include
     * python
     * ruby
     * vim
-    * 
+    * i3
+    * i3 config files
