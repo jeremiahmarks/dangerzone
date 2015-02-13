@@ -2,7 +2,7 @@
 # @Author: jeremiah.marks
 # @Date:   2015-02-10 14:00:49
 # @Last Modified 2015-02-11
-# @Last Modified time: 2015-02-11 01:18:54
+# @Last Modified time: 2015-02-12 19:12:15
 
 #############################################################
 ##
@@ -41,13 +41,25 @@ def add_with_dup_check(email = "example@example.com")
 	contact_id
 end
 
-def add_with_dup_check(email:"example@example.com")
-	contact=create_contact_hash(email: email)
-	puts contact
-	contact_id = $server.call("ContactService.addWithDupCheck", $api_key, contact, "Email")
-	puts "Contact with ID = #{contact_id} was created"
-	contact_id
+# def add_with_dup_check(email:"example@example.com")
+# 	contact=create_contact_hash(email: email)
+# 	puts contact
+# 	contact_id = $server.call("ContactService.addWithDupCheck", $api_key, contact, "Email")
+# 	puts "Contact with ID = #{contact_id} was created"
+# 	contact_id
+# end
+
+def mark_contact_as_marketable(contact_id)
+	#this method will take a contact id, find its matching email address, and then
+	#opt in that email address.
+	# algorithm :  find email addresses by id
+	# opt them in.
+	results = $server.call("DataService.query", $api_key, "Contact", 1000,p,{'Id' => contact_id},['Email'],'Id', true )
+	for results.each do |result|
+		puts result
+	end
 end
+
 def get_list_of_tag_categories
 	$current_tag_cat={}
 	p=0
@@ -86,7 +98,7 @@ def get_list_of_tags
 end
 
 def print_tags
-	#a quick and easy meathod to see 
+	#a quick and easy meathod to see
 	get_list_of_tags
 	##
 	## Since I changed the way that $current_tags stores information, I need to change this too
