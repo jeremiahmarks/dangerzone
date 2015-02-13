@@ -1,14 +1,60 @@
 #!/usr/bin/ruby
 # @Author: jeremiah.marks
 # @Date:   2015-02-10 14:00:49
-# @Last Modified 2015-02-12
-# @Last Modified time: 2015-02-12 22:07:25
+# @Last Modified 2015-02-13
+# @Last Modified time: 2015-02-13 00:53:19
 
 #############################################################
 ##
 ## This file is the testing ground for the infusionsoft API
 ##
 #############################################################
+## Interesting methods to explore
+## DataService.getAppSetting
+## DataService.addCustomField
+## DataService.updateCustomField
+## DiscountService.addCategoryAssignmentToCategoryDiscount
+## different email template merge context.
+## Fileservice.uploadFile
+## FileService.getDownloadURL
+## do a funnel service.achieveGoal example
+## look at some Invoice service stuff
+## OrderService.placeOrder
+## SearchService.getAllReportColumns
+## SearchService.getSavedSearchResultsAllFields
+## SearchService.getSavedSearchResults
+
+##TABLES
+
+##CCharge
+##CProgram
+##CampaignStep
+##ContactAction
+##DataFormField
+##Expense
+##FileBox
+##Invoice
+##InvoiceItem
+##InvoicePayment
+##Job
+##JobRecurringInstance
+##Lead
+##MtgLead
+##OrderItem
+##PayPlan
+##PayPlanItem
+##Payment
+##Product
+##ProductOption
+##RecurringOrderWithContact
+##Referral
+##SavedFilter
+##Stage
+##StageMove
+##Template
+##User
+##UserGroup
+
 #making edit to update get
 require 'xmlrpc/client'
 require_relative 'my.pw'
@@ -17,6 +63,24 @@ require_relative 'my.pw'
 #$api_key = ' '
 
 $server = XMLRPC::Client.new2("https://#{$app_name}.infusionsoft.com:443/api/xmlrpc")
+
+
+def data_service_query(parameters={ })
+	results={}
+	p=0
+	while true
+		data_set = $server.call("DataService.query", $api_key, parameters[]||="ContactGroupCategory", parameters[]||=1000,parameters[]||=p,parameters[]||={},parameters[]||=['Id',"CategoryName","CategoryDescription"],parameters[]||='Id',parameters[]||= true )
+		data_set.each do |result|
+			results[datum['Id']] = { :id => datum['Id'], :name => datum['CategoryName'], :desc => datum["GroupDescription"]}
+		end
+		unless data_set.count==1000
+			break
+		end
+		p+=1
+	end
+end
+def get_custom_fields
+
 
 def create_contact_hash ( parameters={} )
 	#This method creates a hash that stores a contact record
