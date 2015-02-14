@@ -2,7 +2,7 @@
 # @Author: jeremiah.marks
 # @Date:   2015-02-10 14:00:49
 # @Last Modified 2015-02-13
-# @Last Modified time: 2015-02-13 00:53:19
+# @Last Modified time: 2015-02-13 18:55:49
 
 #############################################################
 ##
@@ -66,11 +66,32 @@ $server = XMLRPC::Client.new2("https://#{$app_name}.infusionsoft.com:443/api/xml
 
 
 def data_service_query(parameters={ })
+	## This method will accept a parameters hash which will hold the different parameters
+	## that define the search.
+	## at the end of the query it will return a hash of all of the return values.
+	## Example:
+		## parameters = {
+		## 	:table => "TableName",
+		## 	:results_returned => 1000,
+		## 	:search_criteria =>{"Field1" => "FieldValue"},
+		## 	:return_values => ['Id',"CategoryName","CategoryDescription"],
+		## 	:ascending => true,
+		## }
 	results={}
 	p=0
 	while true
-		data_set = $server.call("DataService.query", $api_key, parameters[]||="ContactGroupCategory", parameters[]||=1000,parameters[]||=p,parameters[]||={},parameters[]||=['Id',"CategoryName","CategoryDescription"],parameters[]||='Id',parameters[]||= true )
-		data_set.each do |result|
+		data_set = $server.call(
+		                        "DataService.query",
+		                        $api_key,
+		                        parameters[:table]||="ContactGroupCategory",
+		                        parameters[:results_returned]||=1000,
+		                        p,
+		                        parameters[:search_criteria]||={},
+		                        parameters[:return_values]||=['Id',"CategoryName","CategoryDescription"],
+		                        parameters[:sort_by]||='Id',
+		                        parameters[:ascending] = true if parameters[:ascending].nil?,
+		                        )
+		data_set.each do |datum|
 			results[datum['Id']] = { :id => datum['Id'], :name => datum['CategoryName'], :desc => datum["GroupDescription"]}
 		end
 		unless data_set.count==1000
@@ -78,6 +99,7 @@ def data_service_query(parameters={ })
 		end
 		p+=1
 	end
+	results
 end
 def get_custom_fields
 
@@ -134,7 +156,7 @@ def create_new_tag (new_tag_name)
 	return $server.call("DataService.add", $api_key, 'ContactGroup', {'GroupName' => new_tag_name})
 end
 def apply_tag_to_contact( contact_id, tag_id)
-	#returns true if it did apply the tag to the contact. If the 
+	#returns true if it did apply the tag to the contact. If the
 	#contact already has the tag, though, returns false
 	return $server.call("ContactService.addToGroup", $api_key, contact_id, tag_id)
 end
@@ -328,14 +350,14 @@ def sendTest
 				FOOTER
 		------------------------------------- */
 		table.footer-wrap {
-			width: 100%;	
+			width: 100%;
 			clear: both!important;
 		}
 
 		.footer-wrap .container p {
 			font-size: 12px;
 			color: #666;
-			
+
 		}
 
 		table.footer-wrap a {
@@ -444,7 +466,7 @@ def sendTest
 					</table>
 					</div>
 					<!-- /content -->
-					
+
 				</td>
 				<td></td>
 			</tr>
@@ -456,7 +478,7 @@ def sendTest
 			<tr>
 				<td></td>
 				<td class="container">
-					
+
 					<!-- content -->
 					<div class="content">
 						<table>
@@ -469,7 +491,7 @@ def sendTest
 						</table>
 					</div>
 					<!-- /content -->
-					
+
 				</td>
 				<td></td>
 			</tr>
