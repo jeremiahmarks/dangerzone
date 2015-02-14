@@ -1,8 +1,8 @@
 #!/usr/bin/ruby
 # @Author: jeremiah.marks
 # @Date:   2015-02-10 14:00:49
-# @Last Modified 2015-02-13
-# @Last Modified time: 2015-02-13 18:55:49
+# @Last Modified 2015-02-14
+# @Last Modified time: 2015-02-14 00:50:57
 
 #############################################################
 ##
@@ -70,15 +70,16 @@ def data_service_query(parameters={ })
 	## that define the search.
 	## at the end of the query it will return a hash of all of the return values.
 	## Example:
-		## parameters = {
-		## 	:table => "TableName",
-		## 	:results_returned => 1000,
-		## 	:search_criteria =>{"Field1" => "FieldValue"},
-		## 	:return_values => ['Id',"CategoryName","CategoryDescription"],
-		## 	:ascending => true,
-		## }
-	results={}
+		# parameters = {
+		# 	:table => "TableName",
+		# 	:results_returned => 1000,
+		# 	:search_criteria =>{"Field1" => "FieldValue"},
+		# 	:return_values => ['Id',"CategoryName","CategoryDescription"],
+		# 	:ascending => true,
+		# }
+	results=[]
 	p=0
+	parameters[:ascending] = true if parameters[:ascending].nil?
 	while true
 		data_set = $server.call(
 		                        "DataService.query",
@@ -89,10 +90,11 @@ def data_service_query(parameters={ })
 		                        parameters[:search_criteria]||={},
 		                        parameters[:return_values]||=['Id',"CategoryName","CategoryDescription"],
 		                        parameters[:sort_by]||='Id',
-		                        parameters[:ascending] = true if parameters[:ascending].nil?,
+		                        parameters[:ascending],
 		                        )
 		data_set.each do |datum|
-			results[datum['Id']] = { :id => datum['Id'], :name => datum['CategoryName'], :desc => datum["GroupDescription"]}
+			# results[datum['Id']] = { :id => datum['Id'], :name => datum['CategoryName'], :desc => datum["GroupDescription"]}
+			results << datum
 		end
 		unless data_set.count==1000
 			break
@@ -101,7 +103,60 @@ def data_service_query(parameters={ })
 	end
 	results
 end
+def get_table_settings(table)
+	case table
+	when "DataFormField"
+		settings={}
+		settings[:rows] = [
+			{:field => "DataType", :type =>"Integer", :Access =>"Read", :row_id => 1 },
+			{:field => "DefaultValue", :type =>"String", :Access =>"Edit Read", :row_id => 2 },
+			{:field => "FormId", :type =>"Id", :Access =>"Read", :row_id => 3 },
+			{:field => "GroupId", :type =>"Id", :Access =>"Edit Read", :row_id => 4 },
+			{:field => "Id", :type =>"Id", :Access =>"Read", :row_id => 5 } ,
+			{:field => "Label", :type =>"String", :Access =>"Edit Read", :row_id => 6 },
+			{:field => "ListRows", :type =>"Integer", :Access =>"Edit Read", :row_id => 7 },
+			{:field => "Name", :type =>"String", :Access =>"Edit Read", :row_id => 8 },
+			{:field => "Values", :type =>"String", :Access =>"Edit Read", :row_id => 9 }
+		]
+		settings[:parameters] = {
+			:table => "DataFormField",
+			:results_returned => 1000,
+			:search_criteria =>{},
+			:return_values => [ ],
+			:ascending => true,
+		}
+		settings[:display_settings] = {
+			:brief_print => "
+			Id #{settings[:rows][5][:field]} \t\t DataType: #{settings[:rows][1][:field]} \t\t Name: #{settings[:rows][8][:field]}"
+
+		}
+		settings[:rows].each do |each_row|
+			settings[:parameters][:return_values] << each_row[:field]
+		end
+		settings
+	else
+		nil
+	end
+end
+
+
+
 def get_custom_fields
+	settings = get_table_settings("DataFormField")
+	data_service_query(settings[:parameters])
+end
+
+def print_custom_fields
+	settings = get_table_settings("DataFormField")
+	custom_fields = data_service_query(settings[:parameters])
+	mystring = "Id "
+	custom_fields.each do |field|
+		mystring = "Id " + field[settings[:rows][4][:field]].to_s + " \t DataType: " + field[settings[:rows][0][:field]].to_s + " Name: "+ field[settings[:rows][7][:field]].to_s
+		puts mystring
+		# puts "Id #{field[settings[:rows][stars][:field]]} \t\t DataType: #{field[settings[:rows][stars][:field]]} \t\t Name: #{field[settings[:rows][stars][:field]]}"
+	end
+	puts settings[:display_settings][:brief_print]
+end
 
 
 def create_contact_hash ( parameters={} )
@@ -522,3 +577,5 @@ def tm
 		storage.close
 	end
 end
+
+get_custom_fields
