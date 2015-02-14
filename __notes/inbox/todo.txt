@@ -2,5 +2,5 @@
 
 * read infusionsofts new privacy policy.
 * make this part of the code easily accessible so that I can see it, add to it, edit it, etc. from a url that I own
+* create short-named sym links to common locations from home
 * 
-
