@@ -1,3 +1,11 @@
+Video_php_important:
+  ☐ create php file that pulls swf file by name from database
+  ☐ track open history
+  ☐ if regularFile
+    ☐ delete after assigned time without being loaded.
+  ☐ else
+    ☐ handle appropriately. 
+
 Actual:
   ✔ write script that copies the files to the correct place.  @done (15-02-16 20:47)
   ☐ write  script that 

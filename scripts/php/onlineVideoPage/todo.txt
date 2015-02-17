@@ -1,0 +1,5 @@
+Create php script that accepts file name as parameter.
+1st   make it so that it will work if the file is right there
+2nd   make it so that it will work if the file is in a location defined by the database
+
+checks main
