@@ -1,0 +1,40 @@
+Actual:
+  ✔ write script that copies the files to the correct place.  @done (15-02-16 20:47)
+  ☐ write  script that 
+    ☐ goes through files and folders in path where called from
+    ☐ if file not already in database
+      ☐ check that file should be uploaded, if so, continue
+      ☐ add file to database
+        ☐ include filename
+        ☐ include gitpath to file
+        ☐ convert file to htmlVersion
+        ☐ upload htmlversion to jlmarks.org/htmlizedScripts/file
+        ☐ include path to htmlized version
+        ☐ include online edit path, if available
+      ☐ get fileid for quick reference
+      ☐ create README.md, if it does not exist
+      ☐ add pathToFile to README.md
+    ☐ if file already in database : 
+        ☐ get last edit date of file
+        ☐ get last edit date of db entry
+          ☐ if edit date of file is newer then db entry
+            ☐ webanize file
+            ☐ upload file to jlmarks.org/htmlizedScripts/file
+              ☐ consider including timedate stamp in file name
+            ☐ update README to have newer link to file
+        ☐ updates local README.md with db information
+
+      
+  ☐ 
+
+
+General:
+  ☐ Ctrl+enter to get a new task
+    ✔ Ctrl +d to toggle this @done (15-02-16 18:35)
+      ☐ These keep on getting nested, lets try ctrl+enter at the end of the line 
+      ☐ This is not nested
+      ☐ 
+      ☐ 
+      ☐ But they are not moving up a level either
+☐ I had to create this one first then remove the preceeding spaces.
+
