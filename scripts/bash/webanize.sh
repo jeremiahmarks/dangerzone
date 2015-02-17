@@ -1,5 +1,7 @@
 source ~/.webanize.conf
-
+####
+## webanize relies on a properly set up webanize.conf file as well as an 
+## installation of Syntax Highlighter (http://alexgorbatchev.com/SyntaxHighlighter/download/)
 
 if [[ -z "$1" ]]; then
 	echo "Please pass a valid file to be webanized."
