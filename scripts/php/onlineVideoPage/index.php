@@ -1,10 +1,10 @@
 <?php
-session_start()
+session_start();
 /**
  * @Author: Jeremiah Marks
  * @Date:   2015-02-16 23:17:05
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-02-16 23:22:59
+ * @Last Modified time: 2015-02-18 00:46:05
  */
 
 /**
@@ -12,4 +12,16 @@ session_start()
 *   passed through the url
 */
 include_once 'functions.php';
-include_once 'connection.php';
+include_once 'my.pw.php';
+include 'head.php';
+if (isset($_POST['add'])){
+  add_video_to_database($_POST['add']);
+}
+elseif (isset($_POST['video'])){
+  insertScript($_POST['video']);
+} else {
+  insertScript("UpdateBillingInfo");
+}
+include 'body.php';
+
+?>
