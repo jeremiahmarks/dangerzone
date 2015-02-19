@@ -4,7 +4,7 @@ require 'my.pw.php';
  * @Author: jeremiah.marks
  * @Date:   2015-02-17 14:23:45
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-02-18 01:40:32
+ * @Last Modified time: 2015-02-19 00:39:27
  */
 $conn =  mysqli_connect($dbpath, $dbuser,$dbpassword,$dbtouse);
 if (mysqli_connect_errno()) {
@@ -98,6 +98,7 @@ function add_video_to_database($name){
   $error='';
   $stmt = "INSERT INTO vids (name) VALUES ('" . $name . "')";
   $res = mysqli_query($conn,$stmt);
+  // prettty sure that I am using prepared statements and queries totally wrong.
   $dataList = array();
   // while($cRow = mysqli_fetch_array($res)){
   //   $dataList[] = $cRow[0];
@@ -120,4 +121,32 @@ function update_videos_by_name($name){
   echo $stmt;
   echo pp($vid);
 
+}
+
+function check_and_add($name) {
+    echo "attempting to add " .$name ." now. ";
+    global $conn;
+    $stmt = mysqli_stmt_init($conn);
+    if (mysqli_stmt_prepare($stmt, "SELECT count(*) as total from vids WHERE name LIKE ?") ) {
+      echo "into first statement";
+      mysqli_stmt_bind_param($stmt, 's', $name);
+      mysqli_stmt_execute($stmt);
+      mysqli_stmt_bind_result($stmt, $total);
+      mysqli_stmt_fetch($stmt);
+      mysqli_stmt_close($stmt);
+      echo $total;
+      echo pp($total);
+      if ($total==0){
+        echo "into second statement";
+        $stmt1 = mysqli_stmt_init($conn);
+        echo $stmt1;
+        if (mysqli_stmt_prepare($stmt1, "INSERT INTO vids (name) VALUES ( ? )") ){
+          echo "am I here?";
+          mysqli_stmt_bind_param($stmt1, 's', $name);
+          mysqli_stmt_execute($stmt1);
+          mysqli_stmt_close($stmt1);
+        }
+      
+    }
+  }
 }

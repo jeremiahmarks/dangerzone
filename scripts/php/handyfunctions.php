@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-02-17 22:40:42
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-02-17 23:47:30
+ * @Last Modified time: 2015-02-18 23:16:38
  */
 ## I seriously can't believe how much basic information I am 
 ##  unable to recall.
@@ -75,3 +75,43 @@ $cars = "CREATE TABLE cars(
     plates varchar(255) NOT NULL UNIQUE,
     PRIMARY KEY (carid)
     )";
+
+#mysql example of how to store encrypted information
+# encryptedInbox is a table with two columns, int(11) id, longblob item
+$insertNewIdea = "INSERT into encryptedInbox (item) VALUES (AES_ENCRYPT('Some String', 'myKey'));";
+$getTranslation = "SELECT *, AES_DECRYPT(item, 'myKey') FROM encryptedInbox;";
+
+#mysqli_bind_parameters
+function addtodo($todotoadd) {
+    //This function will be used to add todo items to the proper tables.
+    global $conn; //this expects that $conn is defined as 
+    // $conn =  mysqli_connect($dbpath, $dbuser,$dbpassword,$dbtouse);
+    $stmt = mysqli_stmt_init($conn);
+    if (mysqli_stmt_prepare($stmt, "INSERT INTO encryptedInbox (item) VALUES (AES_ENCRYPT(?, ?));"){
+      mysqli_stmt_bind_param($stmt, 'ss', $_POST['message'], $key);
+      mysqli_stmt_execute($stmt);
+      mysqli_stmt_close($stmt);
+
+    }
+    $toadd = mysqli_prepare($conn, "INSERT INTO inbox ( item, class) VALUES (?,?)");
+    //Above statement
+    $class='todo';
+    mysqli_stmt_bind_param($toadd, 'ss', $todotoadd, $class);
+    mysqli_stmt_execute($toadd);
+    $testa = $todotoadd . "todo";
+    return $testa;
+}
+##mysqli_stmt_bind_param parameters
+##  3 parameters
+## mysqli_stmt_bind_param(mysqli_stmt $stmt , string $types , mixed &$var1 [, mixed &$... ])
+  ## 1. mysqli_stmt $stmt - this is the statment that you have prepared.
+  ## 2. string $types - this lets the function know how to intrpet the data you are about to give item
+  ## 3. mixed &$var1 [, mixed &$... ]) - This is the information that you are passing it.  A note:  the 
+      ## #number of question marks in step 1 should equal the number of chars in step two
+      ## #should equal the number of objects you are passing it in step 3
+
+## format of the second parameter
+// i corresponding variable has type integer
+// d corresponding variable has type double
+// s corresponding variable has type string
+// b corresponding variable is a blob and will be sent in packets
