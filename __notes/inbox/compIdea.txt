@@ -1,0 +1,11 @@
+
+Basic $500 computer (laptop for travel?)
+
+    max out or nearly max out ram.
+    either (2..n)x2Tb or (2..n)x1Tb internal upgrade RAID 1
+    Set up grub2win to boot a linux install on the array when specified
+    Provide http://www.pcmag.com/article2/0,2817,2409720,00.asp
+    Basically get him a laptop that he can take with him and use while traveling. http://youtu.be/uXXvJ-4Abbc
+    Either get it upgraded with appropriate storage 
+        or
+    set 
