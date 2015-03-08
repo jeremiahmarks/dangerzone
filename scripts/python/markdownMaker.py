@@ -3,7 +3,7 @@
 # @Author: Jeremiah Marks
 # @Date:   2015-03-07 23:13:32
 # @Last Modified 2015-03-08
-# @Last Modified time: 2015-03-08 01:15:21
+# @Last Modified time: 2015-03-08 01:18:15
 
 
 ############################################################
@@ -68,7 +68,7 @@ class Crawler(object):
                     os.chdir(self.mywd)
             self.fileLines.append('* {}'.format(root.replace(self.mywd, '.')+'\n'))
             for f in files:
-                self.fileLines.append('{}* [{}]({}\{})'.format(indent, f, root.replace(self.mywd, '.'),f)+'\n')
+                self.fileLines.append('{}* [{}]({}/{})'.format(indent, f, root.replace(self.mywd, '.'),f)+'\n')
         for eachLine in self.fileLines:
             self.readme.write(eachLine)
     def closeUp(self):

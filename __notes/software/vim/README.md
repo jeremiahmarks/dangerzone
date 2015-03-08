@@ -2,9 +2,11 @@
 
 
 
+
+
 ####################################################
 #TOC START
 ####################################################
 * .
-    * [README.md](.\README.md)
-    * [vimnotes.md](.\vimnotes.md)
+    * [README.md](./README.md)
+    * [vimnotes.md](./vimnotes.md)
