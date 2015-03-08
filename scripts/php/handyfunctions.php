@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-02-17 22:40:42
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-02-18 23:16:38
+ * @Last Modified time: 2015-03-08 09:50:29
  */
 ## I seriously can't believe how much basic information I am 
 ##  unable to recall.
@@ -11,6 +11,9 @@
 if (isset($_POST['video'])){
   insertScript($_POST['video'])
 }
+
+SELECT tagapplications.tagid, tags.tagname FROM tagapplications LEFT JOIN tags on tagapplications.tagid = tags.tagid WHERE tagapplications.taskid=1;
+SELECT taskProjectAssignments.projectid, taskProjects.projectname FROM taskProjectAssignments LEFT JOIN taskProjects on taskProjectAssignments.projectid = taskProjects.projectid WHERE taskProjectAssignments.taskid=1;
 
 #If/Else
   #From http://www.w3schools.com/php/php_if_else.asp
@@ -115,3 +118,53 @@ function addtodo($todotoadd) {
 // d corresponding variable has type double
 // s corresponding variable has type string
 // b corresponding variable is a blob and will be sent in packets
+// Some fun mysql statements
+
+$searchStmt1='SELECT *
+FROM (
+    SELECT tagapplications.tagid AS tagid, tags.tagname AS tagname, tasks.taskname AS taskname, tasks.taskid AS tid
+    FROM tagapplications
+    LEFT JOIN  tags ON tagapplications.tagid = tags.tagid
+    LEFT JOIN  tasks ON tagapplications.taskid = tasks.taskid
+    WHERE tagapplications.taskid =1
+) AS tagside
+RIGHT JOIN taskProjectAssignments ON tagside.tid = taskProjectAssignments.taskid
+JOIN taskProjects ON taskProjectAssignments.projectid=taskProjects.projectid
+WHERE taskProjectAssignments.taskid =1'
+
+
+$searchStmt2='SELECT *
+FROM (
+    SELECT tagapplications.tagid AS tagid, tags.tagname AS tagname, tasks.taskname AS taskname, tasks.taskid AS tid
+    FROM tagapplications
+    LEFT JOIN  tags ON tagapplications.tagid = tags.tagid
+    LEFT JOIN  tasks ON tagapplications.taskid = tasks.taskid
+    WHERE tagapplications.taskid =1
+) AS tagside
+RIGHT JOIN taskProjectAssignments ON tagside.tid = taskProjectAssignments.taskid
+RIGHT JOIN taskProjects ON taskProjectAssignments.projectid=taskProjects.projectid
+WHERE taskProjectAssignments.taskid =1'
+
+$searchStmt3='SELECT *
+FROM (
+    SELECT tagapplications.tagid AS tagid, tags.tagname AS tagname, tasks.taskname AS taskname, tasks.taskid AS tid
+    FROM tagapplications
+    LEFT JOIN  tags ON tagapplications.tagid = tags.tagid
+    LEFT JOIN  tasks ON tagapplications.taskid = tasks.taskid
+    WHERE tagapplications.taskid =1
+) AS tagside
+LEFT JOIN taskProjectAssignments ON tagside.tid = taskProjectAssignments.taskid
+LEFT JOIN taskProjects ON taskProjectAssignments.projectid=taskProjects.projectid
+WHERE taskProjectAssignments.taskid =1'
+
+$searchStmt4='SELECT tagside.tagid AS tagid, tagside.tagname as tagname, tagside.taskname as taskname, tagside.tid as tid, taskProjectAssignments.projectid as pid, taskProjects.projectname as pname, taskProjects.projectDescription as descp
+FROM (
+    SELECT tagapplications.tagid AS tagid, tags.tagname AS tagname, tasks.taskname AS taskname, tasks.taskid AS tid
+    FROM tagapplications
+    LEFT JOIN  tags ON tagapplications.tagid = tags.tagid
+    LEFT JOIN  tasks ON tagapplications.taskid = tasks.taskid
+    WHERE tagapplications.taskid =1
+) AS tagside
+LEFT JOIN taskProjectAssignments ON tagside.tid = taskProjectAssignments.taskid
+LEFT JOIN taskProjects ON taskProjectAssignments.projectid=taskProjects.projectid
+WHERE taskProjectAssignments.taskid =1'
