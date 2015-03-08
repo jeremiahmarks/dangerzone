@@ -4,10 +4,12 @@
 
 
 
+
+
 ####################################################
 #TOC START
 ####################################################
-* .
+* [](.//README.md)
     * [serverCheckFinal.sh](./serverCheckFinal.sh)
     * [Zen.txt](./Zen.txt)
     * [README.md](./README.md)

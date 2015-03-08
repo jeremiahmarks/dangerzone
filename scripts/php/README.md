@@ -4,10 +4,12 @@
 
 
 
+
+
 ####################################################
 #TOC START
 ####################################################
-* .
+* [](.//README.md)
     * [linksOfInterest.php](./linksOfInterest.php)
     * [connection.php](./connection.php)
     * [README.md](./README.md)
@@ -18,7 +20,7 @@
     * [nindex.php](./nindex.php)
     * [my.pw.php](./my.pw.php)
     * [books.connection.php](./books.connection.php)
-* ./basicToDoServer
+* [/basicToDoServer](.//basicToDoServer/README.md)
       * [.gitignore](./basicToDoServer/.gitignore)
       * [connection.php](./basicToDoServer/connection.php)
       * [README.md](./basicToDoServer/README.md)
@@ -29,7 +31,7 @@
       * [style.css](./basicToDoServer/style.css)
       * [sftp-config.json](./basicToDoServer/sftp-config.json)
       * [.git](./basicToDoServer/.git)
-* ./onlineVideoPage
+* [/onlineVideoPage](.//onlineVideoPage/README.md)
       * [body.php](./onlineVideoPage/body.php)
       * [todo.txt](./onlineVideoPage/todo.txt)
       * [itemadd.php](./onlineVideoPage/itemadd.php)

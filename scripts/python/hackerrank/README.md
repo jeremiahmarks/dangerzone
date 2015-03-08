@@ -4,10 +4,12 @@
 
 
 
+
+
 ####################################################
 #TOC START
 ####################################################
-* .
+* [](.//README.md)
     * [quicksort3.py](./quicksort3.py)
     * [findDigits.py](./findDigits.py)
     * [insertionSortP2.py](./insertionSortP2.py)

@@ -4,23 +4,25 @@
 
 
 
+
+
 ####################################################
 #TOC START
 ####################################################
-* .
+* [](.//README.md)
     * [README.md](./README.md)
-* ./mysql
+* [/mysql](.//mysql/README.md)
       * [snippets](./mysql/snippets)
       * [README.md](./mysql/README.md)
       * [getdistinctvalues](./mysql/getdistinctvalues)
       * [imagelocation](./mysql/imagelocation)
-* ./python
+* [/python](.//python/README.md)
       * [.Zen](./python/.Zen)
       * [README.md](./python/README.md)
       * [uploadT.pyc](./python/uploadT.pyc)
       * [markdownMaker.py](./python/markdownMaker.py)
       * [__init__.py](./python/__init__.py)
-* ./python/anagrams
+* [/python/anagrams](.//python/anagrams/README.md)
         * [wordsy.py](./python/anagrams/wordsy.py)
         * [perms.py](./python/anagrams/perms.py)
         * [words.txt](./python/anagrams/words.txt)
@@ -34,7 +36,7 @@
         * [gramsold.py](./python/anagrams/gramsold.py)
         * [wordsy2.py](./python/anagrams/wordsy2.py)
         * [wordsy1.py](./python/anagrams/wordsy1.py)
-* ./python/turtleRelated
+* [/python/turtleRelated](.//python/turtleRelated/README.md)
         * [newhex.py](./python/turtleRelated/newhex.py)
         * [mbrot.py](./python/turtleRelated/mbrot.py)
         * [turts.py](./python/turtleRelated/turts.py)
@@ -61,7 +63,7 @@
         * [turtle_bomb.py](./python/turtleRelated/turtle_bomb.py)
         * [turtle_code.py](./python/turtleRelated/turtle_code.py)
         * [pong.py](./python/turtleRelated/pong.py)
-* ./python/oneTimeScripts
+* [/python/oneTimeScripts](.//python/oneTimeScripts/README.md)
         * [mysqldb_test.py](./python/oneTimeScripts/mysqldb_test.py)
         * [pydo.py](./python/oneTimeScripts/pydo.py)
         * [AmazonProblem1.py](./python/oneTimeScripts/AmazonProblem1.py)
@@ -79,16 +81,16 @@
         * [clippingstobase.py](./python/oneTimeScripts/clippingstobase.py)
         * [mymath.py](./python/oneTimeScripts/mymath.py)
         * [tempConvert.py](./python/oneTimeScripts/tempConvert.py)
-* ./python/challengesCollectionsEtc
+* [/python/challengesCollectionsEtc](.//python/challengesCollectionsEtc/README.md)
         * [checkio.py](./python/challengesCollectionsEtc/checkio.py)
         * [dink.py](./python/challengesCollectionsEtc/dink.py)
         * [fibonacci.py](./python/challengesCollectionsEtc/fibonacci.py)
         * [README.md](./python/challengesCollectionsEtc/README.md)
-* ./python/agrams
+* [/python/agrams](.//python/agrams/README.md)
         * [agrams.py.html](./python/agrams/agrams.py.html)
         * [README.md](./python/agrams/README.md)
         * [agrams.py](./python/agrams/agrams.py)
-* ./python/remoteAccessScripts
+* [/python/remoteAccessScripts](.//python/remoteAccessScripts/README.md)
         * [crawl.py](./python/remoteAccessScripts/crawl.py)
         * [mysqldb_test.py](./python/remoteAccessScripts/mysqldb_test.py)
         * [echoserver.py](./python/remoteAccessScripts/echoserver.py)
@@ -100,7 +102,7 @@
         * [dirTree2.py](./python/remoteAccessScripts/dirTree2.py)
         * [dbcleanup.py](./python/remoteAccessScripts/dbcleanup.py)
         * [microThoughts.py](./python/remoteAccessScripts/microThoughts.py)
-* ./python/cards
+* [/python/cards](.//python/cards/README.md)
         * [cardsy.py](./python/cards/cardsy.py)
         * [cards.py](./python/cards/cards.py)
         * [README.md](./python/cards/README.md)
@@ -108,7 +110,7 @@
         * [cardgen.py](./python/cards/cardgen.py)
         * [onecard.py](./python/cards/onecard.py)
         * [cardsz.py](./python/cards/cardsz.py)
-* ./python/clock
+* [/python/clock](.//python/clock/README.md)
         * [cubeclock.py](./python/clock/cubeclock.py)
         * [roman.py](./python/clock/roman.py)
         * [README.md](./python/clock/README.md)
@@ -121,7 +123,7 @@
         * [__init__.py](./python/clock/__init__.py)
         * [romans.py](./python/clock/romans.py)
         * [clockrings.py](./python/clock/clockrings.py)
-* ./python/taskwarriorwebpage
+* [/python/taskwarriorwebpage](.//python/taskwarriorwebpage/README.md)
         * [ti.txt](./python/taskwarriorwebpage/ti.txt)
         * [tasks.json](./python/taskwarriorwebpage/tasks.json)
         * [README.md](./python/taskwarriorwebpage/README.md)
@@ -129,7 +131,7 @@
         * [__init__.py](./python/taskwarriorwebpage/__init__.py)
         * [tc.txt](./python/taskwarriorwebpage/tc.txt)
         * [tr.txt](./python/taskwarriorwebpage/tr.txt)
-* ./python/hackerrank
+* [/python/hackerrank](.//python/hackerrank/README.md)
         * [quicksort3.py](./python/hackerrank/quicksort3.py)
         * [findDigits.py](./python/hackerrank/findDigits.py)
         * [insertionSortP2.py](./python/hackerrank/insertionSortP2.py)
@@ -157,24 +159,24 @@
         * [findMedian.py](./python/hackerrank/findMedian.py)
         * [IntroToTutChallenges.py](./python/hackerrank/IntroToTutChallenges.py)
         * [countingSort4.py](./python/hackerrank/countingSort4.py)
-* ./python/fileManip
+* [/python/fileManip](.//python/fileManip/README.md)
         * [README.md](./python/fileManip/README.md)
         * [recurMvFiles.py](./python/fileManip/recurMvFiles.py)
         * [ctpng.py](./python/fileManip/ctpng.py)
         * [siteimages.py](./python/fileManip/siteimages.py)
-* ./python/calculus
+* [/python/calculus](.//python/calculus/README.md)
         * [README.md](./python/calculus/README.md)
         * [ch2.py](./python/calculus/ch2.py)
         * [__init__.pyc](./python/calculus/__init__.pyc)
         * [__init__.py](./python/calculus/__init__.py)
-* ./python/uploadT.py
+* [/python/uploadT.py](.//python/uploadT.py/README.md)
         * [README.md](./python/uploadT.py/README.md)
         * [__init__.py](./python/uploadT.py/__init__.py)
         * [my.pw.py](./python/uploadT.py/my.pw.py)
-* ./python/uploadT.py/my.pw
+* [/python/uploadT.py/my.pw](.//python/uploadT.py/my.pw/README.md)
           * [README.md](./python/uploadT.py/my.pw/README.md)
           * [__init__.py](./python/uploadT.py/my.pw/__init__.py)
-* ./python/someMoreFVH
+* [/python/someMoreFVH](.//python/someMoreFVH/README.md)
         * [fvh.py](./python/someMoreFVH/fvh.py)
         * [somemorefvhpy.py](./python/someMoreFVH/somemorefvhpy.py)
         * [README.md](./python/someMoreFVH/README.md)
@@ -182,7 +184,7 @@
         * [fvhmans.py](./python/someMoreFVH/fvhmans.py)
         * [fvh2.py](./python/someMoreFVH/fvh2.py)
         * [__init__.py](./python/someMoreFVH/__init__.py)
-* ./bash
+* [/bash](.//bash/README.md)
       * [snippets](./bash/snippets)
       * [gitup.sh](./bash/gitup.sh)
       * [test.sh](./bash/test.sh)
@@ -241,7 +243,7 @@
       * [webanize.conf](./bash/webanize.conf)
       * [webanize.refactor](./bash/webanize.refactor)
       * [gpush.sh](./bash/gpush.sh)
-* ./bash/advancedBashScriptingGuide
+* [/bash/advancedBashScriptingGuide](.//bash/advancedBashScriptingGuide/README.md)
         * [hdlother](./bash/advancedBashScriptingGuide/hdlother)
         * [hdl_nearfinal](./bash/advancedBashScriptingGuide/hdl_nearfinal)
         * [hdlold](./bash/advancedBashScriptingGuide/hdlold)
@@ -260,7 +262,7 @@
         * [00Book-05Part4.txt](./bash/advancedBashScriptingGuide/00Book-05Part4.txt)
         * [whatistruth.sh](./bash/advancedBashScriptingGuide/whatistruth.sh)
         * [00Book-07Appendix.txt](./bash/advancedBashScriptingGuide/00Book-07Appendix.txt)
-* ./bash/advancedBashScriptingGuide/book
+* [/bash/advancedBashScriptingGuide/book](.//bash/advancedBashScriptingGuide/book/README.md)
           * [gotchas.html](./bash/advancedBashScriptingGuide/book/gotchas.html)
           * [scrstyle.html](./bash/advancedBashScriptingGuide/book/scrstyle.html)
           * [functions.html](./bash/advancedBashScriptingGuide/book/functions.html)
@@ -402,11 +404,11 @@
           * [optimizations.html](./bash/advancedBashScriptingGuide/book/optimizations.html)
           * [files.html](./bash/advancedBashScriptingGuide/book/files.html)
           * [bashver2.html](./bash/advancedBashScriptingGuide/book/bashver2.html)
-* ./bash/newInstalls
+* [/bash/newInstalls](.//bash/newInstalls/README.md)
         * [rhel.brilliantjenny.sh](./bash/newInstalls/rhel.brilliantjenny.sh)
         * [README.md](./bash/newInstalls/README.md)
         * [brilliantjennyiptables.sh](./bash/newInstalls/brilliantjennyiptables.sh)
-* ./bash/notes
+* [/bash/notes](.//bash/notes/README.md)
         * [LOGFILE](./bash/notes/LOGFILE)
         * [3Feb.SpecialCharacters.md](./bash/notes/3Feb.SpecialCharacters.md)
         * [special_chars.txt](./bash/notes/special_chars.txt)
@@ -418,13 +420,13 @@
         * [notesfromirc](./bash/notes/notesfromirc)
         * [commands.md](./bash/notes/commands.md)
         * [control.txt](./bash/notes/control.txt)
-* ./bash/autostartFiles
+* [/bash/autostartFiles](.//bash/autostartFiles/README.md)
         * [readme from init.d.txt](./bash/autostartFiles/readme from init.d.txt)
         * [etc.init.d.taskd](./bash/autostartFiles/etc.init.d.taskd)
         * [README.md](./bash/autostartFiles/README.md)
         * [init.dfile for rsync.txt](./bash/autostartFiles/init.dfile for rsync.txt)
         * [etc.init.taskd.conf](./bash/autostartFiles/etc.init.taskd.conf)
-* ./php
+* [/php](.//php/README.md)
       * [linksOfInterest.php](./php/linksOfInterest.php)
       * [connection.php](./php/connection.php)
       * [README.md](./php/README.md)
@@ -435,7 +437,7 @@
       * [nindex.php](./php/nindex.php)
       * [my.pw.php](./php/my.pw.php)
       * [books.connection.php](./php/books.connection.php)
-* ./php/basicToDoServer
+* [/php/basicToDoServer](.//php/basicToDoServer/README.md)
         * [.gitignore](./php/basicToDoServer/.gitignore)
         * [connection.php](./php/basicToDoServer/connection.php)
         * [README.md](./php/basicToDoServer/README.md)
@@ -446,7 +448,7 @@
         * [style.css](./php/basicToDoServer/style.css)
         * [sftp-config.json](./php/basicToDoServer/sftp-config.json)
         * [.git](./php/basicToDoServer/.git)
-* ./php/onlineVideoPage
+* [/php/onlineVideoPage](.//php/onlineVideoPage/README.md)
         * [body.php](./php/onlineVideoPage/body.php)
         * [todo.txt](./php/onlineVideoPage/todo.txt)
         * [itemadd.php](./php/onlineVideoPage/itemadd.php)
@@ -457,7 +459,7 @@
         * [my.pw.php](./php/onlineVideoPage/my.pw.php)
         * [sftp-config.json](./php/onlineVideoPage/sftp-config.json)
         * [oneoff.php](./php/onlineVideoPage/oneoff.php)
-* ./java
+* [/java](.//java/README.md)
       * [asciibird.class](./java/asciibird.class)
       * [KeyLis.java](./java/KeyLis.java)
       * [theASCIIBird.java](./java/theASCIIBird.java)
@@ -482,7 +484,7 @@
       * [asciibirdpanel$MyKeyListener.class](./java/asciibirdpanel$MyKeyListener.class)
       * [KeyTestPanel$1.class](./java/KeyTestPanel$1.class)
       * [asciibirdpanel.class](./java/asciibirdpanel.class)
-* ./ruby
+* [/ruby](.//ruby/README.md)
       * [Invoice.txt](./ruby/Invoice.txt)
       * [doneInPy.py](./ruby/doneInPy.py)
       * [attempt1.rb](./ruby/attempt1.rb)
@@ -508,6 +510,6 @@
       * [c.rb](./ruby/c.rb)
       * [tg3.rb](./ruby/tg3.rb)
       * [Contact.txt](./ruby/Contact.txt)
-* ./html
+* [/html](.//html/README.md)
       * [README.md](./html/README.md)
       * [embedLocalFullScreenSWF.html](./html/embedLocalFullScreenSWF.html)

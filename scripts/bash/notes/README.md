@@ -4,10 +4,12 @@
 
 
 
+
+
 ####################################################
 #TOC START
 ####################################################
-* .
+* [](.//README.md)
     * [LOGFILE](./LOGFILE)
     * [3Feb.SpecialCharacters.md](./3Feb.SpecialCharacters.md)
     * [special_chars.txt](./special_chars.txt)

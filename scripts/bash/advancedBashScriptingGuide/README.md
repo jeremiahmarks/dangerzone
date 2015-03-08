@@ -4,10 +4,12 @@
 
 
 
+
+
 ####################################################
 #TOC START
 ####################################################
-* .
+* [](.//README.md)
     * [hdlother](./hdlother)
     * [hdl_nearfinal](./hdl_nearfinal)
     * [hdlold](./hdlold)
@@ -26,7 +28,7 @@
     * [00Book-05Part4.txt](./00Book-05Part4.txt)
     * [whatistruth.sh](./whatistruth.sh)
     * [00Book-07Appendix.txt](./00Book-07Appendix.txt)
-* ./book
+* [/book](.//book/README.md)
       * [gotchas.html](./book/gotchas.html)
       * [scrstyle.html](./book/scrstyle.html)
       * [functions.html](./book/functions.html)

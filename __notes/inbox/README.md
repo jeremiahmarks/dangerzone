@@ -4,10 +4,12 @@
 
 
 
+
+
 ####################################################
 #TOC START
 ####################################################
-* .
+* [](.//README.md)
     * [script_ideas.md](./script_ideas.md)
     * [compIdea.txt](./compIdea.txt)
     * [todo.txt](./todo.txt)
@@ -16,7 +18,7 @@
     * [20150208generalThoughts.txt](./20150208generalThoughts.txt)
     * [javascriptImplementationToFindDistanceBetweenTwoLatLongPoints.md](./javascriptImplementationToFindDistanceBetweenTwoLatLongPoints.md)
     * [startUpFile-actions-toInclude.md](./startUpFile-actions-toInclude.md)
-* ./writing_experiment_topics
+* [/writing_experiment_topics](.//writing_experiment_topics/README.md)
       * [git_moveFilesFromOneLocationToAnother.md](./writing_experiment_topics/git_moveFilesFromOneLocationToAnother.md)
       * [setting_up_git_server_to_over_internet.md](./writing_experiment_topics/setting_up_git_server_to_over_internet.md)
       * [README.md](./writing_experiment_topics/README.md)

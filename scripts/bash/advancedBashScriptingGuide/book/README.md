@@ -4,10 +4,12 @@
 
 
 
+
+
 ####################################################
 #TOC START
 ####################################################
-* .
+* [](.//README.md)
     * [gotchas.html](./gotchas.html)
     * [scrstyle.html](./scrstyle.html)
     * [functions.html](./functions.html)

@@ -3,7 +3,7 @@
 # @Author: Jeremiah Marks
 # @Date:   2015-03-07 23:13:32
 # @Last Modified 2015-03-08
-# @Last Modified time: 2015-03-08 01:18:15
+# @Last Modified time: 2015-03-08 01:25:01
 
 
 ############################################################
@@ -66,7 +66,7 @@ class Crawler(object):
                     # print os.getcwd()
                     self.subCrawlers.append(Crawler())
                     os.chdir(self.mywd)
-            self.fileLines.append('* {}'.format(root.replace(self.mywd, '.')+'\n'))
+            self.fileLines.append('* [{}]({}/README.md)\n'.format(root.replace(self.mywd, ''),root.replace(self.mywd, './')))
             for f in files:
                 self.fileLines.append('{}* [{}]({}/{})'.format(indent, f, root.replace(self.mywd, '.'),f)+'\n')
         for eachLine in self.fileLines:

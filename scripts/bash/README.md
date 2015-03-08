@@ -4,10 +4,12 @@
 
 
 
+
+
 ####################################################
 #TOC START
 ####################################################
-* .
+* [](.//README.md)
     * [snippets](./snippets)
     * [gitup.sh](./gitup.sh)
     * [test.sh](./test.sh)
@@ -66,7 +68,7 @@
     * [webanize.conf](./webanize.conf)
     * [webanize.refactor](./webanize.refactor)
     * [gpush.sh](./gpush.sh)
-* ./advancedBashScriptingGuide
+* [/advancedBashScriptingGuide](.//advancedBashScriptingGuide/README.md)
       * [hdlother](./advancedBashScriptingGuide/hdlother)
       * [hdl_nearfinal](./advancedBashScriptingGuide/hdl_nearfinal)
       * [hdlold](./advancedBashScriptingGuide/hdlold)
@@ -85,7 +87,7 @@
       * [00Book-05Part4.txt](./advancedBashScriptingGuide/00Book-05Part4.txt)
       * [whatistruth.sh](./advancedBashScriptingGuide/whatistruth.sh)
       * [00Book-07Appendix.txt](./advancedBashScriptingGuide/00Book-07Appendix.txt)
-* ./advancedBashScriptingGuide/book
+* [/advancedBashScriptingGuide/book](.//advancedBashScriptingGuide/book/README.md)
         * [gotchas.html](./advancedBashScriptingGuide/book/gotchas.html)
         * [scrstyle.html](./advancedBashScriptingGuide/book/scrstyle.html)
         * [functions.html](./advancedBashScriptingGuide/book/functions.html)
@@ -227,11 +229,11 @@
         * [optimizations.html](./advancedBashScriptingGuide/book/optimizations.html)
         * [files.html](./advancedBashScriptingGuide/book/files.html)
         * [bashver2.html](./advancedBashScriptingGuide/book/bashver2.html)
-* ./newInstalls
+* [/newInstalls](.//newInstalls/README.md)
       * [rhel.brilliantjenny.sh](./newInstalls/rhel.brilliantjenny.sh)
       * [README.md](./newInstalls/README.md)
       * [brilliantjennyiptables.sh](./newInstalls/brilliantjennyiptables.sh)
-* ./notes
+* [/notes](.//notes/README.md)
       * [LOGFILE](./notes/LOGFILE)
       * [3Feb.SpecialCharacters.md](./notes/3Feb.SpecialCharacters.md)
       * [special_chars.txt](./notes/special_chars.txt)
@@ -243,7 +245,7 @@
       * [notesfromirc](./notes/notesfromirc)
       * [commands.md](./notes/commands.md)
       * [control.txt](./notes/control.txt)
-* ./autostartFiles
+* [/autostartFiles](.//autostartFiles/README.md)
       * [readme from init.d.txt](./autostartFiles/readme from init.d.txt)
       * [etc.init.d.taskd](./autostartFiles/etc.init.d.taskd)
       * [README.md](./autostartFiles/README.md)
