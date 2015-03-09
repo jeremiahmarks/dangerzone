@@ -1,0 +1,28 @@
+#Table creation string
+
+CREATE TABLE  `jeremiahmarks`.`vids` (
+`id` INT NOT NULL ,
+`datecreated` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+`playcount` INT NOT NULL DEFAULT  '0',
+`privacy` SET(  'private',  'public' ) NOT NULL DEFAULT  'private',
+`name` VARCHAR( 255 ) NOT NULL
+) ENGINE = MYISAM
+
+id - just numerical identifier for video
+name - string - name of file
+date created
+last accessed
+playcount
+
+CREATE TABLE  `jeremiahmarks`.`vids` (
+
+`id` INT NOT NULL ,
+`name` VARCHAR( 255 ) NOT NULL ,
+`created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+`lastAccessed` TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+`playcount` INT NOT NULL DEFAULT  '0',
+`notes` TEXT NULL ,
+`privacy` SET(  'private',  'public' ) NOT NULL DEFAULT  '''private''',
+`tags` TEXT NULL ,
+`fullpath` VARCHAR( 255 ) NULL
+) ENGINE = MYISAM

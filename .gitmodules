@@ -1,0 +1,3 @@
+[submodule "scripts/php/basicToDoServer"]
+	path = scripts/php/basicToDoServer
+	url = git@github.com:jeremiahmarks/basicToDoServer.git
