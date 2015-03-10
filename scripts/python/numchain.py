@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # @Author: Jeremiah Marks
 # @Date:   2015-03-08 21:40:17
-# @Last Modified 2015-03-08>
-# @Last Modified time: 2015-03-08 21:42:09
+# @Last Modified 2015-03-09
+# @Last Modified time: 2015-03-09 21:40:22
 
 class NumChain2(object):
 
@@ -15,6 +15,7 @@ class NumChain2(object):
         self.links.append(1)
         self.potentialLinks.append(set([1]))
         self.fulfilled=False
+        self.chainsThatWork=[]
 
     def createNextPotentialLinks(self):
         self.potentialNextValues=set()
@@ -27,21 +28,25 @@ class NumChain2(object):
     def iterate(self):
         self.createNextPotentialLinks()
         self.potentialLinks.append(self.potentialNextValues)
-        # print "potentialNextValues:"
-        # for eachnum in sorted(self.potentialNextValues):
-        #     print eachnum
         if (self.currentLinks>=self.linksgoal-1):
-            self.fulfilled=True
+            if (len(self.chainsThatWork)>0):
+                self.fulfilled=True
         elif (self.valuegoal in self.potentialNextValues):
-            self.fulfilled=True
             self.setNextValue(self.valuegoal)
         # elif (max(self.potentialNextValues)==self.links[-1]):
         #     """That means we have did this last time"""
         #     if (max(self.potentialNextValues)==self.valuegoal):
         #         self.fulfilled=True
-        self.setNextValue(max(self.potentialNextValues))
+        for eachPotential in self.potentialNextValues:
+            self.setNextValue(eachPotential)
+            self.links.pop()
     def setNextValue(self,value):
         self.links.append(value)
+        if (value==self.valuegoal):
+            temp=[]
+            for eachV in self.links:
+                temp.append(eachV)
+            self.chainsThatWork.append(temp)
 
     def theLogicController(self):
         while not self.fulfilled:
