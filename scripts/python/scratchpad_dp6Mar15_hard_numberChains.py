@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # @Author: Jeremiah Marks
 # @Date:   2015-03-08 19:24:27
-# @Last Modified 2015-03-08
-# @Last Modified time: 2015-03-08 21:42:13
+# @Last Modified 2015-03-10
+# @Last Modified time: 2015-03-10 20:17:48
 
 ##########################################
 ## from http://redd.it/2y5ziw
@@ -110,6 +110,59 @@ class NumChain2(object):
         while not self.fulfilled:
             self.iterate()
         print self.links
+
+
+import random
+import itertools
+class spad(object):
+
+    def __init__(self, numberOfLinks, desiredValue):
+        self.numberOfLinks = numberOfLinks
+        self.desiredValue = desiredValue
+        self.links=[]
+        self.links.append(1)
+        self.stringGroup=[]
+        self.allPotentialValues=set()
+        for x in range(numberOfLinks+1):
+            self.stringGroup.append([x,])
+        print self.calculateNextLinks()
+        self.cleanLists()
+
+    def calculateNextLinks(self):
+        potentialNextValues = set()
+        currentNumberOfLinks=len(self.links)
+
+        if (self.links[-1]==self.desiredValue):
+            return self.links
+        elif (currentNumberOfLinks>self.numberOfLinks):
+            return False
+        else:
+            self.stringGroup[currentNumberOfLinks].append(self.links[:])
+            for outterLinkLocation in range(currentNumberOfLinks):
+                for innerLinkLocation in range(outterLinkLocation, currentNumberOfLinks):
+                    self.allPotentialValues.add(self.links[outterLinkLocation]+self.links[innerLinkLocation])
+                    potentialNextValues.add(self.links[outterLinkLocation]+self.links[innerLinkLocation])
+            while (len(potentialNextValues)>0):
+                eachLink = random.choice(list(potentialNextValues))
+                potentialNextValues.discard(eachLink)
+                self.links.append(eachLink)
+                done=self.calculateNextLinks()
+                if (done):
+                    return done
+                else:
+                    self.links.pop()
+            return False
+
+    def cleanLists(self):
+        self.finalLists=[]
+        for x in self.stringGroup:
+            x.pop(0)
+            for y in x:
+                y.sort()
+            x.sort()
+            self.finalLists.append([key for key,_ in itertools.groupby(x)])
+
+
 
 
 #Description
