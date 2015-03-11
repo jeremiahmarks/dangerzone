@@ -3,7 +3,7 @@
 # @Author: Jeremiah Marks
 # @Date:   2015-03-09 22:51:07
 # @Last Modified 2015-03-10
-# @Last Modified time: 2015-03-10 00:51:21
+# @Last Modified time: 2015-03-10 00:53:55
 
 
 ##########################################
@@ -89,8 +89,8 @@ def testBoth():
     times=[]
     s1=0
     s2=0
-    for x in range(45):
-        a=random.randint(3,20)
+    for x in range(5):
+        a=random.randint(3,12)
         b=random.randint(1,2**(a-1))
         varspassed="( %i, %i)"%(a,b)
         firsttime= timeit.timeit("firstSolution" + varspassed, "from __main__ import firstSolution",number=1)
