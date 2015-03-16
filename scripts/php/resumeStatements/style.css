@@ -1,0 +1,117 @@
+/* 
+* @Author: Jeremiah Marks
+* @Date:   2015-03-15 10:44:57
+* @Last Modified by:   Jeremiah Marks
+* @Last Modified time: 2015-03-15 16:24:30
+*/
+
+
+
+.resumeBody {
+    background-color: #333;
+    color: #999;
+}
+.name {
+    clear: both;
+    color: #f00;
+    float: right;
+    font-size: 1.5em;
+    margin: 10px 0 50px 80%;
+}
+.address {
+    float: left;
+    margin: 0 10% 3em;
+    width: 100%;
+}
+.addressItem {
+    float: left;
+    margin: auto;
+    width: 24%;
+}
+.summary {
+    clear: both;
+}
+.statementWithTags {
+    border: 1px solid;
+    display: table-row;
+    float: left;
+    margin: 0 0 15px;
+    min-height: 70px;
+    padding: 0 0 35px;
+    position: relative;
+    top: 50px;
+    width: 100%;
+}
+.statementWithTagsInterior {
+    bottom: 0;
+    display: table-row;
+    float: left;
+    min-height: 100px;
+    position: absolute;
+    width: 100%;
+}
+.statement {
+    bottom: 0;
+    display: table-cell;
+    float: left;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    width: 40%;
+}
+.appliedTags {
+    border-left: 1px solid;
+    border-right: 1px solid;
+    bottom: 0;
+    display: table-cell;
+    height: 100%;
+    left: 40%;
+    overflow: auto;
+    position: absolute;
+    width: 25%;
+}
+.tag {
+    border: 1px solid black;
+    border-radius: 50px;
+    float: left;
+    font-size: 0.7em;
+    margin: 3px;
+    padding: 0 3px;
+}
+.applied {
+    background-color: #ffff66;
+}
+.editOptions {
+    border-right: 1px solid;
+    bottom: 0;
+    display: inline-block;
+    float: right;
+    height: 100%;
+    left: 65%;
+    overflow: auto;
+    position: absolute;
+    width: 20%;
+}
+.tagSelector {
+    bottom: 0;
+    display: inline-block;
+    float: left;
+    height: 100%;
+    left: 7px;
+    overflow: scroll;
+    position: absolute;
+}
+.tag.hidden {
+    opacity: 0;
+}
+.updateTags {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+.actions{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}

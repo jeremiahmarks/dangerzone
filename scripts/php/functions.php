@@ -1,10 +1,10 @@
 <?php
-session_start()
+session_start();
 /**
  * @Author: Jeremiah Marks
  * @Date:   2015-02-16 17:58:39
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-02-16 23:21:07
+ * @Last Modified time: 2015-03-15 01:15:28
  */
 
 /**
