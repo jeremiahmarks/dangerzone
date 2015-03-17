@@ -175,6 +175,43 @@ def get_list_of_tags
 	end
 end
 
+def get_list_of_opportunities
+	$leads={}
+	p=0
+	while true
+		group_of_opportunities = $server.call("DataService.query", $api_key, "Lead", 1000,p,{},['Id',"Opportunity Title","ContactID","StatusID"],"Id", true)
+		group_of_opportunities.each do |opp|
+			$leads[opp['Id']] = ( :id => opp['Id'], :title => opp['Opportunity Title'], :cid => opp['ContactID'], :status => opp['StatusID'] )
+		end
+		unless group_of_opportunities.count ==1000
+			break
+		end
+		p+=1
+	end
+end
+
+def get_list_of_status
+	$statuses={}
+	p=0
+	while true
+		group_of_status = $server.call("DataService.query", $api_key, "Lead", 1000,p,{},['Id',"StatusName","StatusOrder","TargetNumDays"],"Id", true)
+		group_of_status.each do |stat|
+			$statuses[stat['Id']] = (:id => stat['Id'],:name => stat["StatusName"],:order => stat["StatusOrder"],:days => stat["TargetNumDays"])
+		end
+		unless group_of_status.count == 1000
+			break
+		end
+		p+=1
+	end
+end
+
+def printOppsWithStatus
+	get_list_of_opportunities
+	get_list_of_status
+	ops = $leads.to_a << nil
+	ops.each do |each_opp|
+		puts "#{$leads[each_opp]}"
+
 def print_tags
 	#a quick and easy meathod to see
 	get_list_of_tags
@@ -227,6 +264,24 @@ end
 def sendWithStatus (parameters = {})
 	return $server.call("APIEmailService.sendEmailWithStatus", $api_key, parameters[:from], parameters[:to], parameters[:cc]||="", parameters[:bcc]||="",parameters[:subject], parameters[:text], parameters[:html])
 end
+
+
+
+def tm
+	#this will get all of the different types of merge field for each type of template
+	context = ["Contact", "Opportunity", "Invoice", "CreditCard"]
+	context.each do |type|
+		storage = File.open("#{type}.txt", "w")
+		fields_available = $server.call("APIEmailService.getAvailableMergeFields", $api_key, type)
+		fields_available.sort!
+		fields_available.each do |field|
+			storage << field + "\n"
+		end
+		storage.close
+	end
+end
+
+
 
 def sendTest
 	params = {}
@@ -485,18 +540,4 @@ def sendTest
 	params[:text]="This is a simple text message.  I sent an html message, but I guess you wont be seeing it, huh?"
 	statuses=sendWithStatus(params)
 	puts statuses
-end
-
-def tm
-	#this will get all of the different types of merge field for each type of template
-	context = ["Contact", "Opportunity", "Invoice", "CreditCard"]
-	context.each do |type|
-		storage = File.open("#{type}.txt", "w")
-		fields_available = $server.call("APIEmailService.getAvailableMergeFields", $api_key, type)
-		fields_available.sort!
-		fields_available.each do |field|
-			storage << field + "\n"
-		end
-		storage.close
-	end
 end
