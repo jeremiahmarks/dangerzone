@@ -1,4 +1,4 @@
-from circleint import Circle
+##from circleint import Circle
 from turtle import Turtle
 import fvh2
 import random

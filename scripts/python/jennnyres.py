@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # @Author: Jeremiah Marks
 # @Date:   2015-03-14 22:08:02
-# @Last Modified 2015-03-15
-# @Last Modified time: 2015-03-15 00:47:09
+# @Last Modified 2015-04-03
+# @Last Modified time: 2015-04-03 21:31:08
 
 
 import MySQLdb
@@ -149,7 +149,8 @@ class statementOrganizer(object):
             print "I do now know how to do that."
             self.statementMenu(statementid)
 
-
+def __init__():
+    pass
 
 
 if __name__ == '__main__':
