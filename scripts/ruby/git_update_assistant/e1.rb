@@ -2,10 +2,10 @@
 # @Author: Jeremiah Marks
 # @Date:   2015-03-16 22:50:24
 # @Last Modified 2015-04-07
-# @Last Modified time: 2015-04-07 19:39:32
+# @Last Modified time: 2015-04-07 20:02:09
 
 
-gitsFinder = %x( find ~/ -name ".git" 2>/dev/null )
+gitsFinder = %x( find ~ ! -path '*/share/Trash/*'  -name ".git"  2>/dev/null )
 # gitsFinder = %x[ #{cmd} ]
 
 # value = %x( echo 'hi' )
