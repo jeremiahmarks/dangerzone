@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 23:00:30
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-08 23:55:56
+ * @Last Modified time: 2015-04-09 01:03:10
  */
 include_once "functions.php";
 function htmlHead(){
@@ -38,17 +38,19 @@ function bodyEnd(){
 function inboxSubmitter(){
     ?>
     <div class="newNote">
-        <form method='post' action=''>
+        <form method='post' action='' id='addNote' class="mobilePost">
             <table class='newNoteTable'>
-                <tr>
+                <tr class="tableHeader">
                     <td colspan="2"><h2>Leave a note!</h2></td>
                 </tr>
               <tr>
-                <td>Note:</td>
-                <td><input type='text' name='noteText'></td>
+                <!-- <td class="inputNoteLabel">Note:</td> -->
+                <td colspan="2">
+                    <textarea name="noteText" form="addNote" id="noteText"> </textarea>
+                </td>
               </tr>
               <tr>
-                <td colspan="2"><input type="submit" name="newItem" value="new note"></td>
+                <td colspan="2"><input class="mobilesubmit" type="submit" name="newItem" value="new note"></td>
               </tr>
             </table>
         </form>

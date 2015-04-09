@@ -1,0 +1,46 @@
+/* 
+* @Author: Jeremiah Marks
+* @Date:   2015-04-09 00:30:28
+* @Last Modified by:   Jeremiah Marks
+* @Last Modified time: 2015-04-09 01:07:24
+*/
+body{
+    background-color: #333;
+    color: #aaa;
+}
+
+.newNote{
+    width: 100%;
+}
+
+.mobilePost{
+
+}
+
+.newNoteTable{
+    width: 100%;
+    margin: 0 auto;
+}
+.tableHeader, h2{
+    width: 30%;
+    margin: 0 auto;
+}
+#noteText{
+    width: 100%;
+    margin: 0 auto;
+}
+.mobilesubmit{
+    width: 100%;
+    margin: 0 auto;
+}
+td{
+    width:100%;
+    margin: 0 auto;
+}
+.inputNoteLabel{
+    float:right;
+}
+.mobilesubmit{
+    width: 100%;
+    margin: 0 auto;
+}

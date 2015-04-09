@@ -3,25 +3,41 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 22:20:21
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-08 23:41:05
+ * @Last Modified time: 2015-04-09 00:24:11
  */
 ##
 include_once 'connection.php';
 include_once 'htmlElements.php';
-
+########
+########
 ##Current List of functions:
 ##
 ## add_item(itemName);
 ## main_page()
 ## get_all_notes()
+
+
 ########
 ########
 ## Current lists of tables to access through $conn:
 ##
 ## catchall
-## ID - integer ID
+## id - integer ID
 ## text - text of submission
 ##
+## ideatag
+## id - integer ID
+## displayText - varchar(32)
+## notes - varchar(256)
+## 
+## ideatagapp
+## id - unique id for this particular application
+## noteid - 
+
+
+
+
+
 function add_item($itemName){
     global $conn;
     $error='';
