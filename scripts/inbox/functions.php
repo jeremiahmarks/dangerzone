@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 22:20:21
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-09 00:24:11
+ * @Last Modified time: 2015-04-10 23:23:22
  */
 ##
 include_once 'connection.php';
@@ -24,15 +24,17 @@ include_once 'htmlElements.php';
 ## catchall
 ## id - integer ID
 ## text - text of submission
+## datetime - datetime created
 ##
-## ideatag
+## catchalltags
 ## id - integer ID
 ## displayText - varchar(32)
 ## notes - varchar(256)
 ## 
-## ideatagapp
+## catchalltagapplied
 ## id - unique id for this particular application
-## noteid - 
+## catchallid - id of catchall
+## catchalltagid - id of the tag
 
 
 
@@ -52,7 +54,7 @@ function main_page(){
     htmlHead();
     bodyStart();
     inboxSubmitter();
-    listAllNotes();
+    // listAllNotes();
     footer();
     bodyEnd();
 }
