@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 23:00:30
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-09 01:03:10
+ * @Last Modified time: 2015-04-13 19:40:09
  */
 include_once "functions.php";
 function htmlHead(){
@@ -39,45 +39,79 @@ function inboxSubmitter(){
     ?>
     <div class="newNote">
         <form method='post' action='' id='addNote' class="mobilePost">
-            <table class='newNoteTable'>
-                <tr class="tableHeader">
-                    <td colspan="2"><h2>Leave a note!</h2></td>
-                </tr>
-              <tr>
-                <!-- <td class="inputNoteLabel">Note:</td> -->
-                <td colspan="2">
-                    <textarea name="noteText" form="addNote" id="noteText"> </textarea>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2"><input class="mobilesubmit" type="submit" name="newItem" value="new note"></td>
-              </tr>
-            </table>
+            <div class="noteArea">
+                <table class='newNoteTable'>
+                    <tr class="tableHeader">
+                        <td colspan="2"><h2>Leave a note!</h2></td>
+                    </tr>
+                  <tr>
+                    <!-- <td class="inputNoteLabel">Note:</td> -->
+                    <td colspan="2">
+                        <textarea name="noteText" form="addNote" id="noteText"> </textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><input class="mobilesubmit" type="submit" name="newItem" value="new note"></td>
+                  </tr>
+                </table>
+            </div>
+                <?php
+                echo get_tags_as_option(); //because I will probably want to remove it on demand and use it elsewhere
+                ?>
         </form>
     </div>
     <?php
 }
 
 function listAllNotes(){
-    $allnotes = get_all_notes();
-    ?>
-    <div id="allNotes">
-        <table class="allNotes">
-            <tr>
-                <td>id</td>
-                <td>text</td>
-            </tr>
+    if (isset($_GET['a'])){
+        $allnotes = get_all_notes();
+        ?>
+        <div id="allNotes">
+            <table class="allNotes">
+                <tr>
+                    <td>id</td>
+                    <td>text</td>
+                </tr>
+            <?php
+            foreach ($allnotes as $key => $value) {
+                $colorID = ($key%2==0 ? "even" : "odd");
+                ?>
+                <tr class="noteHolder <?php echo $colorID; ?>">
+                    <td><?php echo $key;?></td>
+                    <td><?php echo $value;?></td>
+                </tr>
+                <?php 
+            } ?>
+            </table>
+        </div>
         <?php
-        foreach ($allnotes as $key => $value) {
-            $colorID = ($key%2==0 ? "even" : "odd");
-            ?>
-            <tr class="noteHolder <?php echo $colorID; ?>">
-                <td><?php echo $key;?></td>
-                <td><?php echo $value;?></td>
-            </tr>
-            <?php 
-        } ?>
-        </table>
+    } elseif (isset($_GET['t'])) {
+        tagCreationForm();
+    }
+}
+
+function tagCreationForm(){
+    ?>
+    <div id="newTagFormHolder" class="newForm mobilePost">
+        <form id="newTagForm" action='' class="newForm" method="POST">
+            <div id="newTagElements" class="tag">
+                <div class="tag display">
+                    <label>
+                        Tag Name:
+                        <input type="text" name="newTagName">
+                    </label>
+                </div>
+                <div class="tag description">
+                    <textarea name="tagDescription" form="newTagForm">
+Describe this tag, if you like.
+                    </textarea>
+                </div>
+                <div class="tag submit">
+                    <input type="SUBMIT" name="newTag" value="new tag">
+                </div>
+            </div>
+        </form>
     </div>
     <?php
 

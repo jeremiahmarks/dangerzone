@@ -2,7 +2,7 @@
 * @Author: Jeremiah Marks
 * @Date:   2015-04-09 00:30:28
 * @Last Modified by:   Jeremiah Marks
-* @Last Modified time: 2015-04-10 22:35:18
+* @Last Modified time: 2015-04-13 18:29:37
 */
 body{
     background-color: #333;
@@ -44,4 +44,29 @@ td{
 .mobilesubmit{
     width: 100%;
     margin: 0 auto;
+}
+
+#newTagFormHolder{
+
+}
+.newForm {
+
+}
+#newTagElements{
+
+}
+.tag .display{
+
+}
+.tag{
+
+}
+.display{
+
+}
+.description{
+    
+}
+.submit{
+
 }
