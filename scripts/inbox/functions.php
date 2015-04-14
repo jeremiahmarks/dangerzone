@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 22:20:21
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-13 20:34:34
+ * @Last Modified time: 2015-04-14 10:55:49
  */
 ##
 include_once 'connection.php';
@@ -31,7 +31,7 @@ include_once 'htmlElements.php';
 ## displayText - varchar(32)
 ## notes - varchar(256)
 ## 
-## catchalltagapplied
+## catchalltagapplications
 ## id - unique id for this particular application
 ## catchallid - id of catchall
 ## catchalltagid - id of the tag
@@ -56,13 +56,18 @@ include_once 'htmlElements.php';
 
 function add_item($itemName){
     global $conn;
-    $error='';
     echo $_POST['newItem'];
     $stmtString = "INSERT INTO catchall (text) VALUES (?)";
     $stmt = mysqli_prepare($conn, $stmtString);
     mysqli_stmt_bind_param($stmt, 's', $itemName);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
+    $thisnotesID=mysqli_insert_id($conn);
+    if (isset($_POST['tags'])){
+        foreach ($_POST['tags'] as $key => $value) {
+            addTagToContactRecord($thisnotesID, $value);
+        }
+    }
 }
 
 function new_tag($displayText, $notes){
@@ -76,12 +81,36 @@ function new_tag($displayText, $notes){
     return mysqli_insert_id($conn);
 }
 
+function addTagToContactRecord($catchallid, $catchalltagid){
+    global $conn;
+    $checkString = 'SELECT COUNT(*) FROM catchalltagapplications WHERE catchallid=' . $catchallid . ' AND catchalltagid=' . $catchalltagid ;
+    $results=mysqli_query($conn, $checkString);
+    $numOfMatches=mysqli_fetch_array($results);
+    if ( $numOfMatches[0]==0 ){
+        $stmtString = "INSERT INTO catchalltagapplications (catchallid, catchalltagid) VALUES (?,?)";
+        $stmt = mysqli_prepare($conn, $stmtString);
+        mysqli_stmt_bind_param($stmt, 'ii', $catchallid, $catchalltagid);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+    }
+}
+
+
 function main_page(){
     htmlHead();
     bodyStart();
     inboxSubmitter();
     listAllNotes();
     footer();
+    print_r($_POST);
+    if (isset($_POST['tags'])){
+        print_r($_POST['tags']);
+        foreach ($_POST['tags'] as $value) {
+            // echo $key;
+            echo $value;
+            echo "\n\n";
+        }
+    }
     bodyEnd();
 }
 
@@ -110,7 +139,7 @@ function get_all_tags(){
 function convert_data_to_HTMLoption($dataSet){
     //currently expecting that the key will be an integer
     $sbuilder="<div class=\"tagOptions\">\n
-    <select name=\"tags\" class=\"tagList\" multiple>";
+    <select name=\"tags[]\" class=\"tagList\" multiple>";
     foreach ($dataSet as $key => $value) {
             $colorID = ($key%2==0 ? "even" : "odd");
             $sbuilder .= "

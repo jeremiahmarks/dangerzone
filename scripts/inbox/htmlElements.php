@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 23:00:30
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-13 19:40:09
+ * @Last Modified time: 2015-04-13 20:59:21
  */
 include_once "functions.php";
 function htmlHead(){
@@ -38,6 +38,7 @@ function bodyEnd(){
 function inboxSubmitter(){
     ?>
     <div class="newNote">
+        <!-- http://requestb.in/oomdjaoo -->
         <form method='post' action='' id='addNote' class="mobilePost">
             <div class="noteArea">
                 <table class='newNoteTable'>
