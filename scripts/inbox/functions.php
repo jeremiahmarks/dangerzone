@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 22:20:21
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-14 10:55:49
+ * @Last Modified time: 2015-04-14 23:55:18
  */
 ##
 include_once 'connection.php';
@@ -54,6 +54,20 @@ include_once 'htmlElements.php';
 // b corresponding variable is a blob and will be sent in packets
 
 
+function addTagToContactRecord($catchallid, $catchalltagid){
+    global $conn;
+    $checkString = 'SELECT COUNT(*) FROM catchalltagapplications WHERE catchallid=' . $catchallid . ' AND catchalltagid=' . $catchalltagid ;
+    $results=mysqli_query($conn, $checkString);
+    $numOfMatches=mysqli_fetch_array($results);
+    if ( $numOfMatches[0]==0 ){
+        $stmtString = "INSERT INTO catchalltagapplications (catchallid, catchalltagid) VALUES (?,?)";
+        $stmt = mysqli_prepare($conn, $stmtString);
+        mysqli_stmt_bind_param($stmt, 'ii', $catchallid, $catchalltagid);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+    }
+}
+
 function add_item($itemName){
     global $conn;
     echo $_POST['newItem'];
@@ -70,31 +84,95 @@ function add_item($itemName){
     }
 }
 
-function new_tag($displayText, $notes){
-    global $conn;
-    echo "I am here!";
-    $stmtString = "INSERT INTO catchalltags (displayText, notes) VALUES (?,?)";
-    $stmt = mysqli_prepare($conn, $stmtString);
-    mysqli_stmt_bind_param($stmt, 'ss', $displayText, $notes);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-    return mysqli_insert_id($conn);
+function convert_data_to_HTMLoption($dataSet){
+    //currently expecting that the key will be an integer
+    $sbuilder="<div class=\"tagOptions\">\n
+    <select name=\"tags[]\" class=\"tagList\" multiple>";
+    foreach ($dataSet as $key => $value) {
+            $colorID = ($key%2==0 ? "even" : "odd");
+            $sbuilder .= "
+            <option class=\"noteHolder " . $colorID . "\" value=\"" . $key . "\">" . $value . "</option>
+            ";
+    }
+    $sbuilder .= "</select>
+    </div>
+    ";
+    return $sbuilder;
 }
 
-function addTagToContactRecord($catchallid, $catchalltagid){
+function get_all_notes(){
     global $conn;
-    $checkString = 'SELECT COUNT(*) FROM catchalltagapplications WHERE catchallid=' . $catchallid . ' AND catchalltagid=' . $catchalltagid ;
-    $results=mysqli_query($conn, $checkString);
-    $numOfMatches=mysqli_fetch_array($results);
-    if ( $numOfMatches[0]==0 ){
-        $stmtString = "INSERT INTO catchalltagapplications (catchallid, catchalltagid) VALUES (?,?)";
-        $stmt = mysqli_prepare($conn, $stmtString);
-        mysqli_stmt_bind_param($stmt, 'ii', $catchallid, $catchalltagid);
+    $notesStmt = "SELECT * FROM catchall";
+    $notesData=array();
+    $notesResults=mysqli_query($conn, $notesStmt);
+    while ($eachRow = mysqli_fetch_array($notesResults)){
+        $notesData[$eachRow['id']]=$eachRow['text'];
+    }
+    return $notesData;
+}
+
+function get_all_tagapplications(){
+    global $conn;
+    $getAllStmt = "SELECT * FROM catchalltagapplications";
+    $applicationData=array();
+    $applicationResults=mysqli_query($conn, $getAllStmt);
+    while ($eachRow = mysqli_fetch_array($applicationResults)){
+        $applicationData[$eachRow['id']]=array( "catchallid" => $eachRow['catchallid'], "catchalltagid" => $eachRow['catchalltagid']);
+    }
+    return $applicationData;
+}
+
+function get_all_tags(){
+    global $conn;
+    $tagsStmt = "SELECT * FROM catchalltags";
+    $tagsData=array();
+    $tagsResults=mysqli_query($conn, $tagsStmt);
+    while ($eachRow = mysqli_fetch_array($tagsResults)){
+        $tagsData[$eachRow['id']]=$eachRow['displayText'];
+    }
+    return $tagsData;
+}
+
+function get_catchall_all($catchallid){
+    global $conn;
+    $catchallAll=array();
+    $get_txt_stmt = "SELECT text, created FROM catchall WHERE id = ?";
+    if ($stmt = mysqli_prepare($conn, $get_txt_stmt)){
+        mysqli_stmt_bind_param($stmt, 'i', $catchallid);
         mysqli_stmt_execute($stmt);
+        mysqli_stmt_bind_result($stmt, $text, $created);
+        while (mysqli_stmt_fetch($stmt)){
+            $catchallAll['catchallid'] = $catchallid;
+            $catchallAll['text']=$text;
+            $catchallAll['created']=$created;
+        }
         mysqli_stmt_close($stmt);
     }
+    return $catchallAll;
 }
 
+function get_tags_applied($catchallid){
+    global $conn;
+    $stmtString = "SELECT id, catchalltagid, applied FROM catchalltagapplications WHERE catchallid = ?";
+    $allTagsAppliedData=array();
+    if ($stmt = mysqli_prepare($conn, $stmtString)){
+        mysqli_stmt_bind_param($stmt, 'i', $catchallid);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_bind_result($stmt, $id, $catchalltagid, $applied);
+        while (mysqli_stmt_fetch($stmt)){
+            $allTagsAppliedData[$id] = array( 'catchalltagid' => $catchalltagid, 'applied' => $applied);
+        }
+        mysqli_stmt_close($stmt);
+    }
+    return $allTagsAppliedData;
+}
+
+function get_tags_as_option(){
+    $tagsData = get_all_tags();
+    return convert_data_to_HTMLoption($tagsData);
+
+
+}
 
 function main_page(){
     htmlHead();
@@ -114,48 +192,25 @@ function main_page(){
     bodyEnd();
 }
 
-function get_all_notes(){
+function new_tag($displayText, $notes){
     global $conn;
-    $notesStmt = "SELECT * FROM catchall";
-    $notesData=array();
-    $notesResults=mysqli_query($conn, $notesStmt);
-    while ($eachRow = mysqli_fetch_array($notesResults)){
-        $notesData[$eachRow['id']]=$eachRow['text'];
-    }
-    return $notesData;
+    echo "I am here!";
+    $stmtString = "INSERT INTO catchalltags (displayText, notes) VALUES (?,?)";
+    $stmt = mysqli_prepare($conn, $stmtString);
+    mysqli_stmt_bind_param($stmt, 'ss', $displayText, $notes);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    return mysqli_insert_id($conn);
 }
 
-function get_all_tags(){
+function update_catchall_text($catchallid, $catchalltext){
     global $conn;
-    $tagsStmt = "SELECT * FROM catchalltags";
-    $tagsData=array();
-    $tagsResults=mysqli_query($conn, $tagsStmt);
-    while ($eachRow = mysqli_fetch_array($tagsResults)){
-        $tagsData[$eachRow['id']]=$eachRow['displayText'];
-    }
-    return $tagsData;
+    $stmtString = "UPDATE catchall SET text = \"?\" WHERE id = ?";
+    $stmt = mysqli_prepare($conn, $stmtString);
+    print_r($stmt);
+    mysqli_stmt_bind_param($stmt, 'si',  $catchalltext, $catchallid );
+    mysqli_stmt_execute($stmt);
+    print_r($stmt);
+    mysqli_stmt_close($stmt);
+    // return $callresults;
 }
-
-function convert_data_to_HTMLoption($dataSet){
-    //currently expecting that the key will be an integer
-    $sbuilder="<div class=\"tagOptions\">\n
-    <select name=\"tags[]\" class=\"tagList\" multiple>";
-    foreach ($dataSet as $key => $value) {
-            $colorID = ($key%2==0 ? "even" : "odd");
-            $sbuilder .= "
-            <option class=\"noteHolder " . $colorID . "\" value=\"" . $key . "\">" . $value . "</option>
-            ";
-    }
-    $sbuilder .= "</select>
-    </div>
-    ";
-    return $sbuilder;
-}
-
-function get_tags_as_option(){
-    $tagsData = get_all_tags();
-    return convert_data_to_HTMLoption($tagsData);
-
-
-}
-

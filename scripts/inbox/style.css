@@ -2,71 +2,159 @@
 * @Author: Jeremiah Marks
 * @Date:   2015-04-09 00:30:28
 * @Last Modified by:   Jeremiah Marks
-* @Last Modified time: 2015-04-13 18:29:37
+* @Last Modified time: 2015-04-14 23:30:04
 */
-body{
+
+
+body {
     background-color: #333;
     color: #aaa;
 }
-
-.newNote{
+:root {
+    --main-height: 500px;
+    --tags-height: 200px;
+}
+.newNote {
+    display: table;
     width: 100%;
 }
-
-.mobilePost{
-
-}
-
-.newNoteTable{
+.newNoteHeader {
+    clear: both;
+    display: table-row;
+    height: auto;
+    left: 50%;
+    position: relative;
     width: 100%;
-    margin: 0 auto;
 }
-.tableHeader, h2{
-    width: 30%;
-    margin: 0 auto;
-}
-#noteText{
+.noteTextArea {
+    height: var(--tags-height);
     width: 100%;
-    height: 500px;
-    margin: 0 auto;
 }
-.mobilesubmit{
+.noteArea {
+    display: table-cell;
+    left: 0;
+    position: absolute;
+    right: 20%;
+}
+.mobilePost {
+}
+.updateRecordSubmit {
+    height: var(--tags-height);
+    margin: 2px;
+    padding: 2px;
+    width: 10%;
+}
+.noteAndTagHolder {
+    display: table-row;
+    float: left;
+    position: absolute;
     width: 100%;
+}
+.newNoteTable {
     margin: 0 auto;
-}
-td{
-    /*width:100%;*/
-    margin: 0 auto;
-}
-.inputNoteLabel{
-    float:right;
-}
-.mobilesubmit{
     width: 100%;
+}
+.tableHeader, h2 {
+    display: table-cell;
+    margin: 0 auto;
+    width: 1px;
+}
+#noteText {
+    height: var(--main-height);
+    margin: 0 auto;
+    width: 100%;
+}
+.mobilesubmit {
+    margin: 0 auto;
+    width: 100%;
+}
+td {
     margin: 0 auto;
 }
-
-#newTagFormHolder{
-
+.inputNoteLabel {
+    float: right;
+}
+#newTagFormHolder {
 }
 .newForm {
-
 }
-#newTagElements{
-
+#newTagElements {
 }
-.tag .display{
-
+.tag .display {
 }
-.tag{
-
+.tag {
+    border: 1px solid #0fe;
+    display: inline-block;
+    margin: 0;
+    padding: 3px;
 }
-.display{
-
+.display {
 }
-.description{
-    
+.description {
 }
-.submit{
-
+.submit {
+}
+.tagArea {
+    bottom: 0;
+    display: table-cell;
+    left: 80%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.tagOptions {
+    bottom: 100%;
+    height: var(--main-height);
+    position: relative;
+    right: 0;
+    width: 100%;
+}
+.tagList {
+    height: var(--main-height);
+    position: relative;
+    width: 100%;
+}
+.editName {
+}
+.catchallText {
+    font-family: monospace;
+    font-size: 1.5em;
+    font-style: italic;
+    height: 3em;
+    width: 100%;
+}
+.appliedTags {
+    background-color: #666;
+    color: #f77;
+    float: right;
+    height: var(--tags-height);
+    left: 40%;
+    margin: 2px;
+    padding: 3px;
+    position: absolute;
+    width: 27%;
+}
+.addTagsDiv {
+    background-color: #222;
+    color: #262;
+    float: right;
+    height: var(--tags-height);
+    margin: 2px;
+    padding: 3px;
+    width: 37%;
+}
+.hiddenCheckbox {
+    opacity: 0;
+    position: relative;
+    right: 25px;
+}
+.editNotes {
+    float: left;
+    position: relative;
+    width: 40%;
+}
+.updateHolder {
+    left: 11%;
+    position: absolute;
+    right: 0;
 }

@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 23:00:30
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-13 20:59:21
+ * @Last Modified time: 2015-04-14 23:34:22
  */
 include_once "functions.php";
 function htmlHead(){
@@ -39,26 +39,21 @@ function inboxSubmitter(){
     ?>
     <div class="newNote">
         <!-- http://requestb.in/oomdjaoo -->
+        <div class="newNoteHeader">
+            <h2>Leave a note!</h2>
+        </div>
         <form method='post' action='' id='addNote' class="mobilePost">
-            <div class="noteArea">
-                <table class='newNoteTable'>
-                    <tr class="tableHeader">
-                        <td colspan="2"><h2>Leave a note!</h2></td>
-                    </tr>
-                  <tr>
-                    <!-- <td class="inputNoteLabel">Note:</td> -->
-                    <td colspan="2">
-                        <textarea name="noteText" form="addNote" id="noteText"> </textarea>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="2"><input class="mobilesubmit" type="submit" name="newItem" value="new note"></td>
-                  </tr>
-                </table>
+            <div class="noteAndTagHolder">
+                <div class="noteArea">
+                    <textarea name="noteText" form="addNote" id="noteText"> </textarea>
+                    <input class="mobilesubmit" type="submit" name="newItem" value="new note">
+                </div>
+                <div class="tagArea">
+                    <?php
+                    echo get_tags_as_option(); //because I will probably want to remove it on demand and use it elsewhere
+                    ?>
+                </div>
             </div>
-                <?php
-                echo get_tags_as_option(); //because I will probably want to remove it on demand and use it elsewhere
-                ?>
         </form>
     </div>
     <?php
@@ -89,6 +84,8 @@ function listAllNotes(){
         <?php
     } elseif (isset($_GET['t'])) {
         tagCreationForm();
+    } elseif (isset($_GET['ga'])){
+        getNotesWithTags();
     }
 }
 
@@ -105,7 +102,7 @@ function tagCreationForm(){
                 </div>
                 <div class="tag description">
                     <textarea name="tagDescription" form="newTagForm">
-Describe this tag, if you like.
+                        Describe this tag, if you like.
                     </textarea>
                 </div>
                 <div class="tag submit">
@@ -115,5 +112,106 @@ Describe this tag, if you like.
         </form>
     </div>
     <?php
+}
 
+function getNotesWithTags(){
+    $allnotes = get_all_notes();
+    $alltags = get_all_tags();
+    $allapplications = get_all_tagapplications();
+    $notesWithTags=array();
+    foreach ($allnotes as $key => $value) {
+        $notesWithTags[$key] = array( "text" => $value, "tags" => array() );
+    }
+    foreach ($allapplications as $key => $value) {
+        $notesWithTags[$value['catchallid']]["tags"][$value["catchalltagid"]] = $alltags[$value["catchalltagid"]];
+    }
+    ?>
+    <div class="allNotesWithTags">
+        <table>
+            <?php
+            $counter=1;
+            foreach ($notesWithTags as $key => $value) {
+                $rowValue = ( $counter++ % 2 == 0 ? "even" : "odd");
+                ?>
+                <tr class="noteRow <?php echo $rowValue; ?>">
+                    <td class="noteID">
+                        <?php echo $key; ?>
+                    </td>
+                    <td class="noteText">
+                        <?php echo $value['text']; ?>
+                    </td>
+                    <td class="tagHolder">
+                        <?php
+                        foreach ($value["tags"] as $tagid => $tagtext) {
+                            ?>
+                            <span id="<?php echo "tag" . $key . ":" . $tagid;?>" class='tag <?php echo $tagid;?>'>
+                                <?php
+                                echo $tagtext;
+                                ?>
+                            </span>
+                            <?php
+                        }
+                        ?>
+                    </td>
+                </tr>
+                <?php
+            }
+}
+
+function editItem($editParams){
+    // $editParams is expected to be an array with the layout of
+    // $editParams['id'] = statement id that we are working with
+    // $editParams['viewPort'] = optional argument that provides additional
+    //      ways of viewing the data
+    $properties=array();
+    $properties['id']=$editParams['id'];
+    $properties['catchallAll']=get_catchall_all($properties['id']);
+    $properties['tagsApplied'] = get_tags_applied($properties['id']);
+    $properties['alltags']=get_all_tags();
+    $properties['tagidApplied']=array();
+    // print_r($properties);
+    ?>
+    <div class="editItem" id="editItem<?php echo $properties['id']; ?>">
+        <form class="editItemForm" id="editItemForm<?php echo $properties['id']; ?>" action='./'  method='POST'>
+            <div class="editName">
+                <input type="text" name="catchallText" class="catchallText" value="<?php echo $properties['catchallAll']['text']; ?>">
+            </div>
+            <div class="updateHolder">
+                <div class="editNotes">
+                    <textarea class="noteTextArea" form="editItemForm<?php echo $properties['id']; ?>" id="notesFor<?php echo $properties['id']; ?>" name="notesArea">
+                        <?php echo ( isset($properties['catchallAll']['notes']) ? $properties['catchallAll']['notes'] : ""); ?>                    
+                    </textarea>
+                </div>
+                <div class="appliedTags">
+                    <?php
+                    foreach ($properties['tagsApplied'] as $applicationId => $values) {
+                        $displayText = $properties['alltags'][$values['catchalltagid']];
+                        $properties['tagidApplied'][$values['catchalltagid']]=$displayText;
+                        ?>
+                        <label for="<?php echo $properties['id'] . "tag" . $values['catchalltagid']; ?>"  class="tag tag<?php echo $values['catchalltagid']; ?>" ><?php echo $displayText; ?></label><input type="checkbox" class="hiddenCheckbox" id="<?php echo $properties['id'] . "tag" . $values['catchalltagid']; ?>" name="<?php echo $properties['id']; ?>tag[]" value="<?php echo $values['catchalltagid'];?>" />
+                        <?php
+                    } ?>
+                </div>
+                <div class="addTagsDiv">
+                        <?php 
+                        foreach ($properties['alltags'] as $tagid => $displayText) {
+                            if (!isset($properties['tagidApplied'][$tagid])){
+                                ?>
+                                <label for="<?php echo $properties['id'] . "tagtoapply" . $tagid; ?>"  class="tag tag<?php echo $values['catchalltagid']; ?>" ><?php echo $displayText; ?></label><input type="checkbox" class="hiddenCheckbox" id="<?php echo $properties['id'] . "tagtoapply" . $values['catchalltagid']; ?>" name="<?php echo $properties['id']; ?>tag[]" value="<?php echo $tagid;?>" />
+                                <?php
+                            }
+                        } ?>
+                </div>
+            </div>
+            <div class="breaker">
+            </div>
+            <div cladd="tabview">
+            </div>
+            <div class="submitButtonHolder">
+                <input type="hidden" name="catchallid" value="<?php echo $properties['id']; ?>">
+                <input type="submit" name="updateRecord" class="updateRecordSubmit" value="Update">
+            </div>
+        </form>
+    </div>
+    <?php
 }
