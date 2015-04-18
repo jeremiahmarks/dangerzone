@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 23:00:30
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-14 23:34:22
+ * @Last Modified time: 2015-04-17 22:18:29
  */
 include_once "functions.php";
 function htmlHead(){
@@ -44,14 +44,19 @@ function inboxSubmitter(){
         </div>
         <form method='post' action='' id='addNote' class="mobilePost">
             <div class="noteAndTagHolder">
+                <div class="titleHolder">
+                    <input type="text" name="noteText" id="noteText" />
+                </div>
                 <div class="noteArea">
-                    <textarea name="noteText" form="addNote" id="noteText"> </textarea>
-                    <input class="mobilesubmit" type="submit" name="newItem" value="new note">
+                    <textarea name="notes" form="addNote" id="notes"> </textarea>
                 </div>
                 <div class="tagArea">
                     <?php
                     echo get_tags_as_option(); //because I will probably want to remove it on demand and use it elsewhere
                     ?>
+                </div>
+                <div class="mainSubmit">
+                    <input class="mobilesubmit" type="submit" name="newItem" value="new note">
                 </div>
             </div>
         </form>

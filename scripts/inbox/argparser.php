@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 22:21:51
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-14 23:35:33
+ * @Last Modified time: 2015-04-17 19:35:11
  */
 
 include_once "functions.php";
@@ -27,8 +27,12 @@ function brain(){
         if ( isset($_POST['catchallText'] )){
             echo update_catchall_text($catchallid, $_POST['catchallText']);
             editItem(array('id' => $catchallid ));
+            include_once 'test.php';
         }
         
+    } elseif (isset($_GET['test'])) {
+        include_once 'test.php';
+        # code...
     } else {
         main_page();
     }

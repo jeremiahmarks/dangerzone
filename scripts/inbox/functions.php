@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 22:20:21
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-14 23:55:18
+ * @Last Modified time: 2015-04-18 12:21:30
  */
 ##
 include_once 'connection.php';
@@ -70,10 +70,16 @@ function addTagToContactRecord($catchallid, $catchalltagid){
 
 function add_item($itemName){
     global $conn;
-    echo $_POST['newItem'];
-    $stmtString = "INSERT INTO catchall (text) VALUES (?)";
-    $stmt = mysqli_prepare($conn, $stmtString);
-    mysqli_stmt_bind_param($stmt, 's', $itemName);
+    // echo $_POST['newItem'];
+    if (isset($_POST["notes"])){
+        $stmtString = "INSERT INTO catchall (text,notes) VALUES (?,?)";
+        $stmt = mysqli_prepare($conn, $stmtString);
+        mysqli_stmt_bind_param($stmt, 'ss', $itemName, $_POST["notes"]);
+    } else {
+        $stmtString = "INSERT INTO catchall (text) VALUES (?)";
+        $stmt = mysqli_prepare($conn, $stmtString);
+        mysqli_stmt_bind_param($stmt, 's', $itemName);
+    }
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     $thisnotesID=mysqli_insert_id($conn);
@@ -113,11 +119,27 @@ function get_all_notes(){
 
 function get_all_tagapplications(){
     global $conn;
-    $getAllStmt = "SELECT * FROM catchalltagapplications";
+    $getAllStmt = "SELECT id, catchallid, catchalltagid FROM catchalltagapplications";
     $applicationData=array();
     $applicationResults=mysqli_query($conn, $getAllStmt);
     while ($eachRow = mysqli_fetch_array($applicationResults)){
         $applicationData[$eachRow['id']]=array( "catchallid" => $eachRow['catchallid'], "catchalltagid" => $eachRow['catchalltagid']);
+    }
+    return $applicationData;
+}
+
+function get_all_catchalls_with_tag($catchalltagid){
+    global $conn;
+    $getAllStmt = "SELECT id, catchallid, catchalltagid FROM catchalltagapplications WHERE catchalltagid = ? ";
+    $applicationData=array();
+    if ($stmt = mysqli_prepare($conn, $getAllStmt)){
+        mysqli_stmt_bind_param($stmt, 'i', $catchalltagid);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_bind_result($stmt, $id, $catchallid, $catchalltagid);
+        while (mysqli_stmt_fetch($stmt)){
+            $applicationData[$id] = array($catchallid, $catchalltagid);
+        }
+        mysqli_stmt_close($stmt);
     }
     return $applicationData;
 }
@@ -205,7 +227,7 @@ function new_tag($displayText, $notes){
 
 function update_catchall_text($catchallid, $catchalltext){
     global $conn;
-    $stmtString = "UPDATE catchall SET text = \"?\" WHERE id = ?";
+    $stmtString = "UPDATE catchall SET text = ? WHERE id = ? ";
     $stmt = mysqli_prepare($conn, $stmtString);
     print_r($stmt);
     mysqli_stmt_bind_param($stmt, 'si',  $catchalltext, $catchallid );
@@ -213,4 +235,20 @@ function update_catchall_text($catchallid, $catchalltext){
     print_r($stmt);
     mysqli_stmt_close($stmt);
     // return $callresults;
+}
+function pp($arr){ /*pretty print*/
+    //Provides a pretty way to see what an array contains. 
+    //Also is a recursive function.  
+      $retStr = '<ul>';
+      if (is_array($arr)){
+          foreach ($arr as $key=>$val){
+              if (is_array($val)){
+                  $retStr .= '<li>' . $key . ' => ' . pp($val) . '</li>';
+              }else{
+                  $retStr .= '<li>' . $key . ' => ' . $val . '</li>';
+              }
+          }
+      }
+      $retStr .= '</ul>';
+      return $retStr;
 }

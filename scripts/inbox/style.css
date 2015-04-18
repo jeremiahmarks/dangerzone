@@ -2,17 +2,36 @@
 * @Author: Jeremiah Marks
 * @Date:   2015-04-09 00:30:28
 * @Last Modified by:   Jeremiah Marks
-* @Last Modified time: 2015-04-14 23:30:04
+* @Last Modified time: 2015-04-18 16:15:05
 */
 
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 
 body {
     background-color: #333;
     color: #aaa;
 }
+.newNote {
+}
 :root {
     --main-height: 500px;
     --tags-height: 200px;
+    --title-height:75px;
+}
+.titleHolder {
+    bottom: 0;
+    display: table-cell;
+    float: left;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
 }
 .newNote {
     display: table;
@@ -32,11 +51,22 @@ body {
 }
 .noteArea {
     display: table-cell;
-    left: 0;
+    left: 10%;
     position: absolute;
     right: 20%;
+    top: var(--title-height);
 }
 .mobilePost {
+}
+.addableTags{
+    float: left;
+    width: 50%;
+    background-color: white;
+}
+.removeableTags{
+    float: left;
+    width: 50%;
+    background-color: black;
 }
 .updateRecordSubmit {
     height: var(--tags-height);
@@ -59,12 +89,18 @@ body {
     margin: 0 auto;
     width: 1px;
 }
-#noteText {
+#notes {
     height: var(--main-height);
     margin: 0 auto;
     width: 100%;
 }
+#noteText {
+    height: var(--title-height);
+    margin: 0 auto;
+    width: 100%;
+}
 .mobilesubmit {
+    height: var(--main-height);
     margin: 0 auto;
     width: 100%;
 }
@@ -90,6 +126,13 @@ td {
 }
 .display {
 }
+.mainSubmit {
+    display: table-cell;
+    left: 0;
+    position: absolute;
+    top: var(--title-height);
+    width: 10%;
+}
 .description {
 }
 .submit {
@@ -100,10 +143,10 @@ td {
     left: 80%;
     position: absolute;
     right: 0;
-    top: 0;
+    top: var(--title-height);
 }
 .tagOptions {
-    bottom: 100%;
+    /*bottom: 100%;*/
     height: var(--main-height);
     position: relative;
     right: 0;
