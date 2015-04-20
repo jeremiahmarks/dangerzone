@@ -1,0 +1,66 @@
+/* 
+* @Author: Jeremiah Marks
+* @Date:   2015-04-14 11:23:32
+* @Last Modified by:   Jeremiah Marks
+* @Last Modified time: 2015-04-14 11:23:55
+*/
+body {
+    background-color: #333;
+    color: #aaa;
+}
+.newNote {
+    width: 100%;
+    display: table;
+}
+.newNoteHeader {
+    clear: both;
+    height: auto;
+    width: 100%;
+    display: table-row;
+}
+.mobilePost {
+}
+.newNoteTable {
+    margin: 0 auto;
+    width: 100%;
+}
+.tableHeader, h2 {
+    display: table-cell;
+    margin: 0 auto;
+    width: 1px;
+}
+#noteText {
+    height: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+.mobilesubmit {
+    margin: 0 auto;
+    width: 100%;
+}
+td {
+    margin: 0 auto;
+}
+.inputNoteLabel {
+    float: right;
+}
+.mobilesubmit {
+    margin: 0 auto;
+    width: 100%;
+}
+#newTagFormHolder {
+}
+.newForm {
+}
+#newTagElements {
+}
+.tag .display {
+}
+.tag {
+}
+.display {
+}
+.description {
+}
+.submit {
+}

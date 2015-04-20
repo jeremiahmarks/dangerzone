@@ -1,0 +1,193 @@
+/*
+* @Author: Jeremiah Marks
+* @Date:   2015-04-09 00:30:28
+* @Last Modified by:   Jeremiah Marks
+* @Last Modified time: 2015-04-17 22:33:49
+*/
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background-color: #333;
+    color: #aaa;
+}
+.newNote {
+}
+:root {
+    --main-height: 500px;
+    --tags-height: 200px;
+    --title-height:75px;
+}
+.titleHolder {
+    bottom: 0;
+    display: table-cell;
+    float: left;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+.newNote {
+    display: table;
+    width: 100%;
+}
+.newNoteHeader {
+    clear: both;
+    display: table-row;
+    height: auto;
+    left: 50%;
+    position: relative;
+    width: 100%;
+}
+.noteTextArea {
+    height: var(--tags-height);
+    width: 100%;
+}
+.noteArea {
+    display: table-cell;
+    left: 10%;
+    position: absolute;
+    right: 20%;
+    top: var(--title-height);
+}
+.mobilePost {
+}
+.updateRecordSubmit {
+    height: var(--tags-height);
+    margin: 2px;
+    padding: 2px;
+    width: 10%;
+}
+.noteAndTagHolder {
+    display: table-row;
+    float: left;
+    position: absolute;
+    width: 100%;
+}
+.newNoteTable {
+    margin: 0 auto;
+    width: 100%;
+}
+.tableHeader, h2 {
+    display: table-cell;
+    margin: 0 auto;
+    width: 1px;
+}
+#notes {
+    height: var(--main-height);
+    margin: 0 auto;
+    width: 100%;
+}
+#noteText {
+    height: var(--title-height);
+    margin: 0 auto;
+    width: 100%;
+}
+.mobilesubmit {
+    height: var(--main-height);
+    margin: 0 auto;
+    width: 100%;
+}
+td {
+    margin: 0 auto;
+}
+.inputNoteLabel {
+    float: right;
+}
+#newTagFormHolder {
+}
+.newForm {
+}
+#newTagElements {
+}
+.tag .display {
+}
+.tag {
+    border: 1px solid #0fe;
+    display: inline-block;
+    margin: 0;
+    padding: 3px;
+}
+.display {
+}
+.mainSubmit {
+    display: table-cell;
+    left: 0;
+    position: absolute;
+    top: var(--title-height);
+    width: 10%;
+}
+.description {
+}
+.submit {
+}
+.tagArea {
+    bottom: 0;
+    display: table-cell;
+    left: 80%;
+    position: absolute;
+    right: 0;
+    top: var(--title-height);
+}
+.tagOptions {
+    /*bottom: 100%;*/
+    height: var(--main-height);
+    position: relative;
+    right: 0;
+    width: 100%;
+}
+.tagList {
+    height: var(--main-height);
+    position: relative;
+    width: 100%;
+}
+.editName {
+}
+.catchallText {
+    font-family: monospace;
+    font-size: 1.5em;
+    font-style: italic;
+    height: 3em;
+    width: 100%;
+}
+.appliedTags {
+    background-color: #666;
+    color: #f77;
+    float: right;
+    height: var(--tags-height);
+    left: 40%;
+    margin: 2px;
+    padding: 3px;
+    position: absolute;
+    width: 27%;
+}
+.addTagsDiv {
+    background-color: #222;
+    color: #262;
+    float: right;
+    height: var(--tags-height);
+    margin: 2px;
+    padding: 3px;
+    width: 37%;
+}
+.hiddenCheckbox {
+    opacity: 0;
+    position: relative;
+    right: 25px;
+}
+.editNotes {
+    float: left;
+    position: relative;
+    width: 40%;
+}
+.updateHolder {
+    left: 11%;
+    position: absolute;
+    right: 0;
+}
