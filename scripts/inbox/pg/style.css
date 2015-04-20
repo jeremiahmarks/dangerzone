@@ -1,0 +1,179 @@
+/*
+* @Author: Jeremiah Marks
+* @Date:   2015-04-09 00:30:28
+* @Last Modified by:   Jeremiah Marks
+* @Last Modified time: 2015-04-20 01:00:20
+*/
+:root {
+    --main-height: 500px;
+    --tags-height: 40px;
+    --title-height:75px;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+body {
+    background-color: #333;
+    color: #aaa;
+}
+/*########################################################*/
+/*########################################################*/
+/*    This is from the original navbars css file          */
+/* from :                                                 /*
+http://cssmenumaker.com/menu/bubble-wrap-horizontal-menu-bar
+/*########################################################*/
+/*########################################################*/
+#wrap {
+   margin: 10px auto;        
+   background: #222;
+   padding: 0px;
+   width: 700px;
+}
+#header {
+   background-color: #333;
+   color: #FFF;
+}
+#navWrap {
+   height: 30px;
+}
+#nav {
+   padding: 5px;
+   background: #444;    
+}
+#nav ul {
+   margin: 0;
+   padding: 0;    
+}
+#nav li {
+   float: left;
+   padding: 3px 8px;
+   background-color: #222;
+   margin: 0 10px 0 0;
+   color: #F00;
+   list-style-type: none;
+}
+#nav li a {
+   color: #ff0;  
+   text-decoration: none;    
+}
+#nav li a:hover {
+   text-decoration: underline;   
+}
+br.clearLeft {
+   clear: left;        
+}​
+/*########################################################*/
+/*########################################################*/
+/* Styling for elements on front Page
+/*########################################################*/
+/*########################################################*/
+.itemformheader {
+}
+.itemlong {
+    height: 70%;
+    width: 100%;
+}
+.itemshort {
+    width: 100%;
+}
+.itemsubmit {
+}
+.mainBody {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.mainBodyLeft {
+    background-color: blue;
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+.mainBodyRight {
+    background-color: orange;
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+.newItem {
+    height: 50%;
+}
+.newTag {
+}
+.newThings {
+    height: 100%;
+}
+.newThingsSpan {
+    clear: both;
+    float: right;
+    margin: 0 auto;
+    width: 50%;
+}
+.newitemdiv {
+    height: 100%;
+}
+.newitemform {
+}
+.newitemformInner {
+    height: 100%;
+}
+.newtagdiv {
+}
+.newtagform {
+}
+.newtagformInner {
+}
+.tagformheader {
+}
+.taglong {
+}
+.tagshort {
+}
+.tagsubmit {
+}
+.itemnewtextarea {
+    background-color: #222;
+    color: #eef;
+    height: 100%;
+    left: 2%;
+    margin: 0 auto;
+    width: 80%;
+}
+.newitemdescription {
+    background-color: #222;
+    color: #eef;
+    width: 90%;
+}
+.newitemsubmit {
+    background-color: #222;
+    color: #eef;
+    text-align: center;
+    width: 90%;
+}
+.newtagdescription {
+}
+.newtagdiv {
+}
+.newtagform {
+}
+.newtagformInner {
+}
+.newtagsubmit {
+}
+.smoothScroll {
+}
+.tagformheader {
+}
+.taglong {
+}
+.tagnewtextarea {
+}
+.tagshort {
+}
+.tagsubmit {
+}

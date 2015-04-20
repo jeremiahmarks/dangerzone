@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-19 12:15:43
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-19 16:37:24
+ * @Last Modified time: 2015-04-19 23:08:44
  */
 session_start();
 require_once ('connection.php');
@@ -89,15 +89,19 @@ class dbcalls{
     }
     public function user_credential_verification($username, $password){
         global $conn;
-        $queryStmt = "SELECT pwdata FROM iinboxusers WHERE email = ? LIMIT 1";
+        $queryStmt = "SELECT id, pwdata FROM iinboxusers WHERE email = ? LIMIT 1";
         $stmt = mysqli_prepare($conn, $queryStmt);
         mysqli_stmt_bind_param($stmt, 's', $username);
         mysqli_stmt_execute($stmt);
-        mysqli_stmt_bind_result($stmt, $callResult);
+        mysqli_stmt_bind_result($stmt, $userid, $callResult);
         while (mysqli_stmt_fetch($stmt)) {
             $storedHash=$callResult;
+            $hashesID=$userid;
         }
         mysqli_stmt_close($stmt);
-        return password_verify($password, $storedHash);
+        if (password_verify($password, $storedHash)){
+            $_SESSION['uid'] = $hashesID;
+            return true;
+        }
     }
 }
