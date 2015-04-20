@@ -1,0 +1,51 @@
+/* 
+* @Author: Jeremiah Marks
+* @Date:   2015-04-18 17:25:57
+* @Last Modified by:   Jeremiah Marks
+* @Last Modified time: 2015-04-18 17:50:58
+*/
+
+#wrap {
+   margin: 10px auto;        
+   background: #666;
+   padding: 10px;
+   width: 700px;
+}
+#header {
+   background-color: #666;
+   color: #FFF;
+}
+#logo {
+   font-size: 30px;  
+   line-height: 40px;    
+   padding: 5px;
+}
+#navWrap {
+   height: 30px;
+}
+#nav {
+   padding: 5px;
+   background: #999;    
+}
+#nav ul {
+   margin: 0;
+   padding: 0;    
+}
+#nav li {
+   float: left;
+   padding: 3px 8px;
+   background-color: #FFF;
+   margin: 0 10px 0 0;
+   color: #F00;
+   list-style-type: none;
+}
+#nav li a {
+   color: #F00;  
+   text-decoration: none;    
+}
+#nav li a:hover {
+   text-decoration: underline;   
+}
+br.clearLeft {
+   clear: left;        
+}​

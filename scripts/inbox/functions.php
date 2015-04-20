@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 22:20:21
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-18 12:21:30
+ * @Last Modified time: 2015-04-19 03:27:50
  */
 ##
 include_once 'connection.php';
@@ -88,6 +88,7 @@ function add_item($itemName){
             addTagToContactRecord($thisnotesID, $value);
         }
     }
+    return $thisnotesID;
 }
 
 function convert_data_to_HTMLoption($dataSet){
@@ -158,15 +159,16 @@ function get_all_tags(){
 function get_catchall_all($catchallid){
     global $conn;
     $catchallAll=array();
-    $get_txt_stmt = "SELECT text, created FROM catchall WHERE id = ?";
+    $get_txt_stmt = "SELECT text, created, notes FROM catchall WHERE id = ?";
     if ($stmt = mysqli_prepare($conn, $get_txt_stmt)){
         mysqli_stmt_bind_param($stmt, 'i', $catchallid);
         mysqli_stmt_execute($stmt);
-        mysqli_stmt_bind_result($stmt, $text, $created);
+        mysqli_stmt_bind_result($stmt, $text, $created, $notes);
         while (mysqli_stmt_fetch($stmt)){
             $catchallAll['catchallid'] = $catchallid;
             $catchallAll['text']=$text;
             $catchallAll['created']=$created;
+            $catchallAll['notes']=$notes;
         }
         mysqli_stmt_close($stmt);
     }
@@ -199,24 +201,19 @@ function get_tags_as_option(){
 function main_page(){
     htmlHead();
     bodyStart();
-    inboxSubmitter();
-    listAllNotes();
-    footer();
-    print_r($_POST);
-    if (isset($_POST['tags'])){
-        print_r($_POST['tags']);
-        foreach ($_POST['tags'] as $value) {
-            // echo $key;
-            echo $value;
-            echo "\n\n";
-        }
+    include_once 'mainmenu.php';
+    if (empty($_GET)){
+        inboxSubmitter();
     }
+    include_once 'editCatchall.php';
+    listAllNotes();
+    tagCreationForm();
+    footer();
     bodyEnd();
 }
 
 function new_tag($displayText, $notes){
     global $conn;
-    echo "I am here!";
     $stmtString = "INSERT INTO catchalltags (displayText, notes) VALUES (?,?)";
     $stmt = mysqli_prepare($conn, $stmtString);
     mysqli_stmt_bind_param($stmt, 'ss', $displayText, $notes);
@@ -224,15 +221,85 @@ function new_tag($displayText, $notes){
     mysqli_stmt_close($stmt);
     return mysqli_insert_id($conn);
 }
-
+function print_array_of_tags($arrayOfTags, $preName){
+    foreach ($arrayOfTags as $key => $value) {
+        ?>
+        <label for="<?php echo $preName . $value['tagid']; ?>"  class="<?php echo $preName; ?>tag tag<?php echo $value['tagid']; ?>" >
+            <?php echo $value['displayText']; ?>
+        </label>
+        <input type="checkbox" class="<?php echo $preName; ?> hiddenCheckbox" id="<?php echo $preName . $value['tagid']; ?>" name=<?php echo $preName . "tag[]";?> value="<?php echo $value['tagid'];?>" />
+        <?php        
+    }
+}
+function process_catchall_update(){
+    global $conn;
+    if (isset($_POST['catchallid'])){
+        $catchallid = $_POST['catchallid'];
+        $toUpdate=array();
+        if (isset($_POST['catchallText'])){
+            if ($_POST['catchallText']==$_POST['catchallTextOriginal']){
+                #no need to update
+            } else {
+                $toUpdate['catchalltext'] = $_POST['catchallText'];
+            }
+        }
+        if (isset($_POST['notesArea'])){
+            if ($_POST['notesArea']==$_POST['notesAreaOriginal']){
+                #no need to updated
+            } else {
+                $toUpdate['notesArea'] = $_POST['notesArea'];
+            }
+        }
+        if (isset($_POST['appliedTtag'])){
+            foreach ($_POST['appliedTtag'] as $key => $value) {
+                $toUpdate['appliedTtag'][$value]="toremove";
+            }
+        }
+        if (isset($_POST['availableTtag'])){
+            foreach ($_POST['availableTtag'] as $key => $value) {
+                $toUpdate['availableTtag'][$value]="toadd";
+            }
+        }
+        if (isset($toUpdate['catchalltext'])){
+            update_catchall_text( $catchallid, $toUpdate['catchalltext'] );
+        }
+        if (isset($toUpdate['notesArea'])){
+            update_catchall_notes( $catchallid, $toUpdate['notesArea'] );
+        }
+        if (isset($toUpdate['appliedTtag'])){
+            foreach ($toUpdate['appliedTtag'] as $key => $value) {
+                remove_tag_from_catchall($catchallid, $key);
+            }
+        }
+        if (isset($toUpdate['availableTtag'])){
+            foreach ($toUpdate['availableTtag'] as $key => $value) {
+                addTagToContactRecord($catchallid, $key);
+            }
+        }
+    }
+}
+function remove_tag_from_catchall($catchallid, $catchalltagid){
+    global $conn;
+    $stmtString = "DELETE FROM catchalltagapplications WHERE catchallid = ? AND catchalltagid = ? ";
+    $stmt = mysqli_prepare($conn, $stmtString);
+    mysqli_stmt_bind_param($stmt, 'ii', $catchallid, $catchalltagid);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+}
+function update_catchall_notes($catchallid, $catchallnotes){
+    global $conn;
+    $stmtString = "UPDATE catchall SET notes = ? WHERE id = ? ";
+    $stmt = mysqli_prepare($conn, $stmtString);
+    mysqli_stmt_bind_param($stmt, 'si',  $catchallnotes, $catchallid );
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+}
 function update_catchall_text($catchallid, $catchalltext){
     global $conn;
     $stmtString = "UPDATE catchall SET text = ? WHERE id = ? ";
     $stmt = mysqli_prepare($conn, $stmtString);
-    print_r($stmt);
     mysqli_stmt_bind_param($stmt, 'si',  $catchalltext, $catchallid );
     mysqli_stmt_execute($stmt);
-    print_r($stmt);
     mysqli_stmt_close($stmt);
     // return $callresults;
 }
@@ -251,4 +318,18 @@ function pp($arr){ /*pretty print*/
       }
       $retStr .= '</ul>';
       return $retStr;
+}
+function presets($value){
+    switch ($value) {
+        case 1:
+            $mystamp = date('l jS \of F Y H:i:s');
+            $nameOfrecord = "p1 " . $mystamp;
+            $catchallid = add_item($nameOfrecord);
+            addTagToContactRecord($catchallid, 8);
+            break;
+        
+        default:
+            echo "I do not have that preset : " . $value;
+            break;
+    }
 }

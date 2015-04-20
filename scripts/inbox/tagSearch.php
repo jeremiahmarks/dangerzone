@@ -1,13 +1,13 @@
 <?php
 /**
  * @Author: Jeremiah Marks
- * @Date:   2015-04-18 15:04:19
+ * @Date:   2015-04-17 23:27:51
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-18 20:16:40
+ * @Last Modified time: 2015-04-18 14:47:43
  */
 session_start();
-include_once "../functions.php";
-include_once '../htmlElements.php';
+include_once "functions.php";
+include_once 'htmlElements.php';
 
 ## purpose:  to allow a user to select particular tags that 
 ## they are interested in and to show all items which have 
@@ -22,69 +22,20 @@ function getAllTags(){
     <div class="floatingTags">
         <form id='tagsToSearchFor' action='' method='POST'> 
             <?php
-            if (isset($_SESSION['addTags'])){
-                unset($_SESSION['addTags']);
-            }
-            if (isset($_SESSION['removeTags'])){
-                unset($_SESSION['removeTags']);
-            }
             foreach ($_SESSION['allTags'] as $tagid => $displayText) {
-                if (isset($_SESSION['tagSearchTags'][$tagid])){
-                    removeableTags($tagid, $displayText);
-                } else {
-                    addableTags($tagid, $displayText);
-                }
-            }
-            ?>
-            <div class="tagHolder">
-                <div class="addableTags">
-                    <input type="checkbox" value="1" name="addableTags" id="addableTags" class="tagThing hiddenCheckbox">
-                    <label class="addableTagsLabel" for="addableTags">Tags you can add</label>
-                    <?php
-                    if (isset($_SESSION['addTags'])){
-                        printArrayOfTags($_SESSION['addTags'], 'add');
-                    }
-                    ?>
-                </div>
-                <div class="removeableTags">
-                    <input type="checkbox" value="1" name="removeableTags" id="removeableTags" class="tagThing hiddenCheckbox">
-                    <label class="removeableTagsLabel" for="removeableTags">Tags you can Remove</label>
-                    
-                    <?php
-                    if (isset($_SESSION['removeTags'])){
-                        printArrayOfTags($_SESSION['removeTags'], 'remove');
-                    }
-                    ?>
-                </div>
-            </div>
-            <input class="tagSearchSubmit" type="submit" value='Update Tags' name='updateTagSearch'>
+                ?>
+                <label for="<?php echo "tagToAddToSearch" . $tagid; ?>"  class="tag tag<?php echo $tagid; ?>" >
+                    <?php echo $displayText; ?>
+                </label>
+                <input type="checkbox" class="hiddenCheckbox" id="<?php echo "tagToAddToSearch" . $tagid; ?>" name="addtag[]" value="<?php echo $tagid;?>" />
+                <?php
+            } ?>
+            <input type="submit" value='Update Tags' name='updateTagSearch'>
         </form>
     </div>
     <?php
 }
 
-function addableTags($tagid, $displayText){
-    if (!isset($_SESSION['addTags'])){
-        $_SESSION['addTags']=array();
-    }
-    $_SESSION['addTags'][$tagid]=array( 'tagid'=>$tagid, 'displayText' => $displayText );
-}
-function removeableTags($tagid, $displayText){
-    if (!isset($_SESSION['removeTags'])){
-        $_SESSION['removeTags']=array();
-    }
-    $_SESSION['removeTags'][$tagid]=array( 'tagid'=>$tagid, 'displayText' => $displayText );
-}
-function printArrayOfTags($arrayOfTags, $preName){
-    foreach ($arrayOfTags as $key => $value) {
-        ?>
-        <label for="<?php echo $preName . $value['tagid']; ?>"  class="tag tag<?php echo $value['tagid']; ?>" >
-            <?php echo $value['displayText']; ?>
-        </label>
-        <input type="checkbox" class="hiddenCheckbox" id="<?php echo $preName . $value['tagid']; ?>" name=<?php echo $preName . "tag[]";?> value="<?php echo $value['tagid'];?>" />
-        <?php        
-    }
-}
 function resetS(){
     if (isset($_SESSION['tagSearchTags'])){
         unset($_SESSION['tagSearchTags']);
@@ -144,7 +95,6 @@ function removeAllMatching($catchalltagid){
         foreach ($_SESSION['tagSearchTags'][$catchalltagid] as $id => $pairing) {
             removeTagFromCatchall($pairing[0],$pairing[1]);
         }
-        unset($_SESSION['tagSearchTags'][$catchalltagid]);
     }
 }
 
@@ -168,21 +118,22 @@ if (isset($_POST['updateTagSearch'])){
             getAllMatching($value);
         }
     }
-    if (isset($_POST['removetag'])){
-        foreach ($_POST['removetag'] as $key => $value) {
+    if (isset($_POST['removeTag'])){
+        foreach ($_POST['removeTag'] as $key => $value) {
             if (isset($_SESSION['tagSearchTags'][$value])){
-                removeAllMatching($value);
+
             }
         }
     }
 }
-
+if (isset($_POST)){
+    echo pp($_POST);
+}
 
 
 
 htmlHead();
 bodyStart();
-include_once '../mainmenu.php';
 getAllTags();
 // getAllMatching(1);
 // getAllMatching(3);
@@ -190,5 +141,8 @@ getAllTags();
 // getAllMatching(4);
 // sortResults();
 printResults();
+echo "<br /><br /><br /><br /><br />";
+echo pp($_SESSION['results']);
+echo "<br /><br /><br /><br /><br />";
 footer();
 bodyEnd();
