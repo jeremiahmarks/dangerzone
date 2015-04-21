@@ -3,11 +3,12 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 22:20:21
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-19 03:27:50
+ * @Last Modified time: 2015-04-21 01:07:01
  */
 ##
 include_once 'connection.php';
 include_once 'htmlElements.php';
+include_once 'stringParser.php';
 ########
 ########
 ##Current List of functions:
@@ -55,6 +56,22 @@ include_once 'htmlElements.php';
 
 
 function addTagToContactRecord($catchallid, $catchalltagid){
+    # I am leaving this here until I see what uses it.  Until
+    # then, don't use it.
+    global $conn;
+    $checkString = 'SELECT COUNT(*) FROM catchalltagapplications WHERE catchallid=' . $catchallid . ' AND catchalltagid=' . $catchalltagid ;
+    $results=mysqli_query($conn, $checkString);
+    $numOfMatches=mysqli_fetch_array($results);
+    if ( $numOfMatches[0]==0 ){
+        $stmtString = "INSERT INTO catchalltagapplications (catchallid, catchalltagid) VALUES (?,?)";
+        $stmt = mysqli_prepare($conn, $stmtString);
+        mysqli_stmt_bind_param($stmt, 'ii', $catchallid, $catchalltagid);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+    }
+}
+
+function apply_tag_to_item($catchallid, $catchalltagid){
     global $conn;
     $checkString = 'SELECT COUNT(*) FROM catchalltagapplications WHERE catchallid=' . $catchallid . ' AND catchalltagid=' . $catchalltagid ;
     $results=mysqli_query($conn, $checkString);
@@ -105,6 +122,33 @@ function convert_data_to_HTMLoption($dataSet){
     </div>
     ";
     return $sbuilder;
+}
+
+function create_tag($displayText, $notes=""){
+    # check if tag with the same display text already exists
+    # if it does do something with the notes and then return
+    # the number of the tag that you will be using.
+    # 
+    # If you want to force it to make a tag, you can use the 
+    # new_tag($displayText, $notes) method instead.
+    global $conn;
+    $potentialMatches=find_tags_by_display($displayText);
+    return ( empty($potentialMatches) ? new_tag($displayText, $notes) : $potentialMatches );
+}
+function find_tags_by_display(){
+    global $conn;
+    $stmtString = "SELECT id FROM catchalltags WHERE displayText = ?; ";
+    $catchalltagid=array();
+    if ($stmt = mysqli_prepare($conn, $stmtString)){
+        mysqli_stmt_bind_param($stmt, 's', $displayText);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_bind_result($stmt, $tagid);
+        while (mysqli_stmt_fetch($stmt)){
+            $catchalltagid[] = $tagid;
+        }
+        mysqli_stmt_close($stmt);
+    }
+    return $catchalltagid;
 }
 
 function get_all_notes(){
@@ -194,8 +238,6 @@ function get_tags_applied($catchallid){
 function get_tags_as_option(){
     $tagsData = get_all_tags();
     return convert_data_to_HTMLoption($tagsData);
-
-
 }
 
 function main_page(){
@@ -213,6 +255,9 @@ function main_page(){
 }
 
 function new_tag($displayText, $notes){
+    # You should probably use create_tag instead of this. 
+    # Only use this if you don't care about your database
+    # size. 
     global $conn;
     $stmtString = "INSERT INTO catchalltags (displayText, notes) VALUES (?,?)";
     $stmt = mysqli_prepare($conn, $stmtString);

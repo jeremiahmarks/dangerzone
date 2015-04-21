@@ -2,7 +2,7 @@
 * @Author: Jeremiah Marks
 * @Date:   2015-04-09 00:30:28
 * @Last Modified by:   Jeremiah Marks
-* @Last Modified time: 2015-04-20 01:00:20
+* @Last Modified time: 2015-04-20 21:22:14
 */
 :root {
     --main-height: 500px;
@@ -10,15 +10,71 @@
     --title-height:75px;
 }
 body, html {
-    height: 100%;
     margin: 0;
     padding: 0;
+}
+html{
+    height: 100%;
     width: 100%;
 }
 body {
     background-color: #333;
     color: #aaa;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -5;
 }
+/*########################################################*/
+/*########################################################*/
+/*  Styling of form elements
+/*########################################################*/
+/*########################################################*/
+
+input[type="text"]{
+  background-color: #333;
+  color: ivory;
+  width: 95%;
+  margin: 0 auto;
+}
+input[type="submit"]{
+  background-color: #333;
+  color: ivory;
+  width: 95%;
+  margin: 0 auto;
+}
+textarea{
+  background-color: #333;
+  color: ivory;
+  width: 70%;
+  float: left;
+  height: 100%;
+  margin: 0 auto;
+}
+select{
+  background-color: #333;
+  color: ivory;
+  width: 20%;
+  float: left;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/*div
+{
+    width: 100vw; 
+    height: 56.25vw; 
+    background: pink;
+    max-height: 100vh;
+    max-width: 177.78vh; 
+    margin: auto;
+    position: absolute;
+    top:0;bottom:0; 
+    left:0;right:0; 
+}
+*/
 /*########################################################*/
 /*########################################################*/
 /*    This is from the original navbars css file          */
@@ -84,9 +140,10 @@ br.clearLeft {
 .mainBody {
     bottom: 0;
     left: 0;
-    position: absolute;
+    position: relative;
     right: 0;
     top: 0;
+    z-index: -1;
 }
 .mainBodyLeft {
     background-color: blue;
@@ -120,7 +177,14 @@ br.clearLeft {
 .newitemform {
 }
 .newitemformInner {
-    height: 100%;
+    background: none repeat scroll 0 0 pink;
+    height: 47vh;
+    max-height: 50vh;
+    max-width: 50vw;
+    position: relative;
+    width: 47vw;
+    /*top:0;bottom:0; 
+    left:0;right:0; */
 }
 .newtagdiv {
 }
@@ -137,12 +201,7 @@ br.clearLeft {
 .tagsubmit {
 }
 .itemnewtextarea {
-    background-color: #222;
-    color: #eef;
-    height: 100%;
-    left: 2%;
-    margin: 0 auto;
-    width: 80%;
+
 }
 .newitemdescription {
     background-color: #222;

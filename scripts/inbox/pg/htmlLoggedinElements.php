@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-19 22:14:32
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-20 00:17:20
+ * @Last Modified time: 2015-04-20 21:09:58
  */
 include_once 'htmlHeader.php';
 
@@ -28,6 +28,40 @@ class loggedHtmlBuilder{
                     </div>
                     <div class="itemlong">
                         <textarea class="itemnewtextarea"name="itemlong"></textarea>
+                        <select multiple="" name="tags[]">
+                            <optgroup label="starred tags">
+                                <option value='1'>MyFirstTag</option>
+                                <option value='2'>MyRealFavoriteTag</option>
+                            </optgroup>
+                            <optgroup label="bookmarks">
+                                <optgroup label="Linux">
+                                    <option value="hn">Hacker News</option>
+                                    <option value="G">The Goog</option>
+                                </optgroup>
+                                <optgroup label="Programming">
+                                    <optgroup label="Python">
+                                        <option value="P">Python Docs</option>
+                                        <option value="S">Stack Overflow</option>
+                                        <option value="G">The Goog</option>
+                                    </optgroup>
+                                    <optgroup label="PHP">
+                                        <option value="C">My Computer</option>
+                                        <option value="S">Stack Overflow</option>
+                                        <option value="G">The Goog</option>
+                                    </optgroup>
+                                    <optgroup label="Java">
+                                        <option value="S">Stack Overflow</option>
+                                        <option value="G">The Goog</option>
+                                    </optgroup>
+                                    <optgroup label="Linux">
+                                        <option value="man">Man Pages</option>
+                                        <option value="sF">ServerFault</option>
+                                        <option value="S">Stack Overflow</option>
+                                        <option value="G">The Goog</option>
+                                    </optgroup>
+                                </optgroup>
+                            </optgroup>
+                        </select>
                     </div>
                     <div class="itemsubmit">
                         <input type="hidden" value="<?php echo $_SESSION['uid']; ?>" name="uid">
@@ -73,16 +107,19 @@ class loggedHtmlBuilder{
       <?php
     }
     private function logged_header(){
-        ?>
-        <div id="header">
-            <?php
-            $this->logged_nav();
-            /*
-            This is left open to easily add elements to this area.
-            */
+        if (!function_exists('head_out')){
+            include_once 'htmlLoggedheader.php';
             ?>
-        </div>
-        <?php
+            <div id="header">
+                <?php
+                $this->logged_nav();
+                /*
+                This is left open to easily add elements to this area.
+                */
+                ?>
+            </div>
+            <?php
+        }
     }
     private function left_half(){
         ?>
