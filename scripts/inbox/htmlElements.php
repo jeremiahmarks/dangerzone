@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-04-08 23:00:30
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-04-19 02:27:34
+ * @Last Modified time: 2015-04-21 20:20:29
  */
 include_once "functions.php";
 function htmlHead(){
@@ -110,7 +110,7 @@ function listAllNotes(){
                 ?>
                 <tr class="noteHolder <?php echo $colorID; ?>">
                     <td><a href="http://i.jlmarks.org/?editCatchall=<?php echo $key;?>"><?php echo $key;?></a></td>
-                    <td><?php echo $value;?></td>
+                    <td><?php echo htmlspecialchars($value);?></td>
                 </tr>
                 <?php 
             } ?>
@@ -173,7 +173,7 @@ function getNotesWithTags(){
                         <a href="http://i.jlmarks.org/?editCatchall=<?php echo $key; ?>"><?php echo $key; ?></a>
                     </td>
                     <td class="noteText">
-                        <?php echo $value['text']; ?>
+                        <?php echo htmlspecialchars($value['text']); ?>
                     </td>
                     <td class="tagHolder">
                         <?php
