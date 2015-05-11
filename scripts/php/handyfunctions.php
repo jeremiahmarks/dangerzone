@@ -3,7 +3,7 @@
  * @Author: Jeremiah Marks
  * @Date:   2015-02-17 22:40:42
  * @Last Modified by:   Jeremiah Marks
- * @Last Modified time: 2015-03-08 09:50:29
+ * @Last Modified time: 2015-04-27 18:53:48
  */
 ## I seriously can't believe how much basic information I am 
 ##  unable to recall.
@@ -120,6 +120,7 @@ function addtodo($todotoadd) {
 // b corresponding variable is a blob and will be sent in packets
 // Some fun mysql statements
 
+$a='SELECT * FROM catchall, catchalltagapplications WHERE catchall.id = catchalltagapplications.catchallid AND catchall.id = 74';
 $searchStmt1='SELECT *
 FROM (
     SELECT tagapplications.tagid AS tagid, tags.tagname AS tagname, tasks.taskname AS taskname, tasks.taskid AS tid
