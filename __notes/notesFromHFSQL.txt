@@ -1,0 +1,53 @@
+Working from a copy of the 2007 edition of Head First SQL
+
+Atomic data - data broken into the smallest peices of data that cannot or should not be divided. 
+
+In order to be in First Normal Form the data must contain atomic values, and each row of data must have a Primary Key. 
+
+DESCRIBE command provides information about each column of the table. (Things like Type, Null Allowed, Default, and extra bits.)
+
+SHOW CREATE_TABLE tablename : shows how to create a table just like tablename, except without any data. Provides basically copy/paste command to set up same table.
+
+ALTER TABLE <TypeOfAlteration>
+	TypeOfAlteration:
+		CHANGE 	change the name or datatype of a column
+		MODIFY 	change the data type or position of a column
+		ADD		add a column to a table
+		DROP	remove a column from your table
+
+Note that changing datatype of column with incompatable data will result in warning. If compatable data type can also result in loss of precision/truncated 
+
+SELECT RIGHT(columnName, 4) from table_name;
+Selects the four characters to from the right of the column
+
+SELECT SUBSTRING_INDEX(columnName, ',', 2) FROM table_name;
+Selects everything before the second comma in column columnName from table_name
+
+SELECT UPPER('some SerIes Of Characters');
+returns all upper case
+
+SELECT LOWER('some Other StrIng');
+returns all lower case
+
+SELECT REVERSE('some string');
+returns reversed string
+
+SELECT LTRIM(' some String WithSpaces to the left');
+removes spaces to the left
+
+SELECT RTRIM('some string with spaces to the right  ');
+removes spaces to the right
+
+SELECT LENGTH('something');
+returns number of characters in string
+
+CASE statement
+
+UPDATE table_name SET some_new_column = 
+CASE
+	WHEN column1 = someValue1:
+		THEN some_new_value
+	WHEN column1 = someValue2:
+		THEN some_other_new_value
+	ELSE default_new_value
+END
