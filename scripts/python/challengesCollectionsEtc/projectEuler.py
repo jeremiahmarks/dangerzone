@@ -2,7 +2,7 @@
 # @Author: jemarks
 # @Date:   2017-04-11 17:27:24
 # @Last Modified by:   jemarks
-# @Last Modified time: 2017-04-11 19:38:34
+# @Last Modified time: 2017-04-17 19:52:48
 
 ###########################################
 # Project Euler problem 8
@@ -122,5 +122,14 @@ def euler11(chain_length, grid):
     of chain desired. It will then find the largest product of four adjacent
     numbers in the grid.
     """
+    class gridCrunher():
+        """docstring for gridCrunher"""
+        def __init__(self, grid):
+            super(gridCrunher, self).__init__()
+            self.grid = grid
+
+        def check_to_right(self, row, column):
+            pass
+            
     
     pass
